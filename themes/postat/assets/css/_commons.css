@@ -18,6 +18,9 @@ a{
 	color: #808368;
 	font-weight: 700;
 }
+a:hover{
+	color: #48484A;
+}
 
 body {
     background: #fff;
@@ -299,6 +302,48 @@ body.login-register.hide-account-title .select2-container--open .select2-dropdow
 .select2-container--default .select2-results__option--highlighted[data-selected] {
     background-color: #FFA800!important;
     color: #fff!important;
+}
+
+
+/*common button*/
+
+.fl-transparent-btn{
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 15px 25px;
+	min-width: 226px;
+	text-align: center;
+	font-size: 15px;
+	line-height: 1;
+	color: #48484A;
+	background: transparent;
+	text-transform: uppercase;
+	border: 1px solid #48484A;
+}
+.fl-transparent-btn:hover{
+	background: #48484A;
+	color: #fff;
+}
+
+
+.fl-white-btn{
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 15px 25px;
+	min-width: 226px;
+	text-align: center;
+	font-size: 15px;
+	line-height: 1;
+	font-weight: 500;
+	color: #48484A;
+	background: #fff;
+	text-transform: uppercase;
+	border: 1px solid #fff;
+}
+.fl-white-btn:hover{
+	background: #48484A;
+	border-color: #48484A;
+	color: #fff;
 }
 
 
