@@ -350,6 +350,20 @@ body.login-register.hide-account-title .select2-container--open .select2-dropdow
 	border-color: #48484A;
 	color: #fff;
 }
+.fl-black-btn{
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 15px 25px;
+	min-width: 226px;
+	text-align: center;
+	font-size: 15px;
+	line-height: 1;
+	font-weight: 500;
+	color: #fff;
+	background: #48484A;
+	text-transform: uppercase;
+	border: 1px solid #48484A;
+}
 
 
 
