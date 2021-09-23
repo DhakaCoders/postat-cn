@@ -14,17 +14,35 @@ a, a:hover, a:focus, button:hover, button:focus{
 	text-decoration: none;
 	outline: 0;
 }
+a{
+	color: #808368;
+	font-weight: 700;
+}
+a:hover{
+	color: #48484A;
+}
 
 body {
-    background: #f8f8f8;
-    color: #000000;
-    font-size: 18px;
+    background: #fff;
+    color: #A7A7A7;
+    font-size: 16px;
     line-height: 24px;
-     font-family: 'Candara';
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
+/*font-family: 'Epilogue', sans-serif;*/
 p{
-	line-height: 1.2;
+	line-height: 1.85;
 	margin-bottom: 15px;
+}
+strong, b{
+	font-weight: 700;
+}
+i,em{
+	font-style: italic;
+}
+u{
+	text-decoration: underline;
 }
 
 input[type=text],
@@ -38,7 +56,7 @@ textarea{
 }
 ::selection {
   color: #fff;
-  background: #512C36;
+  background: #000;
 }
 /*-- app gap use pattern --*/
 /*data-xxs = 575
@@ -106,7 +124,7 @@ Containers
 
 }
 .container{
-	max-width: 1200px;
+	max-width: 1300px;
 	width: 100%;
 }
 .container-md{
@@ -193,8 +211,8 @@ img{
 	right: 0;
 	bottom: 0;
 }
-
-
+ul.pt-columns,
+ol.pt-columns,
 ul.reset-list,
 ol.reset-list,
 ul.sub-menu,
@@ -207,7 +225,9 @@ ul.ab-top-menu,
 	padding: 0;
 	list-style: none;
 }
-.reset-list > li,
+.pt-columns li,
+ul.pt-columns li,
+.reset-list li,
 ul.sub-menu li,
 .fl-pagi-ctlr ul li,
 .reset-slect ul li,
@@ -219,7 +239,9 @@ ul.ab-top-menu li,
 	list-style: none;
 	margin: 0;
 }
-.reset-list > li:before,
+.pt-columns li:before,
+ul.pt-columns li:before,
+.reset-list li:before,
 ul.sub-menu li:before,
 .fl-pagi-ctlr ul li:before,
 .reset-slect ul li:before,
@@ -284,6 +306,48 @@ body.login-register.hide-account-title .select2-container--open .select2-dropdow
 .select2-container--default .select2-results__option--highlighted[data-selected] {
     background-color: #FFA800!important;
     color: #fff!important;
+}
+
+
+/*common button*/
+
+.fl-transparent-btn{
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 15px 25px;
+	min-width: 226px;
+	text-align: center;
+	font-size: 15px;
+	line-height: 1;
+	color: #48484A;
+	background: transparent;
+	text-transform: uppercase;
+	border: 1px solid #48484A;
+}
+.fl-transparent-btn:hover{
+	background: #48484A;
+	color: #fff;
+}
+
+
+.fl-white-btn{
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 15px 25px;
+	min-width: 226px;
+	text-align: center;
+	font-size: 15px;
+	line-height: 1;
+	font-weight: 500;
+	color: #48484A;
+	background: #fff;
+	text-transform: uppercase;
+	border: 1px solid #fff;
+}
+.fl-white-btn:hover{
+	background: #48484A;
+	border-color: #48484A;
+	color: #fff;
 }
 
 
