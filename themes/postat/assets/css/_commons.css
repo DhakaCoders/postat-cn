@@ -14,17 +14,32 @@ a, a:hover, a:focus, button:hover, button:focus{
 	text-decoration: none;
 	outline: 0;
 }
+a{
+	color: #808368;
+	font-weight: 700;
+}
 
 body {
-    background: #f8f8f8;
-    color: #000000;
-    font-size: 18px;
+    background: #fff;
+    color: #A7A7A7;
+    font-size: 16px;
     line-height: 24px;
-     font-family: 'Candara';
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
+/*font-family: 'Epilogue', sans-serif;*/
 p{
-	line-height: 1.2;
+	line-height: 1.85;
 	margin-bottom: 15px;
+}
+strong, b{
+	font-weight: 700;
+}
+i,em{
+	font-style: italic;
+}
+u{
+	text-decoration: underline;
 }
 
 input[type=text],
@@ -38,7 +53,7 @@ textarea{
 }
 ::selection {
   color: #fff;
-  background: #512C36;
+  background: #000;
 }
 /*-- app gap use pattern --*/
 /*data-xxs = 575
@@ -106,7 +121,7 @@ Containers
 
 }
 .container{
-	max-width: 1200px;
+	max-width: 1300px;
 	width: 100%;
 }
 .container-md{
