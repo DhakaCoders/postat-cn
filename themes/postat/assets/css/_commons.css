@@ -211,8 +211,8 @@ img{
 	right: 0;
 	bottom: 0;
 }
-
-
+ul.pt-columns,
+ol.pt-columns,
 ul.reset-list,
 ol.reset-list,
 ul.sub-menu,
@@ -225,7 +225,9 @@ ul.ab-top-menu,
 	padding: 0;
 	list-style: none;
 }
-.reset-list > li,
+.pt-columns li,
+ul.pt-columns li,
+.reset-list li,
 ul.sub-menu li,
 .fl-pagi-ctlr ul li,
 .reset-slect ul li,
@@ -237,7 +239,9 @@ ul.ab-top-menu li,
 	list-style: none;
 	margin: 0;
 }
-.reset-list > li:before,
+.pt-columns li:before,
+ul.pt-columns li:before,
+.reset-list li:before,
 ul.sub-menu li:before,
 .fl-pagi-ctlr ul li:before,
 .reset-slect ul li:before,
