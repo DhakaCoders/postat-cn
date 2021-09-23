@@ -1,0 +1,78 @@
+.hm-banner{
+	position: relative;
+}
+
+.hm-bnr-bg{
+	position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+.hm-banner-bg-black {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background: #000;
+}
+.hm-bnr-cntlr{
+	height: 1370px;
+	position: relative;
+	z-index: 3;
+	padding-top: 356px;
+	padding-bottom: 100px;
+}
+.hm-bnr-desc-cntlr{
+	max-width: 1000px;
+	width: 100%;
+}
+.hm-bnr-desc{
+	margin-bottom: 42px;
+}
+.hm-bnr-desc > p{
+	font-size: 34px;
+	font-weight: 300;
+	line-height: 1.5;
+}
+.hm-bnr-desc > p:last-of-type{
+	margin-bottom: 0;
+}
+.hm-bnr-desc > p a{
+	font-size: 18px;
+}
+.hm-bnr-btm-btn-cntlr{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 6;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.hm-bnr-btm-btn{
+	width: 50%;
+}
+.hm-bnr-btm-btn a{
+	display: block;
+	width: 100%;
+	background: #D3E3CE;
+	font-size: 18px;
+	color: #48484A;
+	padding: 21px 10px 19px 10px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.hm-bnr-btm-btn-2 a{
+	color: #fff;
+	background: #A7A7A7;
+}
+.hm-bnr-btm-btn a:hover{
+	background: #48484A;
+	color: #fff;
+}
