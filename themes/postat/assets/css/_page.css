@@ -45,3 +45,72 @@
 .sitemap ol li a:focus{
 	text-decoration: underline;
 }
+
+
+/*custom grid*/
+.pt-grids-sec-cntlr{
+	padding-top: 90px;
+	padding-bottom: 90px;
+}
+.pt-columns{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
+.pt-columns-2{
+
+}
+.pt-columns-3{
+	
+}
+.pt-columns-4{
+	
+}
+.pt-columns-2L{
+	
+}
+.pt-columns-2R{
+	
+}
+.pt-grid-item{
+	padding: 0 15px;
+	margin-bottom: 30px;
+}
+.pt-grid-item > p:last-of-type{
+	margin-bottom: 0;
+}
+.pt-columns-2 .pt-grid-item{
+	width: 50%;
+}
+.pt-columns-3 .pt-grid-item{
+	width: 33.33%;
+}
+.pt-columns-4 .pt-grid-item{
+	width: 25%;
+}
+.pt-columns-2L .pt-grid-item{
+	width: 70%;
+}
+.pt-columns-2L .pt-grid-item:first-of-type{
+	width: 30%;
+}
+.pt-columns-2R .pt-grid-item{
+	width: 30%;
+}
+.pt-columns-2R .pt-grid-item:first-of-type{
+	width: 70%;
+}
+.pt-grid-title{
+	margin-bottom: 40px!important;
+}
+
+.pt-fullwidth-txt-module{
+	padding-top: 85px;
+	padding-bottom: 85px;
+}
+.pt-fullwidth-txt-module h2{
+	margin-bottom: 40px!important;
+}
+.pt-fullwidth-txt-module p:last-of-type{
+	margin-bottom: 0;
+}
