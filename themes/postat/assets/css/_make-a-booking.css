@@ -56,7 +56,10 @@
 	-ms-transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
-	margin-top: 14px;
+	margin-top: 15px;
+}
+.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-user input{
+	padding-left: 45px;
 }
 .make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field .wpforms-field-label{
 	font-size: 15px;
