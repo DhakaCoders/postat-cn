@@ -8,7 +8,7 @@
 }
 .contact-form-rgt {
     background: #A7A7A7;
-    width: 64%;
+    width: 67%;
 }
 .contact-form-dsc-wrp {
     padding-top: 200px;
@@ -59,14 +59,12 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: 50%;
 }
 .contact-form-rgt-bg{
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
-    width: 50%;
 }
 .contact-form-rgt-bg{
     background: #A7A7A7;
