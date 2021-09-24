@@ -4,7 +4,6 @@
 
 .lftdes-rgtimg-ctlr{
 	display: flex;
-	/*align-items: center;*/
 }
 
 .display-align{
@@ -147,12 +146,12 @@
 	margin-left: auto;
 	margin-top: 110px;
 }
-.waking-up-des p{
+.waking-up-des blockquote p{
 	font-size:34px;
 	font-weight: 400;
 	color: #48484A;
 }
-.waking-up-des strong{
+.waking-up-des blockquote strong{
 	font-size: 18px;
 	color: #48484A;
 }
@@ -167,7 +166,7 @@
 	margin-bottom: 70px;
 }
 
-.follow-des img{
+.follow-img{
 	margin-bottom: 90px;
 }
 

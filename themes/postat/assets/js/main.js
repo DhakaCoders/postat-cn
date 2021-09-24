@@ -259,6 +259,25 @@ if( $('li.menu-item-has-children a').length ){
 
 /*start of Shariful*/
 
+var windowWidth = $(window).width();
+var containerWidth = $('.container').width();
+var containerOffset = (windowWidth - containerWidth);
+var containerLftOffset = (containerOffset / 2);
+$('.follow-img-ctlr').css('margin-left', containerLftOffset);
+
+
+if( $('.ptTextSlider').length ){
+    $('.ptTextSlider').slick({
+      dots: false,
+      arrows: false,
+      infinite: false,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+}
 
 
 
