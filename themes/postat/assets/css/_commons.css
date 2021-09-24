@@ -364,6 +364,10 @@ body.login-register.hide-account-title .select2-container--open .select2-dropdow
 	text-transform: uppercase;
 	border: 1px solid #48484A;
 }
+.fl-black-btn:hover{
+	background: transparent;
+	color: #48484A;
+}
 
 
 
