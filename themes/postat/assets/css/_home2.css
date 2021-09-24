@@ -7,6 +7,10 @@
 	/*align-items: center;*/
 }
 
+.display-align{
+	align-items: center;
+}
+
 .lftdes-rgtimg-lft{
 	width: 57%;
 	padding-right: 30px;
@@ -28,6 +32,9 @@
 
 .lftdes-rgtimg-img{
 	height: 580px;
+}
+.lftdes-rgtimg-img img{
+	display: none;
 }
 
 .lftdes-rgtimg-title{
