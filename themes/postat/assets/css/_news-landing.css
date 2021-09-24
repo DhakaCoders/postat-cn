@@ -29,14 +29,7 @@
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
-.news-landing-grid-des > a{
-	color: #D3E3CE;
-	display: none;
-}
-.news-landing-grid-des p{
-	margin-bottom: 0;
-}
-.news-landing-grid-des p strong{
+.news-landing-grid-des strong a{
 	color: #D3E3CE;
 	text-transform: uppercase;
 }
