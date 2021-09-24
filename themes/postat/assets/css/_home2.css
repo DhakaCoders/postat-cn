@@ -158,6 +158,37 @@
 }
 
 
+.follow-sec{
+	padding: 175px 0 190px;
+	background: #F2F2F2;
+}
+
+.follow-des-title{
+	margin-bottom: 70px;
+}
+
+.follow-des img{
+	margin-bottom: 90px;
+}
+
+.follow-btm-des{
+	display: flex;
+	align-items: center;
+}
+
+.follow-btm-des-hdr{
+	padding-right: 20px;
+}
+.follow-btm-des-title{
+	margin-bottom: 0;
+}
+.follow-btm-des-btn{
+	margin-left: auto;
+}
+.follow-btm-des-btn .fl-black-btn{
+	min-width: 284px;
+}
+
 
 .hunter-sec{
 	height: 1115px;
@@ -172,7 +203,9 @@
 }
 .hunterd-des-title{
 	color: #fff;
+	margin-bottom: 30px;
 }
 .hunter-des-subtitle{
 	color: #fff;
+	margin-bottom: 30px;
 }
