@@ -1,0 +1,16 @@
+
+
+.pt-text-slider-ctlr{
+
+}
+
+.pt-text-slider{
+	max-width: 900px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pt-text-slider-item{
+	text-align: center;
+}
