@@ -174,8 +174,8 @@ textarea {
     font-size: 12px;
     padding-left: 2px;
     position: absolute;
-    top: -29px;
-    right: 21px;
+    top: -25px;
+    right: 16px;
     color: #D61D1D;
     margin-bottom: 0;
     margin-top: 5px;
@@ -309,7 +309,7 @@ textarea {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    left: 0;
+    left: 18px;
     z-index: 1;
     height: 29px;
     width: 28px;
@@ -353,7 +353,7 @@ textarea {
 .contact-form-check > label {
     display: inline-block;
     vertical-align: middle;
-    padding-left: 64px;
+    padding-left: 46px;
     padding-top: 0;
     position: relative;
     z-index: 5;
@@ -362,6 +362,7 @@ textarea {
     margin: 0;
     color: #A7A7A7;
     font-size: 16px;
+    margin-left: 18px;
 }
 .robot {
     position: absolute;
