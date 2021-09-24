@@ -14,3 +14,58 @@
 .pt-text-slider-item{
 	text-align: center;
 }
+
+
+.pt-accordion-title{
+	margin-bottom: 0;
+    cursor: pointer;
+    position: relative;
+    padding: 20px 50px 25px 20px;
+    border: 1px solid #495649;
+    background: #EAEBEC;
+    line-height: 1.3;
+}
+.pt-accordion-title:after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	background: url(../images/down-arrow.svg);
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    background-position: center center!important;
+    height: 11px;
+    width: 19px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+}
+.pt-accordion-title.active:after{
+    transform: rotate(-180deg);
+}
+
+.pt-accordion-des{
+	padding: 28px 20px 1px 22px;
+	display: none;
+}
+.pt-accordion-des p{
+	margin-bottom: 20px;
+}
+
+.pt-des-accordion-gray-bg{
+	background: #A7A7A7;
+}
+.pt-des-accordion-gray-bg .pt-grid-item-inr p{
+	color: #fff;
+}
+
+.pt-des-accordion-gray-bg .pt-accordion-title{
+	border-color: #E5E5E5;
+}
+.pt-des-accordion-gray-bg .pt-accordion-title.active{
+	background: #D3E3CE;
+	border-color: #D3E3CE;
+}
