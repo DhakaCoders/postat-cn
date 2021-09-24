@@ -279,6 +279,13 @@ if( $('.ptTextSlider').length ){
     });
 }
 
+$('.pt-accordion-title').on('click', function(){
+  $(this).toggleClass('active');
+  $(this).parents('.pt-accordion-menu').siblings().find('.pt-accordion-title').removeClass('active');
+  $(this).parents('.pt-accordion-menu').find('.pt-accordion-des').slideToggle(300);
+  $(this).parents('.pt-accordion-menu').siblings().find('.pt-accordion-des').slideUp(300);
+});
+
 
 
 
