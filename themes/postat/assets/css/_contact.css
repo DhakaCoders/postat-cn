@@ -31,7 +31,7 @@
 }
 .contact-form-info-des {
     padding-right: 72px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 .cnt-tel a,
 .cnt-addres a {
@@ -350,11 +350,9 @@ textarea {
     height: 16px;
     border: solid #D3E3CE;
     border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(
-45deg);
+    -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
-    transform: rotate(
-45deg);
+    transform: rotate(45deg);
 }
 .checkmark:after {
     content: "";
@@ -385,6 +383,8 @@ textarea {
 .robot {
     position: absolute;
     right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .robot i {
     display: inline-block;
