@@ -1,0 +1,19 @@
+
+
+.blockquote-sec{
+	padding-bottom: 100px;
+}
+
+.blockquote-sec-inr{
+	max-width: 1200px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.blockquote-sec-inr blockquote strong{
+	display: inline-block;
+	vertical-align: baseline;
+	color: #D3E3CE;
+	text-transform: uppercase;
+}
