@@ -94,6 +94,9 @@
 .home .hdr-socials{
 	display: none;
 }
+.home .xs-hdr-socials .hdr-socials{
+	display: block;
+}
 .hdr-socials ul{
 	display: flex;
 	flex-wrap: wrap;
