@@ -100,7 +100,10 @@
 .pt-columns-2R .pt-grid-item:first-of-type{
 	width: 70%;
 }
-.pt-grid-title{
+.pt-grids-sec-entry-hdr{
+	padding-bottom: 1;
+}
+.pt-grids-sec-entry-hdr-title{
 	margin-bottom: 40px!important;
 }
 
@@ -122,6 +125,9 @@
 }
 .pt-fullwidth-txt-module-white-green{
 	background: #808368;
+}
+.pt-fullwidth-txt-module-light-gray-bg{
+	background: #EAEBEC;
 }
 .pt-fullwidth-txt-module-white-black,
 .pt-fullwidth-txt-module-white-green,
