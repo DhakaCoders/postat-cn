@@ -268,3 +268,16 @@ Gallery design
 	clear: left;
 }
 
+
+
+.btn-ctlr ul{
+	display: flex;
+	align-items: center;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+.btn-ctlr ul li{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
