@@ -119,7 +119,7 @@
     background: #fff;
     border: 1px solid #a7a7a7;
     box-sizing: border-box;
-    padding: 24px 17px 27px 17px;
+    padding: 16.5px 17px 16.5px 17px;
     padding-right: 20px;
     color: #777F84;
     font-weight: 400;
@@ -133,6 +133,7 @@
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-textarea textarea:focus, 
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input:focus {
     border-color: #A7A7A7;
+    background-color: #D3E3CE;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button {
     min-width: 226px;
