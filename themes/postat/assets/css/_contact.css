@@ -44,6 +44,33 @@
 .cnt-addres a span{
     display: block;
 }
+.contact-form-info-des p {
+    color: #48484A;
+}
+.contact-form-sec-wrp{
+    position: relative;
+    z-index: 99;
+}
+.contact-form-lft-bg{
+    background: #D3E3CE;
+}
+.contact-form-lft-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+}
+.contact-form-rgt-bg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+}
+.contact-form-rgt-bg{
+    background: #A7A7A7;
+}
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container {
     margin: 0 -8px;
     display: flex;
@@ -61,7 +88,7 @@
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-textarea textarea,
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.FullWidthField textarea{
-    height: 122px!important;
+    height: 186px!important;
     display: block;
     resize: none;
 }
@@ -255,7 +282,7 @@ textarea {
     position: relative;
 }
 .contact-google-map iframe{
-    height: 730px;
+    height: 540px;
     width: 100%;
 }
 .contact-google-parachute{
@@ -267,4 +294,79 @@ textarea {
     position: absolute;
     right: -130px;
     top: -300px;
+}
+
+.contact-form-check {
+    position: relative;
+    background: #fff;
+    height: 62px;
+    width: 272px;
+    display: flex;
+    align-items: center;
+    margin-top: -63px;
+}
+.contact-form-check input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    left: 0;
+    z-index: 1;
+    height: 29px;
+    width: 28px;
+}
+.contact-form-check span.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    height: 29px;
+    width: 28px;
+    background-color: #fff;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    transform: translateY(-50%);
+}
+.contact-form-check .checkmark::after {
+    left: 10px;
+    top: 3px;
+    width: 8px;
+    height: 16px;
+    border: solid #D3E3CE;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(
+45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(
+45deg);
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.contact-form-check input:checked ~ .checkmark:after {
+    display: block;
+}
+.contact-form-check input:checked ~ .checkmark {
+    background: #000;
+    border-color: #000;
+}
+.contact-form-check > label {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 64px;
+    padding-top: 0;
+    position: relative;
+    z-index: 5;
+    font-weight: normal;
+    cursor: pointer;
+    margin: 0;
+    color: #A7A7A7;
+    font-size: 16px;
+}
+.robot {
+    position: absolute;
+    right: 22px;
+}
+.robot i {
+    display: inline-block;
 }
