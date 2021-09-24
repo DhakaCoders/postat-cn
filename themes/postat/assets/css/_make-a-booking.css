@@ -34,8 +34,80 @@
 	margin-bottom: 0;
 }
 .make-bking-contact{
-	
+	margin-bottom: 71px;
 }
-.make-bking-contact .wpforms-field-container{
-
+.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container{
+	margin: 0 -13px;
+}
+.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field{
+	padding: 0 13px;
+	margin-bottom: 35px;
+	position: relative;
+}
+.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input{
+	background: #f2f2f2;
+	border-color: #f2f2f2;
+}
+.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field i{
+	position: absolute;
+	left: 27px;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	margin-top: 14px;
+}
+.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field .wpforms-field-label{
+	font-size: 15px;
+	font-weight: 500;
+	color: #48484A;
+	text-transform: uppercase;
+	margin-bottom: 12px;
+	line-height: 1;
+}
+.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button{
+	margin-right: auto;
+	background: transparent;
+	color: #48484A!important;
+	border: 1px solid #48484A!important;
+	font-weight: 500!important;
+}
+.make-bking-nav{
+	margin-bottom: 30px;
+}
+.make-bking-nav ul{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 -18px;
+}
+.make-bking-nav ul li{
+	padding: 0 18px;
+	font-size: 14px;
+}
+.make-bking-nav ul li a{
+	display: inline-block;
+	line-height: 1;
+	font-size: 14px;
+	font-style: italic;
+	color: #A7A7A7;
+}
+.make-bking-mail{
+	text-align: center;
+}
+.make-bking-mail a{
+	display: inline-block;
+	position: relative;
+	padding-left: 31px;
+}
+.make-bking-mail a i{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
 }
