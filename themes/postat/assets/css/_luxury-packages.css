@@ -59,10 +59,19 @@
     color: #FFFFFF;
     border-color: #FFFFFF;
 }
-.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(2n+2){
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(2){
     background: #A7A7A7;
 }
-.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(3n+3){
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(3){
+    background: #D3E3CE;
+}
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(4){
+    background: #808368;
+}
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(5){
+    background: #A7A7A7;
+}
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(6){
     background: #D3E3CE;
 }
 .full-width-img-bleed-sec-rows-cntlr ul li:nth-child(2n+2) .full-width-img-des-cntlr .full-width-img-des-rgt{
@@ -78,4 +87,32 @@
 .full-width-img-bleed-sec-rows-cntlr ul li:nth-child(2n+2) .full-width-img-des-cntlr .full-width-img-des-rgt .full-width-des-innr{
     padding-left: 0;
     padding-right: 90px;
+}
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(2) .full-width-des-title,
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(5) .full-width-des-title{
+    color: #48484A;
+}
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(2) .full-width-des-innr a,
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(5) .full-width-des-innr a{
+    color: #48484A;
+    border-color: #48484A;
+}
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(2) .full-width-des-innr a:hover,
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(5) .full-width-des-innr a:hover,
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(3) .full-width-des-innr a:hover,
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(6) .full-width-des-innr a:hover{
+    color: #fff;
+}
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(3) .full-width-des-title,
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(6) .full-width-des-title{
+    color: #48484A;
+}
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(3) .full-width-des-innr a,
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(6) .full-width-des-innr a{
+    color: #48484A;
+    border-color: #48484A;
+}
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(3) .full-width-des-innr p,
+.full-width-img-bleed-sec-rows-cntlr ul li:nth-child(6) .full-width-des-innr p{
+    color: #48484A;
 }
