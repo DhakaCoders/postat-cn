@@ -15,12 +15,13 @@
 	background: transparent;
 	z-index: 10;
 }
-
+.hdr-topbar{
+	padding: 24px 0;
+}
 .hdr-topbar-inr{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
-	padding: 24px 0;
 }
 .hdr-details{
 	display: flex;
