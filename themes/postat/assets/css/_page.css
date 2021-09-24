@@ -162,22 +162,19 @@ ul{
 }
 .default-page-con ul li,
 ul li {
-	padding: 2px 0 10px 22px;
+	padding: 2px 0 10px 40px;
 	position: relative;
-	line-height: 28px;
+	line-height: 1.5;
 }
 
 .default-page-con ul li::before,
 ul li::before {
-	content: "";
+	content: ">";
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 10px;
-	height: 10px;
-	background: #f85700;
-	border-radius: 100%;
-	margin-top: 9px;
+	margin-top: 5px;
+	color: #D3E3CE;
 }
 ul li.refGridItem:before{
 	display: none;
@@ -210,7 +207,7 @@ ol li::before {
 	position: absolute;
 	left: 0;
 	top: 0;
-	margin-top: 2px;
+	margin-top: 5px;
 	font-size: 16px;
 	font-family: 'Epilogue', sans-serif;
 }
