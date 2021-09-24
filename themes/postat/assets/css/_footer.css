@@ -13,10 +13,10 @@
 	flex-wrap: wrap;
 	margin-bottom: 80px;
 }
-.logo{
+.ftr-logo{
 
 }
-.logo a{
+.ftr-logo a{
 	display: inline-block;
 }
 .ftr-btn{
@@ -187,7 +187,7 @@
 
 /*responsive*/
 @media(max-width: 1699px){
-	.logo a{
+	.ftr-logo a{
 		max-width: 385px;
 	}
 }
@@ -195,7 +195,7 @@
 	.footer-wrp{
 		padding-top: 85px;
 	}
-	.logo a{
+	.ftr-logo a{
 		max-width: 350px;
 	}
 	.ftr-icon a{

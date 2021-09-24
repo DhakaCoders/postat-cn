@@ -336,3 +336,33 @@ body.allWork{
     content: none;
     display: none;
 }
+
+
+/*responsive*/
+@media(max-width: 1699px){
+	.logo a{
+		max-width: 385px;
+	}
+}
+@media(max-width: 1399px){
+	.logo a{
+		max-width: 350px;
+	}
+}
+@media(max-width: 1199px){
+	.logo a{
+		max-width: 30px;
+	}
+}
+@media(max-width: 991px){
+	
+}
+@media(max-width: 767px){
+	
+}
+@media(max-width: 639px){
+	
+}
+@media(max-width: 575px){
+	
+}
