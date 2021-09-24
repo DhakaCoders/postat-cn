@@ -226,8 +226,8 @@ ul.ab-top-menu,
 	padding: 0;
 	list-style: none;
 }
-.pt-columns li,
-ul.pt-columns li,
+.pt-columns > li,
+ul.pt-columns > li,
 .reset-list li,
 ul.sub-menu li,
 .fl-pagi-ctlr ul li,
@@ -240,8 +240,8 @@ ul.ab-top-menu li,
 	list-style: none;
 	margin: 0;
 }
-.pt-columns li:before,
-ul.pt-columns li:before,
+.pt-columns > li:before,
+ul.pt-columns > li:before,
 .reset-list li:before,
 ul.sub-menu li:before,
 .fl-pagi-ctlr ul li:before,
@@ -366,6 +366,26 @@ body.login-register.hide-account-title .select2-container--open .select2-dropdow
 }
 .fl-black-btn:hover{
 	background: transparent;
+	color: #48484A;
+}
+
+.fl-gray-btn{
+	display: inline-block;
+	vertical-align: baseline;
+	padding: 15px 25px;
+	min-width: 226px;
+	text-align: center;
+	font-size: 15px;
+	line-height: 1;
+	font-weight: 400;
+	color: #010203;
+	background: #F2F2F2;
+	text-transform: uppercase;
+	border: 1px solid #F2F2F2;
+}
+.fl-gray-btn:hover{
+	background: transparent;
+	border-color: #48484A;
 	color: #48484A;
 }
 
