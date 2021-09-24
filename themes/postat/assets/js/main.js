@@ -266,6 +266,18 @@ if (windowWidth > 767) {
   }
 }
 
+if($('.start-flatpickr').length ){
+  $('.start-flatpickr').flatpickr({
+    disableMobile: true,
+  }); 
+}
+
+if($('.end-flatpickr').length ){
+  $('.end-flatpickr').flatpickr({
+    disableMobile: true,
+  }); 
+}
+
 /*start of Shariful*/
 
 var windowWidth = $(window).width();
