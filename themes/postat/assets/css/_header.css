@@ -102,16 +102,19 @@
 }
 .hdr-socials ul li{
 	padding: 0 7px;
+	font-size: 18px;
 }
-.hdr-socials ul li a i,
-.hdr-socials ul li a{
+.hdr-socials ul li a i{
 	display: inline-block;
 }
-.hdr-socials ul li a:hover i svg{
-	fill: #48484A;
+.hdr-socials ul li a{
+	display: inline-block;
+	font-size: 18px;
+	color: #48484A;
+	line-height: 1;
 }
 .header{
-
+	padding-bottom: 30px;
 }
 .header-inr{
 	display: flex;
@@ -210,34 +213,6 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	line-height: 1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .allWork .bdoverlay {
     z-index: 9999;
     opacity: 1;
@@ -274,7 +249,7 @@ body.allWork{
     bottom: 0;
     background: #f2f2f2;
     width: 0;
-    z-index: 99999;
+    z-index: -99999;
     opacity: 0;
     -ms-transition: all 0.3s;
     -webkit-transition: all 0.3s;
@@ -310,7 +285,17 @@ body.allWork{
 .xs-menu-col:last-of-type{
 	padding-right: 0;
 }
-
+.xs-hdr-socials{
+	width: 100%;
+	margin-top: -27px;
+}
+.xs-hdr-socials .hdr-socials{
+	padding-left: 0;
+	
+}
+.xs-hdr-socials .hdr-socials ul{
+	justify-content: flex-end;
+}
 .hamburger-icon span {
     content: "";
     position: absolute;
@@ -350,4 +335,34 @@ body.allWork{
 .allWork .hamburger-icon span:nth-child(2) {
     content: none;
     display: none;
+}
+
+
+/*responsive*/
+@media(max-width: 1699px){
+	.logo a{
+		max-width: 385px;
+	}
+}
+@media(max-width: 1399px){
+	.logo a{
+		max-width: 350px;
+	}
+}
+@media(max-width: 1199px){
+	.logo a{
+		max-width: 30px;
+	}
+}
+@media(max-width: 991px){
+	
+}
+@media(max-width: 767px){
+	
+}
+@media(max-width: 639px){
+	
+}
+@media(max-width: 575px){
+	
 }
