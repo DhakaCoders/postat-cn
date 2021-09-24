@@ -113,4 +113,29 @@
 }
 .pt-fullwidth-txt-module p:last-of-type{
 	margin-bottom: 0;
+
+}
+
+
+.pt-fullwidth-txt-module-white-black{
+	background: #010203;
+}
+.pt-fullwidth-txt-module-white-green{
+	background: #808368;
+}
+.pt-fullwidth-txt-module-white-black,
+.pt-fullwidth-txt-module-white-green,
+.pt-fullwidth-txt-module-white-black h1,
+.pt-fullwidth-txt-module-white-black h2,
+.pt-fullwidth-txt-module-white-black h3,
+.pt-fullwidth-txt-module-white-black h4,
+.pt-fullwidth-txt-module-white-black h5,
+.pt-fullwidth-txt-module-white-black h6,
+.pt-fullwidth-txt-module-white-green h1,
+.pt-fullwidth-txt-module-white-green h2,
+.pt-fullwidth-txt-module-white-green h3,
+.pt-fullwidth-txt-module-white-green h4,
+.pt-fullwidth-txt-module-white-green h5,
+.pt-fullwidth-txt-module-white-green h6{
+	color: #fff;
 }
