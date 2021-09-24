@@ -245,7 +245,8 @@ if( $('.wpforms-error').length ){
 var windowWidth = $(window).width();
 var containerWidth = $('.container').width();
 var containerOffset = (windowWidth - containerWidth);
-var containerLftOffset = (containerOffset / 2);
+
+var containerLftOffset = ((containerOffset / 2)+1);
 $('.contact-form-lft-bg').css('width', containerLftOffset);
 $('.contact-form-rgt-bg').css('width', containerLftOffset);
 
