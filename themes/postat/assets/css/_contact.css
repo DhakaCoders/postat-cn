@@ -11,13 +11,13 @@
     width: 67%;
 }
 .contact-form-dsc-wrp {
-    padding-top: 200px;
+    padding-top: 235px;
     padding-left: 170px;
+    padding-bottom: 195px;
 }
 .contact-form-info-cntlr {
-
-    padding-top: 200px;
-    padding-bottom: 150px;
+    padding-top: 235px;
+    padding-bottom: 50px;
 }
 .contact-form-info-title {
     margin-bottom: 46px;
@@ -31,7 +31,7 @@
 }
 .contact-form-info-des {
     padding-right: 72px;
-    padding-bottom: 30px;
+    padding-bottom: 35px;
 }
 .cnt-tel a,
 .cnt-addres a {
@@ -395,3 +395,26 @@ textarea {
 
 
 /*responsive-start*/
+
+
+@media (max-width: 1699px){
+    .contact-form-info-cntlr,
+    .contact-form-dsc-wrp{
+        padding-top: 215px;
+    }
+    .contact-form-dsc-wrp{
+        padding-left: 160px;
+    }
+    .contact-form-info-title {
+        margin-bottom: 42px;
+    }
+}
+@media (max-width: 1699px){
+    
+}
+@media (max-width: 1699px){
+    
+}
+@media (max-width: 1699px){
+    
+}
