@@ -20,6 +20,7 @@ a{
 }
 a:hover{
 	color: #48484A;
+	letter-spacing: 1px;
 }
 
 body {

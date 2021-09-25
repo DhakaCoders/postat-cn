@@ -252,6 +252,12 @@
 	.hunter-sec {
 	    height: 1000px;
 	}
+	.follow-img {
+	    margin-bottom: 80px;
+	}
+	.lftdes-rgtimg-grd-item {
+	    padding-bottom: 90px;
+	}
 }
 @media(max-width: 1399px){
 	.lftdes-rgtimg-img {
@@ -280,6 +286,9 @@
 	}
 	.hunter-sec {
 	    height: 900px;
+	}
+	.lftdes-rgtimg-grd-item {
+	    padding-bottom: 80px;
 	}
 }
 @media(max-width: 1199px){
@@ -319,6 +328,12 @@
 	.hunter-sec {
 	    height: 800px;
 	}
+	.follow-img {
+	    margin-bottom: 70px;
+	}
+	.lftdes-rgtimg-grd-item {
+	    padding-bottom: 70px;
+	}
 }
 @media(max-width: 991px){
 	.lftdes-rgtimg-sec {
@@ -355,10 +370,122 @@
 	.hunter-sec {
 	    height: 700px;
 	}
+	.waking-up-des blockquote p {
+	    font-size: 25px;
+	}
+	.follow-img {
+	    margin-bottom: 60px;
+	}
+	.lftdes-rgtimg-grd-item {
+	    padding-bottom: 60px;
+	}
 }
 @media(max-width: 767px){
+	.lftdes-rgtimg-sec {
+	    padding: 70px 0 90px;
+	}
+	.lftdes-rgtimg-ctlr {
+	    display: block;
+	}
+	.lftdes-rgtimg-lft{
+		width: 100%;
+		padding-right: 0;
+		margin-bottom: 30px;
+	}
+	.lftimg-rgtdes .lftdes-rgtimg-lft {
+	    padding-left: 0;
+	}
+	.lftdes-rgtimg-rgt {
+	    width: 100%;
+	}
 
+	.lftdes-rgtimg-img-ctlr{
+		max-width: 400px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.lftdes-rgtimg-img {
+	    height: 350px;
+	}
+	.lftdes-rgtimg-title {
+	    margin-bottom: 20px;
+	}
+	.lftdes-rgtimg-subtitle {
+	    margin-bottom: 20px;
+	}
+	.cabin-sec {
+	    min-height: 600px;
+	}
+	.cabin-des-title {
+	    margin-bottom: 20px;
+	}
+	.fea-grd-ctlr {
+	    padding-bottom: 15px;
+	}
+	.lftdes-rgtimg-des-btn {
+	    padding-top: 20px;
+	}
+	.luxury-sec {
+	    min-height: 220px;
+	}
+	.waking-up-sec {
+	    height: 600px;
+	}
+	.waking-up-des {
+	    margin-top: 70px;
+	}
+	.waking-up-des blockquote p {
+	    font-size: 22px;
+	}
+	.follow-sec {
+	    padding: 70px 0 80px;
+	}
+	.follow-img {
+	    margin-bottom: 50px;
+	}
+	.follow-btm-des{
+		display: block;
+	}
+	.follow-btm-des-hdr{
+		padding-right: 0;
+		padding-bottom: 30px;
+	}
+	.hunter-sec {
+	    height: 600px;
+	}
+	.lftdes-rgtimg-grd-item {
+	    padding-bottom: 50px;
+	}
 }
 @media(max-width: 575px){
-
+	.lftdes-rgtimg-sec {
+	    padding: 60px 0 80px;
+	}
+	.cabin-sec {
+	    min-height: 550px;
+	}
+	.cabin-sec-inr {
+	    padding-top: 80px;
+	}
+	.luxury-sec {
+	    min-height: 200px;
+	}
+	.waking-up-sec {
+	    height: 500px;
+	}
+	.follow-sec {
+	    padding: 60px 0 70px;
+	}
+	.hunter-sec {
+	    height: 600px;
+	}
+	.lftdes-rgtimg-img {
+	    height: 300px;
+	}
+}
+@media(max-width: 479px){
+	.cabin-sec-inr {
+	    padding-top: 50px;
+	}
 }
