@@ -1,7 +1,12 @@
 
 
 .pt-text-slider-ctlr{
+	padding-bottom: 170px;
+}
 
+.pt-text-slider-wrap{
+	padding-top: 170px;
+	border-top: 3px solid #D4E2CF;
 }
 
 .pt-text-slider{
@@ -94,6 +99,9 @@
 	padding-bottom: 30px;
 }
 
+.pt-team-grd-item{
+	position: relative;
+}
 .pt-team-grd-item-img-ctlr{
 	position: relative;
 	overflow: hidden;
@@ -102,13 +110,21 @@
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	-ms-transition: all 0.5s;
+	-webkit-transform: scale(1.0);
+	-ms-transform: scale(1.0);
+	transform: scale(1.0);
 }
 .pt-team-grd-item-des{
 	text-align: center;
 	padding-top: 20px;
+	position: relative;
+	z-index: 11;
 }
 .pt-team-grd-des-title{
 	margin-bottom: 10px;
+}
+.pt-team-grd-des-title a{
+	color: #48484A;
 }
 .pt-team-grd-item-des strong{
 	display: inline-block;
@@ -177,6 +193,11 @@
 	display: block;
 }
 
+.pt-team-grd-item-ctlr:hover .pt-team-grd-item-img{
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+}
 
 
 
@@ -220,12 +241,19 @@
 }
 
 
-
-.pt-gallery-sec{
-	padding-top: 150px;
-	padding-bottom: 250px;
+.pt-ol-ul-sec{
+	padding-bottom: 110px;
 }
 
+
+
+.pt-gallery-sec{
+	padding-bottom: 250px;
+}
+.pt-gallery-sec-inr{
+	padding-top: 200px;
+	border-top: 3px solid #A7A7A7;
+}
 .pt-gallery-sec .pt-grids-sec-entry-hdr-title{
 	text-align: center;
 	margin-bottom: 30px;
@@ -314,5 +342,26 @@ Gallery design
 .btn-ctlr ul li{
 	padding-left: 10px;
 	padding-right: 10px;
+}
+
+
+
+@media(max-width: 1699px){
+
+}
+@media(max-width: 1399px){
+
+}
+@media(max-width: 1199px){
+
+}
+@media(max-width: 991px){
+
+}
+@media(max-width: 767px){
+
+}
+@media(max-width: 575px){
+
 }
 

@@ -309,7 +309,7 @@ if( $('.ptTextSlider').length ){
       dots: false,
       arrows: false,
       infinite: false,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 4000,
       speed: 700,
       slidesToShow: 1,
