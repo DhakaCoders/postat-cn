@@ -324,6 +324,21 @@ $('.pt-accordion-title').on('click', function(){
   $(this).parents('.pt-accordion-menu').siblings().find('.pt-accordion-des').slideUp(300);
 });
 
+if( $('.ptTeamSlider').length ){
+    $('.ptTeamSlider').slick({
+      dots: false,
+      arrows: true,
+      infinite: false,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      prevArrow: $('.pt-team-slider-ctlr .pt-slider-prev-nxt .pt-prev'),
+      nextArrow: $('.pt-team-slider-ctlr .pt-slider-prev-nxt .pt-nxt')
+    });
+}
+
 
 
 
