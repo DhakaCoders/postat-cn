@@ -335,7 +335,33 @@ if( $('.ptTeamSlider').length ){
       slidesToShow: 4,
       slidesToScroll: 1,
       prevArrow: $('.pt-team-slider-ctlr .pt-slider-prev-nxt .pt-prev'),
-      nextArrow: $('.pt-team-slider-ctlr .pt-slider-prev-nxt .pt-nxt')
+      nextArrow: $('.pt-team-slider-ctlr .pt-slider-prev-nxt .pt-nxt'),
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
     });
 }
 
