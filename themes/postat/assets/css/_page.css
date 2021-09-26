@@ -148,7 +148,13 @@
 .pt-fullwidth-txt-module-white-green h3,
 .pt-fullwidth-txt-module-white-green h4,
 .pt-fullwidth-txt-module-white-green h5,
-.pt-fullwidth-txt-module-white-green h6{
+.pt-fullwidth-txt-module-white-green h6,
+.pt-fullwidth-txt-module-white-mint-bg h1,
+.pt-fullwidth-txt-module-white-mint-bg h2,
+.pt-fullwidth-txt-module-white-mint-bg h3,
+.pt-fullwidth-txt-module-white-mint-bg h4,
+.pt-fullwidth-txt-module-white-mint-bg h5,
+.pt-fullwidth-txt-module-white-mint-bg h6{
 	color: #fff;
 }
 
@@ -276,6 +282,18 @@ ol li::before {
 	.pt-grids-col-entry-hdr-title {
 	    margin-bottom: 35px!important;
 	}
+	.pt-columns-2R .pt-grid-item:first-of-type {
+	    width: 65%;
+	}
+	.pt-columns-2R .pt-grid-item {
+	    width: 35%;
+	}
+	.pt-columns-2L .pt-grid-item:first-of-type {
+	    width: 35%;
+	}
+	.pt-columns-2L .pt-grid-item {
+	    width: 65%;
+	}
 	
 }
 @media(max-width: 1399px){
@@ -287,8 +305,8 @@ ol li::before {
 	    margin-bottom: 30px!important;
 	}
 	.pt-grids-sec-cntlr {
-	    padding-top: 70px;
-	    padding-bottom: 70px;
+	    padding-top: 60px;
+	    padding-bottom: 60px;
 	}
 	.pt-grids-sec-entry-hdr-title {
 	    margin-bottom: 30px!important;

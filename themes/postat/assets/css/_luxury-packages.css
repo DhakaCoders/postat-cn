@@ -60,6 +60,9 @@
     color: #FFFFFF;
     margin-bottom: 23px;
 }
+.full-width-des-innr p:last-of-typ4{
+    margin-bottom: 40px;
+}
 .full-width-des-innr a{
     color: #FFFFFF;
     border-color: #FFFFFF;
@@ -130,8 +133,8 @@
 /*responsive-start*/
 @media (max-width: 1699px){
     .pt-intro-text-sec {
-        padding-top: 180px;
-        padding-bottom: 180px;
+        padding-top: 140px;
+        padding-bottom: 140px;
     }
     .full-width-des-innr {
         padding-top: 80px;
@@ -144,13 +147,12 @@
     .full-width-des-title{
         margin-bottom: 38px;
     }
+    .pt-intro-text-module p {
+        font-size: 28px;
+    }
 
 }
 @media (max-width: 1499px){
-    .pt-intro-text-sec {
-        padding-top: 170px;
-        padding-bottom: 170px;
-    }
     .full-width-des-innr {
         padding-top: 70px;
         padding-left: 85px;
@@ -159,14 +161,11 @@
     .full-width-img-bleed-sec-rows-cntlr ul li:nth-child(2n+2) .full-width-img-des-cntlr .full-width-img-des-rgt .full-width-des-innr{
         padding-right: 85px;
     }
-    .pt-intro-text-module p{
-        font-size: 32px;
-    }
 }
 @media (max-width: 1399px){
     .pt-intro-text-sec {
-        padding-top: 160px;
-        padding-bottom: 160px;
+        padding-top: 130px;
+        padding-bottom: 130px;
     }
     .full-width-des-innr {
         padding-top: 60px;
@@ -179,14 +178,11 @@
     .full-width-des-title {
         margin-bottom: 32px;
     }
-    .pt-intro-text-module p{
-        font-size: 30px;
-    }
 }
 @media (max-width: 1199px){
     .pt-intro-text-sec {
-        padding-top: 140px;
-        padding-bottom: 140px;
+        padding-top: 110px;
+        padding-bottom: 110px;
     }
     .full-width-des-innr {
         padding-top: 50px;
@@ -200,13 +196,13 @@
         margin-bottom: 27px;
     }
     .pt-intro-text-module p{
-        font-size: 28px;
+        font-size: 26px;
     }
 }
 @media (max-width: 991px){
     .pt-intro-text-sec {
-        padding-top: 120px;
-        padding-bottom: 120px;
+        padding-top: 90px;
+        padding-bottom: 90px;
     }
     .full-width-des-innr {
         padding-top: 40px;
@@ -217,7 +213,7 @@
         padding-right: 50px;
     }
     .full-width-des-title {
-        margin-bottom: 22px;
+        margin-bottom: 24px;
     }
     .pt-intro-text-module p{
         font-size: 26px;
@@ -225,11 +221,8 @@
 }
 @media (max-width: 767px){
     .pt-intro-text-sec {
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
-    .pt-intro-text-module p{
-        font-size: 24px;
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
     .full-width-img-des-lft, 
     .full-width-img-des-rgt{
@@ -267,7 +260,7 @@
 }
 @media (max-width: 575px){
     .pt-intro-text-sec {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 }

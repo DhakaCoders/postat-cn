@@ -446,45 +446,9 @@ textarea {
     }
 }
 @media (max-width: 991px){
-    .contact-form-info-cntlr, 
-    .contact-form-dsc-wrp {
-        padding-top: 100px;
-    }
-    .contact-form-info-des{
-        padding-right: 30px;
-        padding-bottom: 30px;
-    }
-    .contact-form-dsc-wrp{
-        padding-left: 60px;
-        padding-bottom: 110px;
-    }
-    .contact-google-map iframe{
-        height: 450px;
-    }
-    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button{
-        margin: auto;
-    }
-    .contact-form-check{
-        position: absolute;
-        margin-top: -130px;
-    }
-    .contact-form-check{
-        width: 100%;
-    }
-    .wpforms-form{
-        position: relative;
-    }
-    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-textarea textarea{
-        height: 170px!important;
-    }
-    /*.wpforms-submit-container {
-        padding-top: 85px;
-    }*/
     .contact-form-check {
         display: none;
     }
-}
-@media (max-width: 767px){
     .contact-form-rgt,
     .contact-form-lft{
         width: 100%;
@@ -503,14 +467,14 @@ textarea {
         margin-right: -20px;
     }
     .contact-form-info-cntlr {
-        max-width: 445px;
+        max-width: 670px;
         width: 100%;
         margin: 0 auto;
         text-align: center;
     }
     .contact-form-dsc-wrp {
         padding: 0;
-        max-width: 600px;
+        max-width: 650px;
         width: 100%;
         margin: 0 auto;
         padding-bottom: 70px;
@@ -537,7 +501,15 @@ textarea {
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-textarea textarea {
         height: 160px!important;
     }
+    .contact-google-map iframe{
+        height: 450px;
+    }
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button{
+        margin: auto;
+    }
+
 }
+
 @media (max-width: 575px){
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field{
         width: 100%;
