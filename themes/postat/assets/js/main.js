@@ -254,13 +254,15 @@ $(window).resize(function(){
 if( $('.ptTextSlider').length ){
     $('.ptTextSlider').slick({
       dots: false,
-      arrows: false,
+      arrows: true,
       infinite: false,
       autoplay: false,
       autoplaySpeed: 4000,
       speed: 700,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      prevArrow: $('.pt-text-slider-wrap .pt-slider-prev-nxt .pt-prev'),
+      nextArrow: $('.pt-text-slider-wrap .pt-slider-prev-nxt .pt-nxt'),
     });
 }
 
