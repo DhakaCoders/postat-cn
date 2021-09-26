@@ -17,3 +17,11 @@
 	color: #D3E3CE;
 	text-transform: uppercase;
 }
+
+
+
+@media(max-width: 1699px){
+	.blockquote-sec {
+	    padding-bottom: 70px;
+	}
+}

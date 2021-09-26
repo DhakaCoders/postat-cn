@@ -236,6 +236,18 @@ if($('.end-flatpickr').length ){
   }); 
 }
 
+
+if( $('.pageBnrSlider').length ){
+    $('.pageBnrSlider').slick({
+      dots: true,
+      infinite: false,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    });
+}
 /*start of Shariful*/
 
 var containerWidth = $('.container').width();
