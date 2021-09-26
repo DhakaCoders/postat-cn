@@ -76,3 +76,15 @@
 	background: #48484A;
 	color: #fff;
 }
+
+
+
+
+
+
+/*responsive*/
+@media(max-width: 575px){
+	.hm-bnr-btm-btn{
+		width: 100%;
+	}
+}
