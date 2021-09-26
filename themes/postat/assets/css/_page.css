@@ -148,7 +148,13 @@
 .pt-fullwidth-txt-module-white-green h3,
 .pt-fullwidth-txt-module-white-green h4,
 .pt-fullwidth-txt-module-white-green h5,
-.pt-fullwidth-txt-module-white-green h6{
+.pt-fullwidth-txt-module-white-green h6,
+.pt-fullwidth-txt-module-white-mint-bg h1,
+.pt-fullwidth-txt-module-white-mint-bg h2,
+.pt-fullwidth-txt-module-white-mint-bg h3,
+.pt-fullwidth-txt-module-white-mint-bg h4,
+.pt-fullwidth-txt-module-white-mint-bg h5,
+.pt-fullwidth-txt-module-white-mint-bg h6{
 	color: #fff;
 }
 
