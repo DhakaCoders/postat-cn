@@ -53,6 +53,7 @@
 }
 .contact-form-sec-wrp{
     position: relative;
+    background: #A7A7A7;
     z-index: 99;
 }
 .contact-form-lft-bg{
@@ -391,7 +392,7 @@ textarea {
         padding-top: 200px;
     }
     .contact-form-dsc-wrp{
-        padding-left: 160px;
+        padding-left: 130px;
     }
     .contact-form-info-title {
         margin-bottom: 42px;
@@ -414,7 +415,7 @@ textarea {
         padding-top: 180px;
     }
     .contact-form-dsc-wrp {
-        padding-left: 155px;
+        padding-left: 120px;
         padding-bottom: 180px;
     }
     .contact-google-map iframe{
@@ -427,7 +428,7 @@ textarea {
         padding-top: 150px;
     }
     .contact-form-dsc-wrp {
-        padding-left: 130px;
+        padding-left: 100px;
         padding-bottom: 170px;
     }
     .contact-form-info-des{
@@ -447,9 +448,10 @@ textarea {
     }
     .contact-form-info-des{
         padding-right: 30px;
+        padding-bottom: 30px;
     }
     .contact-form-dsc-wrp{
-        padding-left: 80px;
+        padding-left: 60px;
         padding-bottom: 140px;
     }
     .contact-google-map iframe{
@@ -471,6 +473,9 @@ textarea {
     .wpforms-form{
         position: relative;
     }
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-textarea textarea{
+        height: 170px!important;
+    }
 }
 @media (max-width: 767px){
     .contact-form-rgt,
@@ -491,14 +496,14 @@ textarea {
         margin-right: -20px;
     }
     .contact-form-info-cntlr {
-        max-width: 400px;
+        max-width: 445px;
         width: 100%;
         margin: 0 auto;
         text-align: center;
     }
     .contact-form-dsc-wrp {
         padding: 0;
-        max-width: 500px;
+        max-width: 600px;
         width: 100%;
         margin: 0 auto;
         padding-bottom: 70px;
@@ -516,6 +521,13 @@ textarea {
     }
     .contact-form-info-des{
         padding-right: 0;
+    }
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-textarea textarea, 
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input{
+        height: 52px;
+    }
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-textarea textarea {
+        height: 160px!important;
     }
 }
 @media (max-width: 575px){
