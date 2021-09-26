@@ -161,6 +161,9 @@
 }
 .pt-team-grd-des-title{
 	margin-bottom: 10px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-ms-transition: all 0.5s;
 }
 .pt-team-grd-des-title:hover{
 	opacity: 0.7;
@@ -271,7 +274,11 @@
 
 .pt-fea-sec .pt-grids-sec-entry-hdr-title{
 	text-align: center;
+	font-family: 'Epilogue', sans-serif;
+	color: #002F2F;
+	text-transform: capitalize;
 }
+
 
 .pt-fea-slider-grds{
 	display: flex;
@@ -394,14 +401,14 @@ Gallery design
 
 
 .pt-grid-item-img{
-	height: 305px;
+	height: 350px;
 }
 .pt-grid-item-img img{
 	display: none;
 }
 
 .pt-grd-item-img-columns2{
-	height: 340px;
+	height: 400px;
 }
 
 
@@ -450,6 +457,14 @@ Gallery design
 		padding-left: 10px;
 	    padding-right: 10px;
 	    padding-bottom: 20px;
+	}
+	.gallery {
+	    margin-left: -10px;
+	    margin-right: -10px;
+	}
+	.gallery-item {
+	    padding: 0 10px;
+	    margin-bottom: 20px;
 	}
 }
 @media(max-width: 1399px){
