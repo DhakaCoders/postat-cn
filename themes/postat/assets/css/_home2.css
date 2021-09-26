@@ -11,21 +11,21 @@
 }
 
 .lftdes-rgtimg-lft{
-	width: 57%;
-	padding-right: 30px;
+	width: 60%;
 }
 
 .lftdes-rgtimg-rgt{
-	width: 43%;
+	width: 40%;
+	padding-left: 40px;
 }
 
 .lftimg-rgtdes .lftdes-rgtimg-lft{
 	order: 2;
-	padding-right: 0;
-	padding-left: 30px;
 }
 .lftimg-rgtdes .lftdes-rgtimg-rgt{
 	order: 1;
+	padding-left: 0;
+	padding-right: 40px;
 }
 
 
@@ -42,6 +42,7 @@
 
 .lftdes-rgtimg-subtitle{
 	margin-bottom: 30px;
+	letter-spacing: 1px;
 }
 
 
@@ -58,7 +59,6 @@
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	color: #fff;
 }
 
 .cabin-des-title{
@@ -68,6 +68,7 @@
 .cabin-des-subtitle{
 	margin-bottom: 30px;
 	color: #fff;
+	letter-spacing: 1px;
 }
 
 
@@ -135,7 +136,8 @@
 	font-weight: 400;
 }
 .luxury-des-title a:hover{
-	color: #A7A7A7;
+	/*color: #A7A7A7;*/
+	opacity: 0.7;
 }
 
 
@@ -151,12 +153,14 @@
 }
 .waking-up-des blockquote p{
 	font-size:34px;
-	font-weight: 400;
-	color: #48484A;
+	font-weight: 300;
+	color: #a29e9e;
 }
 .waking-up-des blockquote strong{
 	font-size: 18px;
-	color: #48484A;
+	color: #a29e9e;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 
@@ -183,12 +187,14 @@
 }
 .follow-btm-des-title{
 	margin-bottom: 0;
+	letter-spacing: 1px;
+	font-size: 16px;
 }
 .follow-btm-des-btn{
 	margin-left: auto;
 }
 .follow-btm-des-btn .fl-black-btn{
-	min-width: 284px;
+	min-width: 270px;
 }
 
 
@@ -201,7 +207,6 @@
 .hunter-des{
 	max-width: 480px;
 	width: 100%;
-	color: #fff;
 }
 .hunterd-des-title{
 	color: #fff;
@@ -210,6 +215,7 @@
 .hunter-des-subtitle{
 	color: #fff;
 	margin-bottom: 30px;
+	letter-spacing: 1px;
 }
 
 
@@ -238,8 +244,18 @@
 	    margin-bottom: 30px;
 	}
 	.fea-grd-ctlr{
-		padding-bottom: 25px;
+		padding-bottom: 22px;
+		margin-left: -15px;
+    	margin-right: -15px;
 	}
+	.fea-item{
+		padding-left: 15px;
+	    padding-right: 15px;
+	    padding-bottom: 15px;
+	}
+	/*.fea-item i svg{
+		max-width: 30px;
+	}*/
 	.waking-up-sec {
 	    height: 1000px;
 	}
@@ -261,10 +277,26 @@
 	.lftdes-rgtimg-grd-item {
 	    padding-bottom: 90px;
 	}
+	.lftdes-rgtimg-subtitle {
+	    margin-bottom: 20px;
+	}
+	.lftdes-rgtimg-des-btn {
+	    padding-top: 20px;
+	}
+	.follow-btm-des-btn .fl-black-btn {
+	    min-width: 230px;
+	    font-size: 13px;
+	}
+	.follow-btm-des-title{
+		font-size: 13px!important;
+	}
+	.waking-up-des blockquote strong {
+	    font-size: 17px;
+	}
 }
 @media(max-width: 1399px){
 	.lftdes-rgtimg-img {
-	    height: 450px;
+	    height: 480px;
 	}
 	.lftdes-rgtimg-sec {
 	    padding: 120px 0 150px;
@@ -293,16 +325,28 @@
 	.lftdes-rgtimg-grd-item {
 	    padding-bottom: 80px;
 	}
+	.lftimg-rgtdes .lftdes-rgtimg-rgt{
+		padding-right: 20px;
+	}
+	.lftdes-rgtimg-rgt{
+		padding-left: 20px;
+	}
+	.lftdes-rgtimg-rgt{
+		padding-top: 10px;
+	}
+	.waking-up-des blockquote strong {
+	    font-size: 16px;
+	}
 }
 @media(max-width: 1199px){
 	.lftdes-rgtimg-img {
-	    height: 400px;
+	    height: 440px;
 	}
 	.lftdes-rgtimg-lft {
-	    padding-right: 20px;
+	    padding-right: 0;
 	}
 	.lftimg-rgtdes .lftdes-rgtimg-lft {
-	    padding-left: 20px;
+	    padding-left: 0;
 	}
 	.lftdes-rgtimg-sec {
 	    padding: 90px 0 110px;
@@ -337,8 +381,36 @@
 	.lftdes-rgtimg-grd-item {
 	    padding-bottom: 70px;
 	}
+	.lftdes-rgtimg-rgt {
+	    padding-top: 0px;
+	}
+	.lftdes-rgtimg-title {
+	    margin-bottom: 20px;
+	}
+	.fea-grd-ctlr {
+	    padding-bottom: 15px;
+	    margin-left: -8px;
+	    margin-right: -8px;
+	}
+	.fea-item {
+	    padding-left: 8px;
+	    padding-right: 8px;
+	    padding-bottom: 10px;
+	}
+	.lftdes-rgtimg-subtitle {
+	    margin-bottom: 15px;
+	}
+	.follow-btm-des-btn .fl-black-btn {
+	    min-width: 235px;
+	}
 }
 @media(max-width: 991px){
+	.lftdes-rgtimg-lft {
+	    width: 55%;
+	}
+	.lftdes-rgtimg-rgt{
+		width: 45%;
+	}
 	.lftdes-rgtimg-sec {
 	    padding: 80px 0 100px;
 	}
@@ -381,6 +453,12 @@
 	}
 	.lftdes-rgtimg-grd-item {
 	    padding-bottom: 60px;
+	}
+	.follow-btm-des-title {
+	    font-size: 12px!important;
+	}
+	.waking-up-des blockquote strong {
+	    font-size: 15px;
 	}
 }
 @media(max-width: 767px){
@@ -459,6 +537,12 @@
 	}
 	.lftdes-rgtimg-grd-item {
 	    padding-bottom: 50px;
+	}
+	.follow-btm-des-title {
+	    font-size: 11px!important;
+	}
+	.waking-up-des blockquote strong {
+	    font-size: 14px;
 	}
 }
 @media(max-width: 575px){

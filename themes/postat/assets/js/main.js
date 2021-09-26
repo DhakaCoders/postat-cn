@@ -303,6 +303,14 @@ var containerOffset = (windowWidth - containerWidth);
 var containerLftOffset = (containerOffset / 2);
 $('.follow-img-ctlr').css('margin-left', containerLftOffset);
 
+$(window).resize(function(){
+  var windowWidth = $(window).width();
+  var containerWidth = $('.container').width();
+  var containerOffset = (windowWidth - containerWidth);
+  var containerLftOffset = (containerOffset / 2);
+  $('.follow-img-ctlr').css('margin-left', containerLftOffset);
+});
+
 
 if( $('.ptTextSlider').length ){
     $('.ptTextSlider').slick({
