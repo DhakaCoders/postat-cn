@@ -473,18 +473,23 @@ Gallery design
 	.pt-nxt{
 		right: -75px!important;
 	}
-}
-@media(max-width: 1399px){
-	.btn-ctlr ul{
-		display: block;
-		margin-left: 0;
-		margin-right: 0;
+	.btn-ctlr ul {
+	    margin-left: -6px;
+	    margin-right: -6px;
 	}
 	.btn-ctlr ul li {
-	    padding-left: 0;
-	    padding-right: 0;
-	    padding-bottom: 20px;
+	    padding-left: 6px;
+	    padding-right: 6px;
 	}
+	.btn-ctlr .fl-transparent-btn{
+		min-width: 190px;
+	}
+	.btn-ctlr .fl-gray-btn{
+		min-width: 190px;
+	}
+}
+@media(max-width: 1399px){
+	
 }
 @media(max-width: 1199px){
 	.pt-text-slider-ctlr {
