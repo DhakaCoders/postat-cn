@@ -37,12 +37,16 @@
 	font-size: 34px;
 	font-weight: 300;
 	line-height: 1.5;
+	color: #48484A;
 }
 .hm-bnr-desc > p:last-of-type{
 	margin-bottom: 0;
 }
 .hm-bnr-desc > p a{
 	font-size: 18px;
+}
+.hm-bnr-btn .fl-transparent-btn{
+	font-weight: 500;
 }
 .hm-bnr-btm-btn-cntlr{
 	position: absolute;
@@ -83,6 +87,26 @@
 
 
 /*responsive*/
+@media(max-width: 1699px){
+	.hm-bnr-cntlr{
+		height: 850px;
+	}
+}
+@media(max-width: 1399px){
+
+}
+@media(max-width: 1199px){
+
+}
+@media(max-width: 991px){
+
+}
+@media(max-width: 767px){
+
+}
+@media(max-width: 369px){
+
+}
 @media(max-width: 575px){
 	.hm-bnr-btm-btn{
 		width: 100%;
