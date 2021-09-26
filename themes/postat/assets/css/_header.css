@@ -68,6 +68,7 @@
 	display: inline-block;
 	position: relative;
 	padding-left: 29px;
+	font-size: 18px;
 }
 .hdr-tel a i{
 	display: inline-block;
@@ -264,11 +265,6 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
     max-width: 100%;
     width: 0;
 
-
-    right: 0;
-    opacity: 1;
-    z-index: 99999;
-    width: 100%;
 }
 .xs-menu-cntlr{
 	padding-bottom: 80px;
@@ -385,6 +381,9 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	.xs-menu-hdr{
 		margin-bottom: 80px;
 	}
+	.xs-mbl-menu{
+		margin-bottom: 140px;
+	}
 }
 @media(max-width: 1199px){
 	.logo a{
@@ -398,6 +397,9 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	}
 	.xs-menu-hdr{
 		margin-bottom: 70px;
+	}
+	.xs-mbl-menu{
+		margin-bottom: 120px;
 	}
 }
 @media(max-width: 991px){
@@ -432,6 +434,9 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	}
 	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
 		padding-top: 35px;
+	}
+	.xs-mbl-menu{
+		margin-bottom: 80px;
 	}
 }
 @media(max-width: 767px){
@@ -504,6 +509,42 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	.hdr-mail{
 		display: block;
 	}
+	.hdr-mail a i svg{
+		width: 28px!important;
+		height: auto!important;
+		fill: #48484A;
+	}
+	.hdr-tel a i svg{
+		width: 24px!important;
+		height: auto!important;
+		fill: #48484A;
+	}
+	.hdr-tel{
+		padding-left: 20px;
+	}
+	.hdr-tel a{
+		font-size: 24px;
+		line-height: 1.2;
+		padding-left: 35px;
+		color:  #48484A;
+	}
+	.hdr-details{
+		margin-bottom: 30px;
+		margin-top: 20px;
+	}
+	.hdr-socials ul{
+		margin: 0 -15px;
+	}
+	.hdr-socials ul li{
+		font-size: 26px;
+		padding: 0 15px;
+	}
+	.hdr-socials ul li a{
+		font-size: 26px;
+	}
+	.xs-mbl-menu{
+		margin-bottom: 60px;
+	}
 }
 @media(max-width: 639px){
 	
@@ -528,6 +569,18 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	.allWork .hamburger-icon span:nth-child(1){
 		top: 9px;
 	}
-
-
+	.xs-mbl-menu{
+		margin-bottom: 50px;
+	}
+	nav.main-nav > ul > li > a{
+		font-size: 24px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children > a{
+		padding-right: 30px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children > a:after {
+		top: 8px;
+		height: 9px;
+		width: 15.2px;
+	}
 }
