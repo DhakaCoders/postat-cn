@@ -442,10 +442,10 @@ Gallery design
 		padding-top: 180px;
 	}
 	.pt-text-slider-ctlr {
-	    padding-bottom: 150px;
+	    padding-bottom: 120px;
 	}
 	.pt-text-slider-wrap {
-	    padding-top: 150px;
+	    padding-top: 120px;
 	}
 	.pt-team-sec {
 	    padding: 180px 0 100px;
@@ -469,12 +469,6 @@ Gallery design
 	}
 }
 @media(max-width: 1399px){
-	.pt-text-slider-ctlr {
-	    padding-bottom: 120px;
-	}
-	.pt-text-slider-wrap {
-	    padding-top: 120px;
-	}
 	.pt-team-sec {
 	    padding: 150px 0 80px;
 	}

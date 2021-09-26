@@ -268,22 +268,22 @@ ol li::before {
 
 @media(max-width: 1699px){
 	.pt-fullwidth-txt-module {
-	    padding-top: 75px;
-	    padding-bottom: 75px;
+	    padding-top: 65px;
+	    padding-bottom: 65px;
 	}
 	.pt-fullwidth-txt-module h2 {
-	    margin-bottom: 35px!important;
+	    margin-bottom: 30px!important;
 	}
 	.pt-grids-sec-cntlr {
-	    padding-top: 80px;
-	    padding-bottom: 80px;
+	    padding-top: 60px;
+	    padding-bottom: 60px;
 	}
 	.pt-grids-sec-entry-hdr-title {
-	    margin-bottom: 35px!important;
+	    margin-bottom: 30px!important;
 	}
 	
 	.pt-grids-col-entry-hdr-title {
-	    margin-bottom: 35px!important;
+	    margin-bottom: 30px!important;
 	}
 	.pt-columns-2R .pt-grid-item:first-of-type {
 	    width: 65%;
@@ -302,28 +302,6 @@ ol li::before {
 		font-size: 15px;
 	}
 	
-}
-@media(max-width: 1399px){
-	.pt-fullwidth-txt-module {
-	    padding-top: 65px;
-	    padding-bottom: 65px;
-	}
-	.pt-fullwidth-txt-module h2 {
-	    margin-bottom: 30px!important;
-	}
-	.pt-grids-sec-cntlr {
-	    padding-top: 60px;
-	    padding-bottom: 60px;
-	}
-	.pt-grids-sec-entry-hdr-title {
-	    margin-bottom: 30px!important;
-	}
-	
-	.pt-grids-col-entry-hdr-title {
-	    margin-bottom: 30px!important;
-	}
-	
-
 }
 @media(max-width: 1199px){
 	.pt-fullwidth-txt-module {
