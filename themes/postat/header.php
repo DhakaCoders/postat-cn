@@ -91,178 +91,180 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-  <div class="page-body-cntlr">
-    <div class="bdoverlay"></div>
-    <header class="header-wrap">
-      <div class="hdr-topbar">
-        <div class="container-lg">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="hdr-topbar-cntlr">
-                <div class="hdr-topbar-inr">
-                  <div class="hdr-details-cntlr hide-sm">
-                    <div class="hdr-details ">
-                      <div class="hdr-mail">
-                        <a href="mailto:hello@postatoakgate.com.au">
-                          <i><svg class="mail-icon" width="19" height="15" viewBox="0 0 19 15" fill="#fff">
-                            <use xlink:href="#mail-icon"></use></svg>
-                          </i>
-                        </a>
-                      </div>
-                      <div class="hdr-tel">
-                        <a href="tel:(02)49939876">
-                          <span>(02) 4993 9876</span>
-                          <i><svg class="phone-icon" width="16.186" height="16.186" viewBox="0 0 16.186 16.186" fill="#fff">
-                            <use xlink:href="#phone-icon"></use></svg>
-                          </i>
-                        </a>
-                      </div>
-                    </div>
+<div class="page-body-cntlr">
+<div class="bdoverlay"></div>
+<header class="header-wrap">
+  <div class="hdr-topbar">
+    <div class="container-lg">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="hdr-topbar-cntlr">
+            <div class="hdr-topbar-inr">
+              <div class="hdr-details-cntlr hide-sm">
+                <div class="hdr-details ">
+                  <div class="hdr-mail">
+                    <a href="mailto:hello@postatoakgate.com.au">
+                      <i><svg class="mail-icon" width="19" height="15" viewBox="0 0 19 15" fill="#fff">
+                        <use xlink:href="#mail-icon"></use></svg>
+                      </i>
+                    </a>
                   </div>
-                  <div class="hdr-socials-cntlr hide-sm">
-                    <div class="hdr-socials">
-                      <ul class="reset-list">
-                        <li>
-                          <a target="_blank" href="#"><i class="fab fa-instagram"></i></a>
-                        </li>
-                        <li>
-                          <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                          <a target="_blank" href="#"><i class="fab fa-youtube"></i></a>
-                        </li>
-                      </ul>
-                    </div>
+                  <div class="hdr-tel">
+                    <a href="tel:(02)49939876">
+                      <span>(02) 4993 9876</span>
+                      <i><svg class="phone-icon" width="16.186" height="16.186" viewBox="0 0 16.186 16.186" fill="#fff">
+                        <use xlink:href="#phone-icon"></use></svg>
+                      </i>
+                    </a>
                   </div>
+                </div>
+              </div>
+              <div class="hdr-socials-cntlr hide-sm">
+                <div class="hdr-socials">
+                  <ul class="reset-list">
+                    <li>
+                      <a target="_blank" href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="#"><i class="fab fa-youtube"></i></a>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="header">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="header-inr">
-                <div class="hdr-lft">
-                  <div class="logo">
-                    <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.png"></a>
-                  </div>
-                </div>
-                <div class="hdr-rgt">
-                  <div class="hamburger-cntlr">
-                    <div class="hamburger-icon">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                  </div>
+    </div>
+  </div>
+  <div class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="header-inr">
+            <div class="hdr-lft">
+              <div class="logo">
+                <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.png"></a>
+              </div>
+            </div>
+            <div class="hdr-rgt">
+              <div class="hamburger-cntlr">
+                <div class="hamburger-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </div>
+</header>
 
 
-      <div class="xs-menu">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="xs-menu-cntlr">
-                <div class="xs-menu-hdr">
-                  <div class="logo">
-                    <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.png"></a>
-                  </div>
-                  <div class="hamburger-cntlr">
-                    <div class="hamburger-icon">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="xs-mbl-menu clearfix">
-                  <div class="xs-menu-col">
-                    <nav class="main-nav">
-                      <ul class="clearfix reset-list">
-                        <li class="current-menu-item"><a href="#">About Post at Oakgate</a></li>
-                        <li class="menu-item-has-children">
-                          <a href="#">The Facilities</a>
-                          <ul class="sub-menu">
-                            <li><a href="#">Watagans</a></li>
-                            <li><a href="#">awaba</a></li>
-                            <li><a href="#">heaton</a></li>
-                          </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                          <a href="#">Luxury Packages</a>
-                          <ul class="sub-menu">
-                            <li><a href="#">Watagans</a></li>
-                            <li><a href="#">awaba</a></li>
-                            <li><a href="#">heaton</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Make a Booking</a></li>
-                        <li><a href="#">Journal</a></li>
-                        <li><a href="#">Contact</a></li>
-                      </ul>
-                    </nav>
-                  </div>
-                  <div class="xs-menu-col">
-                    <nav class="main-nav">
-                      <ul class="clearfix reset-list">
-                        <li class="menu-item-has-children">
-                          <a href="#">The Cabins</a>
-                          <ul class="sub-menu">
-                            <li><a href="#">Watagans</a></li>
-                            <li><a href="#">awaba</a></li>
-                            <li><a href="#">heaton</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                  <div class="hdr-details show-sm">
-                    <div class="hdr-mail">
-                      <a href="mailto:hello@postatoakgate.com.au">
-                        <i><svg class="mail-icon" width="19" height="15" viewBox="0 0 19 15" fill="#fff">
-                          <use xlink:href="#mail-icon"></use></svg>
-                        </i>
-                      </a>
-                    </div>
-                    <div class="hdr-tel">
-                      <a href="tel:(02)49939876">
-                        <span>(02) 4993 9876</span>
-                        <i><svg class="phone-icon" width="16.186" height="16.186" viewBox="0 0 16.186 16.186" fill="#fff">
-                          <use xlink:href="#phone-icon"></use></svg>
-                        </i>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="xs-hdr-socials">
-                    <div class="hdr-socials">
-                      <ul class="reset-list">
-                        <li>
-                          <a target="_blank" href="#"><i class="fab fa-instagram"></i></a>
-                        </li>
-                        <li>
-                          <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                          <a target="_blank" href="#"><i class="fab fa-youtube"></i></a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="hdr-twiter-feed-gallery">
-                  <img src="<?php echo THEME_URI; ?>/assets/images/hdr-twiter-feed-galery.jpg" alt="">
+  <div class="xs-menu">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="xs-menu-cntlr">
+            <div class="xs-menu-hdr">
+              <div class="logo">
+                <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.png"></a>
+              </div>
+              <div class="hamburger-cntlr">
+                <div class="hamburger-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
               </div>
+            </div>
+            <div class="xs-mbl-menu clearfix">
+              <div class="xs-menu-col">
+                <nav class="main-nav">
+                  <ul class="clearfix reset-list">
+                    <li class="current-menu-item"><a href="#">About Post at Oakgate</a></li>
+                    <li class="menu-item-has-children">
+                      <a href="#">The Facilities</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">Watagans</a></li>
+                        <li><a href="#">awaba</a></li>
+                        <li><a href="#">heaton</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <a href="#">Luxury Packages</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">Watagans</a></li>
+                        <li><a href="#">awaba</a></li>
+                        <li><a href="#">heaton</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Make a Booking</a></li>
+                    <li><a href="#">Journal</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="xs-menu-col">
+                <nav class="main-nav">
+                  <ul class="clearfix reset-list">
+                    <li class="menu-item-has-children">
+                      <a href="#">The Cabins</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">Watagans</a></li>
+                        <li><a href="#">awaba</a></li>
+                        <li><a href="#">heaton</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="hdr-details-cntlr show-sm">
+                <div class="hdr-details ">
+                  <div class="hdr-mail">
+                    <a href="mailto:hello@postatoakgate.com.au">
+                      <i><svg class="mail-icon" width="19" height="15" viewBox="0 0 19 15" fill="#fff">
+                        <use xlink:href="#mail-icon"></use></svg>
+                      </i>
+                    </a>
+                  </div>
+                  <div class="hdr-tel">
+                    <a href="tel:(02)49939876">
+                      <span>(02) 4993 9876</span>
+                      <i><svg class="phone-icon" width="16.186" height="16.186" viewBox="0 0 16.186 16.186" fill="#fff">
+                        <use xlink:href="#phone-icon"></use></svg>
+                      </i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="xs-hdr-socials">
+                <div class="hdr-socials">
+                  <ul class="reset-list">
+                    <li>
+                      <a target="_blank" href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a target="_blank" href="#"><i class="fab fa-youtube"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="hdr-twiter-feed-gallery">
+              <img src="<?php echo THEME_URI; ?>/assets/images/hdr-twiter-feed-galery.jpg" alt="">
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
