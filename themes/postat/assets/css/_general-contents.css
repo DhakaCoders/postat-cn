@@ -76,6 +76,8 @@
 }
 
 
+
+
 .pt-team-sec{
 	background: #D3E3CE;
 	padding: 210px 0 120px;
@@ -161,6 +163,9 @@
 	background: url('../images/fl-prev.png');
 	background-repeat: no-repeat;
 }
+.pt-prev:hover{
+	background: url('../images/fl-prev-hover.png');
+}
 
 .pt-nxt{
 	position: absolute;
@@ -179,6 +184,9 @@
 	z-index: 2;
 	background: url('../images/fl-nxt.png');
 	background-repeat: no-repeat;
+}
+.pt-nxt:hover{
+	background: url('../images/fl-nxt-hover.png');
 }
 
 .ptTeamSlider .pt-team-grd-item-ctlr{
