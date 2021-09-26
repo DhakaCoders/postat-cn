@@ -41,6 +41,14 @@
 
 
     <!-- start of Kashob -->
+    <symbol id="close-icon" xmlns="http://www.w3.org/2000/svg" width="66" height="64" viewBox="0 0 66 64">
+      <g id="Menu" transform="translate(8.633 19)">
+        <rect id="background" width="66" height="64" transform="translate(-8.633 -19)" opacity="0"/>
+        <line id="Bottom" x2="49.367" transform="translate(7.23 30.454) rotate(-45)" stroke="#48484a" stroke-linecap="round" stroke-width="2"/>
+        <line id="Middle" x2="49.367" transform="translate(0 13)" stroke="#48484a" stroke-linecap="round" stroke-width="2" opacity="0"/>
+        <line id="Top" x2="49.367" transform="translate(7.23 -4.454) rotate(45)" fill="none" stroke="#48484a" stroke-linecap="round" stroke-width="2"/>
+      </g>
+    </symbol>
 
 
     <!-- start of Noyon -->
@@ -386,7 +394,7 @@
                         <div class="lftdes-rgtimg-des-btn btn-ctlr">
                           <ul class="reset-list clearfix">
                             <li><a class="fl-transparent-btn" href="#">make a booking</a></li>
-                            <li><a class="fl-gray-btn" href="#">floor plan</a></li>
+                            <li><a class="fl-gray-btn" href="#" data-target="#floor-plan-btm-add-card" data-toggle="modal">floor plan</a></li>
                           </ul>
                         </div>
                       </div>
@@ -433,7 +441,7 @@
                         <div class="lftdes-rgtimg-des-btn btn-ctlr">
                           <ul class="reset-list clearfix">
                             <li><a class="fl-transparent-btn" href="#">make a booking</a></li>
-                            <li><a class="fl-gray-btn" href="#">floor plan</a></li>
+                            <li><a class="fl-gray-btn" href="#" data-target="#floor-plan-btm-add-card" data-toggle="modal">floor plan</a></li>
                           </ul>
                         </div>
                       </div>
@@ -480,7 +488,7 @@
                         <div class="lftdes-rgtimg-des-btn btn-ctlr">
                           <ul class="reset-list clearfix">
                             <li><a class="fl-transparent-btn" href="#">make a booking</a></li>
-                            <li><a class="fl-gray-btn" href="#">floor plan</a></li>
+                            <li><a class="fl-gray-btn" href="#" data-target="#floor-plan-btm-add-card" data-toggle="modal">floor plan</a></li>
                           </ul>
                         </div>
                       </div>
@@ -540,6 +548,29 @@
         </div>
       </div>
     </section>
+  </div>
+
+
+  <div class="modal fade show" id="floor-plan-btm-add-card" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="padding-right:0;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i><svg class="mail-icon" width="66" height="64" viewBox="0 0 66 64" fill="#48484a">
+              <use xlink:href="#close-icon"></use></svg>
+            </i>
+          </button>
+          <div class="modal-con-cntlr"> 
+            <div class="modal-img">
+              <img src="assets/images/modal-bg.jpg" alt="">
+            </div>
+            <div class="modal-btn">
+              <a class="fl-transparent-btn" href="#">download plan</a>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>
   </div>
 
 
