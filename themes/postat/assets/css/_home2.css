@@ -266,10 +266,7 @@
 	.pt-bath i{
 		max-width: 35px;
 	}
-	.fea-item i svg
-	.pt-user i svg,
-	.pt-bed i svg,
-	.pt-bath i svg{
+	.fea-item i svg{
 		width: 100%!important;
 		height: auto!important;
 	}
@@ -292,7 +289,7 @@
 	    margin-bottom: 80px;
 	}
 	.lftdes-rgtimg-grd-item {
-	   padding-bottom: 80px;
+	   padding-bottom: 70px;
 	}
 	.lftdes-rgtimg-subtitle {
 	    margin-bottom: 20px;

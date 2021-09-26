@@ -487,6 +487,10 @@ Gallery design
 	.btn-ctlr .fl-gray-btn{
 		min-width: 190px;
 	}
+	.cabin-landing-ctlr .lftdes-rgtimg-sec,
+	.facilites-landing-ctlr .lftdes-rgtimg-sec {
+	    padding: 70px 0 100px;
+	}
 }
 @media(max-width: 1399px){
 	
