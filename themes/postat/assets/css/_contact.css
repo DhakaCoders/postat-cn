@@ -461,9 +461,6 @@ textarea {
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button{
         margin: auto;
     }
-    .wpforms-submit-container {
-        padding-top: 85px;
-    }
     .contact-form-check{
         position: absolute;
         margin-top: -130px;
@@ -476,6 +473,12 @@ textarea {
     }
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-textarea textarea{
         height: 170px!important;
+    }
+    /*.wpforms-submit-container {
+        padding-top: 85px;
+    }*/
+    .contact-form-check {
+        display: none;
     }
 }
 @media (max-width: 767px){
