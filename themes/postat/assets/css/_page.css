@@ -294,6 +294,10 @@ ol li::before {
 	.pt-columns-2L .pt-grid-item {
 	    width: 65%;
 	}
+	.default-page-con ol li::before, 
+	ol li::before{
+		font-size: 15px;
+	}
 	
 }
 @media(max-width: 1399px){
