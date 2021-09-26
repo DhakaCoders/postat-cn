@@ -7,13 +7,29 @@
 .pt-text-slider-wrap{
 	padding-top: 170px;
 	border-top: 3px solid #D4E2CF;
+	position: relative;
 }
 
-.pt-text-slider{
+.pt-text-slider-inr{
 	max-width: 900px;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.pt-text-slider .pt-prev{
+	background: url('../images/pt-ts-prev.png');
+	left: -15px!important;
+}
+.pt-text-slider .pt-prev:hover{
+	background: url('../images/pt-ts-prev-hover.png');
+}
+.pt-text-slider .pt-nxt{
+	background: url('../images/pt-ts-nxt.png');
+	right: -15px!important;
+}
+.pt-text-slider .pt-nxt:hover{
+	background: url('../images/pt-ts-nxt-hover.png');
 }
 
 .pt-text-slider-item{
