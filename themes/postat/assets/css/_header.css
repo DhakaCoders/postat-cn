@@ -68,6 +68,7 @@
 	display: inline-block;
 	position: relative;
 	padding-left: 29px;
+	font-size: 18px;
 }
 .hdr-tel a i{
 	display: inline-block;
@@ -264,11 +265,6 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
     max-width: 100%;
     width: 0;
 
-
-    right: 0;
-    opacity: 1;
-    z-index: 99999;
-    width: 100%;
 }
 .xs-menu-cntlr{
 	padding-bottom: 80px;
@@ -353,13 +349,40 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 /*responsive*/
 @media(max-width: 1699px){
 	.logo a{
-		max-width: 385px;
-	}
-	
-}
-@media(max-width: 1399px){
-	.logo a{
 		max-width: 350px;
+	}
+	.xs-menu-cntlr{
+		padding: 85px 0 70px;
+	}
+	.xs-menu-col{
+		max-width: 50%;
+		padding-right: 30px;
+	}
+	nav.main-nav > ul{
+		margin: -20px 0;
+	}
+	nav.main-nav > ul > li{
+		font-size: 30px;
+		padding: 20px 0;
+	}
+	nav.main-nav > ul > li > a{
+		font-size: 30px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li{
+		font-size: 16px;
+		padding: 20px 0;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
+		font-size: 16px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
+		margin: -20px 0;
+	}
+	.xs-menu-hdr{
+		margin-bottom: 80px;
+	}
+	.xs-mbl-menu{
+		margin-bottom: 140px;
 	}
 }
 @media(max-width: 1199px){
@@ -369,10 +392,51 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	.hdr-socials{
 		padding-left: 35px;
 	}
+	.xs-menu-cntlr{
+		padding: 70px 0 60px;
+	}
+	.xs-menu-hdr{
+		margin-bottom: 70px;
+	}
+	.xs-mbl-menu{
+		margin-bottom: 120px;
+	}
 }
 @media(max-width: 991px){
 	.xs-menu-cntlr{
 		padding: 60px 0 50px;
+	}
+	.xs-menu-hdr{
+		margin-bottom: 60px;
+	}
+	nav.main-nav > ul{
+		margin: -15px 0;
+	}
+	nav.main-nav > ul > li{
+		font-size: 26px;
+		padding: 15px 0;
+	}
+	nav.main-nav > ul > li > a{
+		font-size: 26px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li{
+		font-size: 15px;
+		padding: 15px 0;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
+		font-size: 15px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
+		margin: -15px 0;
+	}
+	nav.main-nav > ul > li.menu-item-has-children > a:after{
+		top: 10px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
+		padding-top: 35px;
+	}
+	.xs-mbl-menu{
+		margin-bottom: 80px;
 	}
 }
 @media(max-width: 767px){
@@ -400,6 +464,87 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	.xs-menu-cntlr{
 		padding: 50px 0 50px;
 	}
+	.xs-menu-hdr{
+		margin-bottom: 50px;
+	}
+	.xs-menu-col{
+		max-width: 100%;
+		padding-right: 0;
+	}
+	.xs-menu-col{
+		margin-bottom: 20px;
+	}
+	nav.main-nav > ul{
+		margin: -10px 0;
+	}
+	nav.main-nav > ul > li{
+		font-size: 28px;
+		padding: 10px 0;
+	}
+	nav.main-nav > ul > li > a{
+		font-size: 28px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li{
+		font-size: 18px;
+		padding: 10px 0;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
+		font-size: 18px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
+		margin: -10px 0;
+	}
+	nav.main-nav > ul > li.menu-item-has-children > a:after{
+		top: 10px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu{
+		padding-top: 30px;
+	}
+	.xs-hdr-socials{
+		margin-top: 0;
+	}
+	.xs-hdr-socials .hdr-socials ul{
+		justify-content: flex-start;
+	}
+	.hdr-mail{
+		display: block;
+	}
+	.hdr-mail a i svg{
+		width: 28px!important;
+		height: auto!important;
+		fill: #48484A;
+	}
+	.hdr-tel a i svg{
+		width: 24px!important;
+		height: auto!important;
+		fill: #48484A;
+	}
+	.hdr-tel{
+		padding-left: 20px;
+	}
+	.hdr-tel a{
+		font-size: 24px;
+		line-height: 1.2;
+		padding-left: 35px;
+		color:  #48484A;
+	}
+	.hdr-details{
+		margin-bottom: 30px;
+		margin-top: 20px;
+	}
+	.hdr-socials ul{
+		margin: 0 -15px;
+	}
+	.hdr-socials ul li{
+		font-size: 26px;
+		padding: 0 15px;
+	}
+	.hdr-socials ul li a{
+		font-size: 26px;
+	}
+	.xs-mbl-menu{
+		margin-bottom: 60px;
+	}
 }
 @media(max-width: 639px){
 	
@@ -418,6 +563,24 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	.hamburger-icon span:nth-child(3) {
 		top: 18px;
 	}
-
-
+	.allWork .hamburger-icon span:nth-child(3){
+		top: 9px;
+	}
+	.allWork .hamburger-icon span:nth-child(1){
+		top: 9px;
+	}
+	.xs-mbl-menu{
+		margin-bottom: 50px;
+	}
+	nav.main-nav > ul > li > a{
+		font-size: 24px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children > a{
+		padding-right: 30px;
+	}
+	nav.main-nav > ul > li.menu-item-has-children > a:after {
+		top: 8px;
+		height: 9px;
+		width: 15.2px;
+	}
 }
