@@ -38,6 +38,18 @@
 	text-align: center;
 }
 
+.ptTextSlider .pt-text-slider-item{
+	display: none;
+}
+
+.ptTextSlider .pt-text-slider-item:first-child{
+	display: block;
+}
+
+.ptTextSlider.slick-initialized .pt-text-slider-item{
+	display: block;
+}
+
 
 .pt-accordion-title{
 	margin-bottom: 0;
