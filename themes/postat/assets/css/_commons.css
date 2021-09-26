@@ -388,6 +388,7 @@ body.login-register.hide-account-title .select2-container--open .select2-dropdow
 .fl-gray-btn:hover{
 	background: transparent;
 	color: #48484A;
+	border-color: #ACACAC;
 }
 
 
