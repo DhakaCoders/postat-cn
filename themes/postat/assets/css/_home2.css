@@ -312,6 +312,7 @@
 	}
 	.lftdes-rgtimg-rgt{
 		padding-left: 20px;
+		padding-right: 20px;
 	}
 	.lftdes-rgtimg-rgt{
 		padding-top: 10px;
@@ -463,19 +464,12 @@
 	.lftdes-rgtimg-rgt {
 	    width: 100%;
 	}
-
 	.lftdes-rgtimg-img-ctlr{
-		max-width: 400px;
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
+		margin-left: -20px;
+		margin-right: -20px;
 	}
 	.lftdes-rgtimg-img {
-	    height: initial;
-	    background-image: none;
-	}
-	.lftdes-rgtimg-img img {
-	    display: block;
+	    height: 400px;
 	}
 	.lftdes-rgtimg-title {
 	    margin-bottom: 20px;
