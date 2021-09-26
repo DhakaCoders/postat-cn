@@ -249,7 +249,7 @@ var containerOffset = (windowWidth_1920 - containerWidth);
 
 var containerLftOffset = ((containerOffset / 2)+2);
 $('.contact-form-lft-bg').css('width', containerLftOffset);
-$('.contact-form-rgt-bg').css('width', containerLftOffset);
+
 
 $(window).resize(function(){
   var windowWidth = $(window).width();
@@ -258,7 +258,7 @@ $(window).resize(function(){
 
   var containerLftOffset = ((containerOffset / 2)+2);
   $('.contact-form-lft-bg').css('width', containerLftOffset);
-  $('.contact-form-rgt-bg').css('width', containerLftOffset);
+
 });
 
 /*start of Noyon*/
