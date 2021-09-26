@@ -436,6 +436,9 @@ textarea {
     .contact-google-map iframe{
         height: 480px;
     }
+    .contact-form-check{
+        width: 256px;
+    }
 }
 @media (max-width: 991px){
     .contact-form-info-cntlr, 
@@ -461,6 +464,12 @@ textarea {
     .contact-form-check{
         position: absolute;
         margin-top: -130px;
+    }
+    .contact-form-check{
+        width: 100%;
+    }
+    .wpforms-form{
+        position: relative;
     }
 }
 @media (max-width: 767px){

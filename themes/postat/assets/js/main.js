@@ -245,18 +245,18 @@ if( $('.wpforms-error').length ){
 
 var windowWidth = $(window).width();
 var containerWidth = $('.container').width();
-var containerOffset = (windowWidth - containerWidth);
+var containerOffset = (windowWidth_1920 - containerWidth);
 
-var containerLftOffset = ((containerOffset / 2)+1);
+var containerLftOffset = ((containerOffset / 2)+2);
 $('.contact-form-lft-bg').css('width', containerLftOffset);
 $('.contact-form-rgt-bg').css('width', containerLftOffset);
 
 $(window).resize(function(){
   var windowWidth = $(window).width();
   var containerWidth = $('.container').width();
-  var containerOffset = (windowWidth - containerWidth);
+  var containerOffset = (windowWidth_1920 - containerWidth);
 
-  var containerLftOffset = ((containerOffset / 2)+1);
+  var containerLftOffset = ((containerOffset / 2)+2);
   $('.contact-form-lft-bg').css('width', containerLftOffset);
   $('.contact-form-rgt-bg').css('width', containerLftOffset);
 });
