@@ -20,7 +20,6 @@ a{
 }
 a:hover{
 	color: #48484A;
-	letter-spacing: 1px;
 }
 
 body {
@@ -326,6 +325,7 @@ body.login-register.hide-account-title .select2-container--open .select2-dropdow
 	background: transparent;
 	text-transform: uppercase;
 	border: 1px solid #48484A;
+	font-weight: 400;
 }
 .fl-transparent-btn:hover{
 	background: #48484A;
@@ -389,6 +389,11 @@ body.login-register.hide-account-title .select2-container--open .select2-dropdow
 	background: transparent;
 	border-color: #48484A;
 	color: #48484A;
+}
+
+
+.pt-link-hover > a:hover{
+	letter-spacing: 1px;
 }
 
 
