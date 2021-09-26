@@ -41,6 +41,10 @@
     font-weight: 600;
     line-height: 1.7;
 }
+.cnt-tel a:hover,
+.cnt-addres a:hover{
+    color: #A7A7A7;
+}
 .cnt-addres a span{
     display: block;
 }
