@@ -339,8 +339,8 @@ ol li::before {
 	    padding-bottom: 55px;
 	}
 	.pt-grids-sec-cntlr {
-	    padding-top: 60px;
-	    padding-bottom: 60px;
+	    padding-top: 50px;
+	    padding-bottom: 50px;
 	}
 	.page-bnr-cntlr{
 		height: 600px;
@@ -356,9 +356,11 @@ ol li::before {
 	.pt-fullwidth-txt-module h2 {
 	    margin-bottom: 20px!important;
 	}
-	.pt-grids-sec-cntlr {
-	    padding-top: 50px;
-	    padding-bottom: 50px;
+	.default-page-con ol li, ol li{
+		padding: 2px 0 10px 30px;
+	}
+	.default-page-con ul li, ul li {
+	    padding: 2px 0 10px 30px;
 	}
 }
 @media(max-width: 767px){
@@ -409,5 +411,11 @@ ol li::before {
 	}
 	.default-page-con ul li::before, ul li::before{
 		margin-top: 2px;
+	}
+}
+
+@media(max-width: 359px){
+	.fl-transparent-btn{
+		min-width: 180px;
 	}
 }
