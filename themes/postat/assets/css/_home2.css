@@ -224,16 +224,16 @@
 
 @media(max-width: 1699px){
 	.lftdes-rgtimg-img {
-	    height: 540px;
+	    height: 500px;
 	}
 	.lftdes-rgtimg-sec {
-	    padding: 150px 0 170px;
+	   padding: 120px 0 150px;
 	}
 	.cabin-sec {
-	    min-height: 1000px;
+	    min-height: 900px;
 	}
 	.cabin-sec-inr {
-	    padding-top: 170px;
+	    padding-top: 130px;
 	}
 	.cabin-des-title {
 	    margin-bottom: 25px;
@@ -266,33 +266,30 @@
 	.pt-bath i{
 		max-width: 35px;
 	}
-	.fea-item i svg
-	.pt-user i svg,
-	.pt-bed i svg,
-	.pt-bath i svg{
+	.fea-item i svg{
 		width: 100%!important;
 		height: auto!important;
 	}
 	.waking-up-sec {
-	    height: 1000px;
+	    height: 900px;
 	}
 	.waking-up-des blockquote p{
-		font-size: 32px;
+		font-size: 30px;
 	}
 	.follow-sec {
-	    padding: 150px 0 160px;
+	    padding: 120px 0 140px;
 	}
 	.follow-des-title {
-	    margin-bottom: 60px;
+	    margin-bottom: 50px;
 	}
 	.hunter-sec {
-	    height: 1000px;
+	    height: 900px;
 	}
 	.follow-img {
 	    margin-bottom: 80px;
 	}
 	.lftdes-rgtimg-grd-item {
-	    padding-bottom: 90px;
+	   padding-bottom: 70px;
 	}
 	.lftdes-rgtimg-subtitle {
 	    margin-bottom: 20px;
@@ -310,38 +307,6 @@
 	.waking-up-des blockquote strong {
 	    font-size: 17px;
 	}
-}
-@media(max-width: 1399px){
-	.lftdes-rgtimg-img {
-	    height: 500px;
-	}
-	.lftdes-rgtimg-sec {
-	    padding: 120px 0 150px;
-	}
-	.cabin-sec {
-	    min-height: 900px;
-	}
-	.cabin-sec-inr {
-	    padding-top: 130px;
-	}
-	.waking-up-sec {
-	    height: 900px;
-	}
-	.waking-up-des blockquote p{
-		font-size: 30px;
-	}
-	.follow-sec {
-	    padding: 120px 0 140px;
-	}
-	.follow-des-title {
-	    margin-bottom: 50px;
-	}
-	.hunter-sec {
-	    height: 900px;
-	}
-	.lftdes-rgtimg-grd-item {
-	    padding-bottom: 80px;
-	}
 	.lftimg-rgtdes .lftdes-rgtimg-rgt{
 		padding-right: 30px;
 	}
@@ -354,7 +319,9 @@
 	.waking-up-des blockquote strong {
 	    font-size: 16px;
 	}
+
 }
+
 @media(max-width: 1199px){
 	.lftdes-rgtimg-img {
 	    height: 470px;

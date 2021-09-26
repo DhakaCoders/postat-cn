@@ -56,7 +56,7 @@
     cursor: pointer;
     position: relative;
     padding: 20px 50px 25px 20px;
-    border: 1px solid #495649;
+    border: 1px solid #cacccb;
     background: #EAEBEC;
     line-height: 1.3;
     border-bottom-width: 0;
@@ -106,6 +106,7 @@
 
 .pt-des-accordion-gray-bg .pt-accordion-title{
 	border-color: #E5E5E5;
+	background: #fff;
 }
 .pt-des-accordion-gray-bg .pt-accordion-title.active{
 	background: #D3E3CE;
@@ -161,6 +162,9 @@
 }
 .pt-team-grd-des-title{
 	margin-bottom: 10px;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-ms-transition: all 0.5s;
 }
 .pt-team-grd-des-title:hover{
 	opacity: 0.7;
@@ -271,7 +275,11 @@
 
 .pt-fea-sec .pt-grids-sec-entry-hdr-title{
 	text-align: center;
+	font-family: 'Epilogue', sans-serif;
+	color: #002F2F;
+	text-transform: capitalize;
 }
+
 
 .pt-fea-slider-grds{
 	display: flex;
@@ -394,14 +402,14 @@ Gallery design
 
 
 .pt-grid-item-img{
-	height: 305px;
+	height: 350px;
 }
 .pt-grid-item-img img{
 	display: none;
 }
 
 .pt-grd-item-img-columns2{
-	height: 340px;
+	height: 400px;
 }
 
 
@@ -410,10 +418,10 @@ Gallery design
 
 @media(max-width: 1699px){
 	.pt-fea-sec {
-	    padding: 200px 0 160px;
+	    padding: 180px 0 140px;
 	}
 	.pt-fea-sec-inr{
-		padding-bottom: 130px;
+		padding-bottom: 110px;
 	}
 	.pt-fea-slider-grds{
 		margin-left: -30px;
@@ -425,22 +433,22 @@ Gallery design
 	    padding-bottom: 60px;
 	}
 	.pt-ol-ul-sec {
-	    padding-bottom: 100px;
+	    padding-bottom: 90px;
 	}
 	.pt-gallery-sec {
-	    padding-bottom: 220px;
+	    padding-bottom: 200px;
 	}
 	.pt-gallery-sec-inr{
-		padding-top: 180px;
+		padding-top: 160px;
 	}
 	.pt-text-slider-ctlr {
-	    padding-bottom: 150px;
+	    padding-bottom: 120px;
 	}
 	.pt-text-slider-wrap {
-	    padding-top: 150px;
+	    padding-top: 120px;
 	}
 	.pt-team-sec {
-	    padding: 180px 0 100px;
+	    padding: 150px 0 80px;
 	}
 	.pt-team-grds {
 	    margin-left: -10px;
@@ -451,16 +459,13 @@ Gallery design
 	    padding-right: 10px;
 	    padding-bottom: 20px;
 	}
-}
-@media(max-width: 1399px){
-	.pt-text-slider-ctlr {
-	    padding-bottom: 120px;
+	.gallery {
+	    margin-left: -10px;
+	    margin-right: -10px;
 	}
-	.pt-text-slider-wrap {
-	    padding-top: 120px;
-	}
-	.pt-team-sec {
-	    padding: 150px 0 80px;
+	.gallery-item {
+	    padding: 0 10px;
+	    margin-bottom: 20px;
 	}
 	.pt-prev{
 		left: -75px!important;
@@ -468,31 +473,27 @@ Gallery design
 	.pt-nxt{
 		right: -75px!important;
 	}
-	.pt-fea-sec {
-	    padding: 180px 0 140px;
-	}
-	.pt-fea-sec-inr{
-		padding-bottom: 110px;
-	}
-	.pt-ol-ul-sec {
-	    padding-bottom: 90px;
-	}
-	.pt-gallery-sec {
-	    padding-bottom: 200px;
-	}
-	.pt-gallery-sec-inr{
-		padding-top: 160px;
-	}
-	.btn-ctlr ul{
-		display: block;
-		margin-left: 0;
-		margin-right: 0;
+	.btn-ctlr ul {
+	    margin-left: -6px;
+	    margin-right: -6px;
 	}
 	.btn-ctlr ul li {
-	    padding-left: 0;
-	    padding-right: 0;
-	    padding-bottom: 20px;
+	    padding-left: 6px;
+	    padding-right: 6px;
 	}
+	.btn-ctlr .fl-transparent-btn{
+		min-width: 190px;
+	}
+	.btn-ctlr .fl-gray-btn{
+		min-width: 190px;
+	}
+	.cabin-landing-ctlr .lftdes-rgtimg-sec,
+	.facilites-landing-ctlr .lftdes-rgtimg-sec {
+	    padding: 70px 0 100px;
+	}
+}
+@media(max-width: 1399px){
+	
 }
 @media(max-width: 1199px){
 	.pt-text-slider-ctlr {
