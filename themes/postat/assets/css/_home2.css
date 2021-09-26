@@ -254,6 +254,9 @@
 	    padding-right: 15px;
 	    padding-bottom: 15px;
 	}
+	.fea-item i{
+		max-width: 30px;
+	}
 	.pt-user i{
 		max-width: 25px;
 	}
@@ -263,6 +266,7 @@
 	.pt-bath i{
 		max-width: 35px;
 	}
+	.fea-item i svg
 	.pt-user i svg,
 	.pt-bed i svg,
 	.pt-bath i svg{

@@ -38,6 +38,18 @@
 	text-align: center;
 }
 
+.ptTextSlider .pt-text-slider-item{
+	display: none;
+}
+
+.ptTextSlider .pt-text-slider-item:first-child{
+	display: block;
+}
+
+.ptTextSlider.slick-initialized .pt-text-slider-item{
+	display: block;
+}
+
 
 .pt-accordion-title{
 	margin-bottom: 0;
@@ -149,6 +161,9 @@
 }
 .pt-team-grd-des-title{
 	margin-bottom: 10px;
+}
+.pt-team-grd-des-title:hover{
+	opacity: 0.7;
 }
 .pt-team-grd-des-title a{
 	color: #48484A;
@@ -426,6 +441,15 @@ Gallery design
 	}
 	.pt-team-sec {
 	    padding: 180px 0 100px;
+	}
+	.pt-team-grds {
+	    margin-left: -10px;
+	    margin-right: -10px;
+	}
+	.pt-team-grd-item-ctlr{
+		padding-left: 10px;
+	    padding-right: 10px;
+	    padding-bottom: 20px;
 	}
 }
 @media(max-width: 1399px){
