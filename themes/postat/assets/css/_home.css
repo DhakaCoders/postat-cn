@@ -139,7 +139,7 @@
 		padding-top: 150px;
 	}
 	.hm-bnr-desc > p {
-		font-size: 24px;
+		font-size: 22px;
 		line-height: 1.3;
 	}
 	.hm-bnr-desc > p a{
@@ -147,6 +147,7 @@
 	}
 	.hm-bnr-btm-btn a{
 		font-size: 14px;
+		padding: 17px 10px 15px 10px;
 	}
 }
 @media(max-width: 369px){

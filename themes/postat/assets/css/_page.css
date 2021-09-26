@@ -260,7 +260,10 @@ ol li::before {
 }
 
 
-
+/*page slider*/
+.pg-bnr-slide-item{
+	position: relative;
+}
 
 
 /*responsive*/
