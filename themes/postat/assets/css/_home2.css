@@ -17,6 +17,7 @@
 .lftdes-rgtimg-rgt{
 	width: 40%;
 	padding-left: 40px;
+	padding-top: 10px;
 }
 
 .lftimg-rgtdes .lftdes-rgtimg-lft{
@@ -136,8 +137,8 @@
 	font-weight: 400;
 }
 .luxury-des-title a:hover{
-	/*color: #A7A7A7;*/
 	opacity: 0.7;
+	text-decoration: underline;
 }
 
 
@@ -223,7 +224,7 @@
 
 @media(max-width: 1699px){
 	.lftdes-rgtimg-img {
-	    height: 500px;
+	    height: 540px;
 	}
 	.lftdes-rgtimg-sec {
 	    padding: 150px 0 170px;
@@ -253,9 +254,21 @@
 	    padding-right: 15px;
 	    padding-bottom: 15px;
 	}
-	/*.fea-item i svg{
-		max-width: 30px;
-	}*/
+	.pt-user i{
+		max-width: 25px;
+	}
+	.pt-bed i{
+		max-width: 40px;
+	}
+	.pt-bath i{
+		max-width: 35px;
+	}
+	.pt-user i svg,
+	.pt-bed i svg,
+	.pt-bath i svg{
+		width: 100%!important;
+		height: auto!important;
+	}
 	.waking-up-sec {
 	    height: 1000px;
 	}
@@ -281,7 +294,7 @@
 	    margin-bottom: 20px;
 	}
 	.lftdes-rgtimg-des-btn {
-	    padding-top: 20px;
+	    padding-top: 25px;
 	}
 	.follow-btm-des-btn .fl-black-btn {
 	    min-width: 230px;
@@ -296,7 +309,7 @@
 }
 @media(max-width: 1399px){
 	.lftdes-rgtimg-img {
-	    height: 480px;
+	    height: 500px;
 	}
 	.lftdes-rgtimg-sec {
 	    padding: 120px 0 150px;
@@ -340,7 +353,7 @@
 }
 @media(max-width: 1199px){
 	.lftdes-rgtimg-img {
-	    height: 440px;
+	    height: 470px;
 	}
 	.lftdes-rgtimg-lft {
 	    padding-right: 0;
@@ -380,9 +393,6 @@
 	}
 	.lftdes-rgtimg-grd-item {
 	    padding-bottom: 70px;
-	}
-	.lftdes-rgtimg-rgt {
-	    padding-top: 0px;
 	}
 	.lftdes-rgtimg-title {
 	    margin-bottom: 20px;
@@ -446,7 +456,7 @@
 	    height: 700px;
 	}
 	.waking-up-des blockquote p {
-	    font-size: 25px;
+	    font-size: 24px;
 	}
 	.follow-img {
 	    margin-bottom: 60px;
@@ -487,7 +497,11 @@
 		margin-right: auto;
 	}
 	.lftdes-rgtimg-img {
-	    height: 350px;
+	    height: initial;
+	    background-image: none;
+	}
+	.lftdes-rgtimg-img img {
+	    display: block;
 	}
 	.lftdes-rgtimg-title {
 	    margin-bottom: 20px;
@@ -543,6 +557,9 @@
 	}
 	.waking-up-des blockquote strong {
 	    font-size: 14px;
+	}
+	.lftdes-rgtimg-rgt {
+	    padding-left: 0;
 	}
 }
 @media(max-width: 575px){
