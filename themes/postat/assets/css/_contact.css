@@ -390,10 +390,11 @@ textarea {
     .contact-form-info-cntlr,
     .contact-form-dsc-wrp{
         padding-top: 170px;
-        padding-bottom: 180px;
+        
     }
     .contact-form-dsc-wrp{
         padding-left: 100px;
+        padding-bottom: 180px;
     }
     .contact-form-info-title {
         margin-bottom: 42px;
@@ -418,7 +419,7 @@ textarea {
     }
     .contact-form-dsc-wrp {
         padding-left: 120px;
-         padding-bottom: 160px;
+        padding-bottom: 160px;
     }
     .contact-google-map iframe{
         height: 500px;
