@@ -36,9 +36,6 @@
 }
 
 @media(max-width: 1399px){
-	.container { 
-		max-width: 1100px;
-	}
 	.home .hdr-topbar-cntlr{
 		max-width: 1070px;
 	}
