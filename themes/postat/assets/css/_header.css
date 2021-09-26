@@ -29,6 +29,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
+	align-items: center;
 }
 .hdr-details{
 	display: flex;
@@ -262,6 +263,12 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
     height: auto;
     max-width: 100%;
     width: 0;
+
+
+    right: 0;
+    opacity: 1;
+    z-index: 99999;
+    width: 100%;
 }
 .xs-menu-cntlr{
 	padding-bottom: 80px;
@@ -348,6 +355,7 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	.logo a{
 		max-width: 385px;
 	}
+	
 }
 @media(max-width: 1399px){
 	.logo a{
@@ -358,16 +366,58 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	.logo a{
 		max-width: 300px;
 	}
+	.hdr-socials{
+		padding-left: 35px;
+	}
 }
 @media(max-width: 991px){
-	
+	.xs-menu-cntlr{
+		padding: 60px 0 50px;
+	}
 }
 @media(max-width: 767px){
-	
+	.home .hdr-topbar{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.header,
+	.hdr-topbar{
+		padding: 0;
+	}
+	.header-inr{
+		padding: 40px 0;
+	}
+	.home .header-inr,
+	.header-inr{
+		align-items: center;
+	}
+	.home .hdr-lft{
+		margin-top: 0;
+	}
+	.logo a{
+		max-width: 250px;
+	}
+	.xs-menu-cntlr{
+		padding: 50px 0 50px;
+	}
 }
 @media(max-width: 639px){
 	
 }
 @media(max-width: 575px){
-	
+	.logo a{
+		max-width: 200px;
+	}
+	.hamburger-icon{
+		width: 32px;
+		height: 20px;
+	}
+	.hamburger-icon span:nth-child(2) {
+		top: 10px;
+	}
+	.hamburger-icon span:nth-child(3) {
+		top: 18px;
+	}
+
+
 }
