@@ -151,7 +151,7 @@ function custom_body_classes($classes){
     }
 
     if( is_front_page() ){
-        $classes[]='home';
+        $classes[]='allWork';
     }
     return $classes;
 }

@@ -105,11 +105,14 @@
 }
 .pt-grids-sec-entry-hdr-title{
 	margin-bottom: 40px!important;
+	font-weight: 300!important;
 }
 .pt-grids-col-entry-hdr-title{
 	margin-bottom: 40px!important;
 }
-
+.pt-grids-col-entry-hdr{
+	padding-top: 10px;
+}
 .pt-fullwidth-txt-module{
 	padding-top: 85px;
 	padding-bottom: 85px;
