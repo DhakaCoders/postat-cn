@@ -105,11 +105,14 @@
 }
 .pt-grids-sec-entry-hdr-title{
 	margin-bottom: 40px!important;
+	font-weight: 300!important;
 }
 .pt-grids-col-entry-hdr-title{
 	margin-bottom: 40px!important;
 }
-
+.pt-grids-col-entry-hdr{
+	padding-top: 10px;
+}
 .pt-fullwidth-txt-module{
 	padding-top: 85px;
 	padding-bottom: 85px;
@@ -265,39 +268,6 @@ ol li::before {
 
 @media(max-width: 1699px){
 	.pt-fullwidth-txt-module {
-	    padding-top: 75px;
-	    padding-bottom: 75px;
-	}
-	.pt-fullwidth-txt-module h2 {
-	    margin-bottom: 35px!important;
-	}
-	.pt-grids-sec-cntlr {
-	    padding-top: 80px;
-	    padding-bottom: 80px;
-	}
-	.pt-grids-sec-entry-hdr-title {
-	    margin-bottom: 35px!important;
-	}
-	
-	.pt-grids-col-entry-hdr-title {
-	    margin-bottom: 35px!important;
-	}
-	.pt-columns-2R .pt-grid-item:first-of-type {
-	    width: 65%;
-	}
-	.pt-columns-2R .pt-grid-item {
-	    width: 35%;
-	}
-	.pt-columns-2L .pt-grid-item:first-of-type {
-	    width: 35%;
-	}
-	.pt-columns-2L .pt-grid-item {
-	    width: 65%;
-	}
-	
-}
-@media(max-width: 1399px){
-	.pt-fullwidth-txt-module {
 	    padding-top: 65px;
 	    padding-bottom: 65px;
 	}
@@ -315,8 +285,23 @@ ol li::before {
 	.pt-grids-col-entry-hdr-title {
 	    margin-bottom: 30px!important;
 	}
+	.pt-columns-2R .pt-grid-item:first-of-type {
+	    width: 65%;
+	}
+	.pt-columns-2R .pt-grid-item {
+	    width: 35%;
+	}
+	.pt-columns-2L .pt-grid-item:first-of-type {
+	    width: 35%;
+	}
+	.pt-columns-2L .pt-grid-item {
+	    width: 65%;
+	}
+	.default-page-con ol li::before, 
+	ol li::before{
+		font-size: 15px;
+	}
 	
-
 }
 @media(max-width: 1199px){
 	.pt-fullwidth-txt-module {
