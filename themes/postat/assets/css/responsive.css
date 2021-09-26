@@ -33,9 +33,6 @@
 }
 
 @media(max-width: 1399px){
-	.home .hdr-topbar-cntlr{
-		max-width: 1070px;
-	}
 	.block-1440{
 		max-width: 1140px;
 	}
