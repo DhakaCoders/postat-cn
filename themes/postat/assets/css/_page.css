@@ -4,17 +4,20 @@
 	padding: 0 20px!important;
 }
 .slick-slider .slick-dots li{
-	width: 16px!important;
-	height: 16px!important;
+	width: 12px!important;
+	height: 12px!important;
 	position: static;
-	background: #E1E1E1!important;
+	background: #707070!important;
 	border-radius: 100% 100%!important;
 	margin: 0 8px;
 	padding: 0!important;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .slick-slider .slick-dots li.slick-active,
 .slick-slider .slick-dots li:hover{
-	background: #F3BA4B!important;
+	background: #fff!important;
 }
 .slick-slider .slick-dots li:before,
 .slick-slider .slick-dots li button:before{
@@ -22,8 +25,8 @@
 }
 .slick-slider .slick-dots li button{
 	padding: 0;
-	width: 16px;
-	height: 16px;
+	width: 12px;
+	height: 12px;
 }
 
 .slick-dots li:only-child{ 
@@ -260,8 +263,29 @@ ol li::before {
 }
 
 
-
-
+/*page slider*/
+.pg-bnr-slide-item-cntlr{
+	display: none;
+}
+.pg-bnr-slide-item-cntlr:first-of-type{
+	display: block;
+}
+.pageBnrSlider.slick-initialized .pg-bnr-slide-item-cntlr{
+	display: block;
+}
+.pg-bnr-slide-item{
+	position: relative;
+}
+.pageBnrSlider.slick-dotted.slick-slider{
+	margin-bottom: 0;
+}
+.pageBnrSlider.slick-slider ul.slick-dots{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 51px;
+	z-index: 5;
+}
 
 /*responsive*/
 
@@ -371,6 +395,9 @@ ol li::before {
 		height: 500px;
 		padding-top: 60px;
 		padding-bottom: 60px;
+	}
+	.pageBnrSlider.slick-slider ul.slick-dots{
+		bottom: 30px;
 	}
 }
 @media(max-width: 575px){

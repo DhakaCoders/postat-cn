@@ -44,6 +44,7 @@
 }
 .hm-bnr-desc > p a{
 	font-size: 18px;
+	text-transform:uppercase;
 }
 .hm-bnr-btn .fl-transparent-btn{
 	font-weight: 500;
@@ -90,19 +91,64 @@
 @media(max-width: 1699px){
 	.hm-bnr-cntlr{
 		height: 850px;
+		padding-top: 280px;
+		padding-bottom: 150px;
+	}
+	.hm-bnr-desc > p {
+		font-size: 30px;
+		line-height: 1.4;
+	}
+	.hm-bnr-desc > p a{
+		font-size: 16px;
+	}
+	.hm-bnr-desc{
+		margin-bottom: 35px;
+	}
+	.hm-bnr-btm-btn a{
+		padding: 19px 10px 17px 10px;
+	}
+	.hm-bnr-btm-btn a{
+		font-size: 16px;
 	}
 }
 @media(max-width: 1399px){
 
 }
 @media(max-width: 1199px){
-
+	.hm-bnr-cntlr{
+		height: 750px;
+		padding-top: 220px;
+	}
+	.hm-bnr-desc > p {
+		font-size: 26px;
+		line-height: 1.4;
+	}
+	.hm-bnr-desc > p a{
+		font-size: 15px;
+	}
+	.hm-bnr-desc{
+		margin-bottom: 30px;
+	}
 }
 @media(max-width: 991px){
 
 }
 @media(max-width: 767px){
-
+	.hm-bnr-cntlr{
+		height: 650px;
+		padding-top: 150px;
+	}
+	.hm-bnr-desc > p {
+		font-size: 22px;
+		line-height: 1.3;
+	}
+	.hm-bnr-desc > p a{
+		font-size: 14px;
+	}
+	.hm-bnr-btm-btn a{
+		font-size: 14px;
+		padding: 17px 10px 15px 10px;
+	}
 }
 @media(max-width: 369px){
 
