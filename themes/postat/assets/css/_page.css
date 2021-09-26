@@ -339,21 +339,11 @@ ol li::before {
 	    padding: 0 0;
 	    margin-bottom: 20px;
 	}
-	.pt-columns-3 .pt-grid-item {
-	    width: 100%;
-	}
-	.pt-columns-2L .pt-grid-item:first-of-type {
-	    width: 100%;
-	}
-	.pt-columns-2L .pt-grid-item {
-	    width: 100%;
-	}
-	.pt-columns-2R .pt-grid-item:first-of-type {
-	    width: 100%;
-	}
-	.pt-columns-2R .pt-grid-item {
-	    width: 100%;
-	}
+	.pt-columns-3 .pt-grid-item,
+	.pt-columns-2L .pt-grid-item:first-of-type,
+	.pt-columns-2L .pt-grid-item,
+	.pt-columns-2R .pt-grid-item:first-of-type,
+	.pt-columns-2R .pt-grid-item,
 	.pt-columns-4 .pt-grid-item {
 	    width: 100%;
 	}
