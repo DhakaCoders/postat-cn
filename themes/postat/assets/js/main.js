@@ -215,14 +215,14 @@ if( $('li.menu-item-has-children a').length ){
  });
 }
 
-/*if (windowWidth > 767) {
-  if( $('.hm-bnr-cntlr').length ){
+if (windowWidth > 767) {
+  if( $('.page-bnr-cntlr').length ){
     var windowHeight = $(window).height();
     if (windowHeight > 660) {
-      $('.hm-bnr-cntlr').css('height', windowHeight);
+      $('.page-bnr-cntlr').css('height', windowHeight);
     }
   }
-}*/
+}
 
 if($('.start-flatpickr').length ){
   $('.start-flatpickr').flatpickr({

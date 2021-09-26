@@ -118,6 +118,10 @@
 	color: #48484A;
 	line-height: 1;
 }
+.hdr-socials ul li a:hover i,
+.hdr-socials ul li a:hover{
+	color: #D3E3CE;
+}
 .header{
 	padding-bottom: 30px;
 }

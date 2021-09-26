@@ -48,6 +48,13 @@
 	background: #f2f2f2;
 	border-color: #f2f2f2;
 }
+.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input:focus{
+	border-color: #A7A7A7;
+    background-color: #D3E3CE;
+}
+.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input.flatpickr-input.active:focus{
+	border-color: transparent;
+}
 .make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field i{
 	position: absolute;
 	left: 27px;
@@ -76,6 +83,10 @@
 	border: 1px solid #48484A!important;
 	font-weight: 500!important;
 }
+.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button:hover{
+	color: #fff!important;
+	background: #48484A!important;
+}
 .make-bking-nav{
 	margin-bottom: 30px;
 }
@@ -97,6 +108,9 @@
 	font-style: italic;
 	color: #A7A7A7;
 }
+.make-bking-nav ul li a:hover{
+	color: #48484A;
+}
 .make-bking-mail{
 	text-align: center;
 }
@@ -113,4 +127,10 @@
 	-ms-transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.make-bking-mail a:hover i svg{
+	fill: #48484A;
 }
