@@ -90,6 +90,11 @@
 @media(max-width: 1699px){
 	.hm-bnr-cntlr{
 		height: 850px;
+		padding-top: 280px;
+	}
+	.hm-bnr-desc > p {
+		font-size: 32px;
+		line-height: 1.4;
 	}
 }
 @media(max-width: 1399px){
