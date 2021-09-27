@@ -154,6 +154,9 @@
 	-ms-transform: scale(1.0);
 	transform: scale(1.0);
 }
+.pt-team-grd-item-img img{
+	width: 100%;
+}
 .pt-team-grd-item-des{
 	text-align: center;
 	padding-top: 20px;
@@ -255,6 +258,7 @@
 
 .pt-grds-black-bg{
 	background: #010203;
+	padding-top: 150px;
 }
 
 .pt-grds-black-bg .pt-grid-item h1,
@@ -505,6 +509,9 @@ Gallery design
 	.facilites-landing-ctlr .lftdes-rgtimg-sec {
 	    padding: 70px 0 100px;
 	}
+	.pt-grds-black-bg {
+	    padding-top: 100px;
+	}
 }
 @media(max-width: 1399px){
 	.pt-prev {
@@ -532,7 +539,7 @@ Gallery design
 	    left: -20px!important;
 	}
 	.pt-nxt {
-	    right:20px!important;
+	    right: -20px!important;
 	}
 	.pt-fea-sec {
 	    padding: 120px 0 100px;
@@ -567,6 +574,9 @@ Gallery design
 	    padding-left: 0;
 	    padding-right: 0;
 	    padding-bottom: 15px;
+	}
+	.pt-grds-black-bg {
+	    padding-top: 80px;
 	}
 }
 @media(max-width: 991px){
@@ -610,6 +620,13 @@ Gallery design
 	.pt-gallery-sec-inr {
 	    padding-top: 100px;
 	}
+	.pt-text-slider-inr {
+	    padding-left: 50px;
+	    padding-right: 50px;
+	}
+	.pt-grds-black-bg {
+	    padding-top: 70px;
+	}
 }
 @media(max-width: 767px){
 	.pt-text-slider-ctlr {
@@ -647,20 +664,7 @@ Gallery design
 		margin-left: -20px;
 		margin-right: -20px;
 	}
-	.pt-team-grds {
-	    margin-left: 0;
-	    margin-right: 0;
-	}
-	.pt-team-grd-item-ctlr{
-		padding-left: 0;
-	    padding-right: 0;
-	}
-	.pt-team-grd-item{
-		max-width: 375px;
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
+	
 	.btn-ctlr ul {
 	    display: flex;
 	    margin-left: -7px;
@@ -685,9 +689,25 @@ Gallery design
 	.pt-grds-black-bg .pt-grid-item h5,
 	.pt-grds-black-bg .pt-grid-item h6{
 		margin-bottom: 20px;
-		padding-top: 20px;
+		padding-top: 0;
 	}
 
+}
+@media(max-width: 639px){
+	.pt-team-grds {
+	    margin-left: 0;
+	    margin-right: 0;
+	}
+	.pt-team-grd-item-ctlr{
+		padding-left: 0;
+	    padding-right: 0;
+	}
+	.pt-team-grd-item{
+		max-width: 375px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 @media(max-width: 575px){
 	.pt-team-sec {
