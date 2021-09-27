@@ -224,13 +224,13 @@
 
 @media(max-width: 1699px){
 	.lftdes-rgtimg-img {
-	    height: 500px;
+	    height: 480px;
 	}
 	.lftdes-rgtimg-sec {
 	   padding: 120px 0 150px;
 	}
 	.cabin-sec {
-	    min-height: 900px;
+	    min-height: 800px;
 	}
 	.cabin-sec-inr {
 	    padding-top: 130px;
@@ -242,10 +242,10 @@
 	    margin-bottom: 20px;
 	}
 	.lftdes-rgtimg-title {
-	    margin-bottom: 30px;
+	    margin-bottom: 25px;
 	}
 	.fea-grd-ctlr{
-		padding-bottom: 22px;
+		padding-bottom: 15px;
 		margin-left: -15px;
     	margin-right: -15px;
 	}
@@ -271,7 +271,7 @@
 		height: auto!important;
 	}
 	.waking-up-sec {
-	    height: 900px;
+	    height: 800px;
 	}
 	.waking-up-des blockquote p{
 		font-size: 30px;
@@ -283,7 +283,7 @@
 	    margin-bottom: 50px;
 	}
 	.hunter-sec {
-	    height: 900px;
+	    height: 800px;
 	}
 	.follow-img {
 	    margin-bottom: 80px;
@@ -307,12 +307,8 @@
 	.waking-up-des blockquote strong {
 	    font-size: 17px;
 	}
-	.lftimg-rgtdes .lftdes-rgtimg-rgt{
-		padding-right: 30px;
-	}
 	.lftdes-rgtimg-rgt{
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 35px;
 	}
 	.lftdes-rgtimg-rgt{
 		padding-top: 10px;
