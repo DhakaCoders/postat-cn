@@ -257,6 +257,10 @@
 	background: #010203;
 }
 
+.pt-grds-black-bg .pt-grid-item h2{
+	color: #fff;
+}
+
 
 .pt-grds-black-bg .pt-grid-item,
 .pt-grds-black-bg .pt-grids-col-entry-hdr-title{
