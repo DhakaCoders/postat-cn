@@ -91,6 +91,17 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php 
+$logoObj = get_field('hdlogo', 'options');
+if( is_array($logoObj) ){
+  $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
+}else{
+  $logo_tag = '';
+}
+$telephone = get_field('telephone', 'options');
+$email = get_field('emailaddres', 'options');
+$sinfo = get_field('social_media', 'options');
+?> 
 <div class="page-body-cntlr">
 <div class="bdoverlay"></div>
 <header class="header-wrap">
@@ -102,38 +113,42 @@
             <div class="hdr-topbar-inr">
               <div class="hdr-details-cntlr hide-sm">
                 <div class="hdr-details ">
+                  <?php if( !empty($email) ): ?>
                   <div class="hdr-mail">
-                    <a href="mailto:hello@postatoakgate.com.au">
+                    <a href="mailto:<?php echo $email; ?>">
                       <i><svg class="mail-icon" width="19" height="15" viewBox="0 0 19 15" fill="#fff">
                         <use xlink:href="#mail-icon"></use></svg>
                       </i>
                     </a>
                   </div>
+                <?php 
+                  endif;
+                  if( !empty($telephone) ):
+                ?>
                   <div class="hdr-tel">
-                    <a href="tel:(02)49939876">
-                      <span>(02) 4993 9876</span>
+                    <a href="tel:<?php echo phone_preg($telephone); ?>">
+                      <?php printf('<span>%s</span>', $telephone); ?>
                       <i><svg class="phone-icon" width="16.186" height="16.186" viewBox="0 0 16.186 16.186" fill="#fff">
                         <use xlink:href="#phone-icon"></use></svg>
                       </i>
                     </a>
                   </div>
+                  <?php endif; ?>
                 </div>
               </div>
+              <?php if($sinfo): ?>
               <div class="hdr-socials-cntlr hide-sm">
                 <div class="hdr-socials">
                   <ul class="reset-list">
-                    <li>
-                      <a target="_blank" href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li>
-                      <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li>
-                      <a target="_blank" href="#"><i class="fab fa-youtube"></i></a>
-                    </li>
+                  <?php 
+                    if( !empty($sinfo['instagram_url']) ) printf('<li><a target="_blank" href="%s"><i class="fab fa-instagram"></i></a></li>', $sinfo['instagram_url']); 
+                    if( !empty($sinfo['facebook_url']) ) printf('<li><a target="_blank" href="%s"><i class="fab fa-facebook-f"></i></a></li>', $sinfo['facebook_url']); 
+                    if( !empty($sinfo['youtube_url']) ) printf('<li><a target="_blank" href="%s"><i class="fab fa-youtube"></i></a></li>', $sinfo['youtube_url']); 
+                  ?>
                   </ul>
                 </div>
               </div>
+              <?php endif; ?>
             </div>
           </div>
         </div>
@@ -146,9 +161,13 @@
         <div class="col-md-12">
           <div class="header-inr">
             <div class="hdr-lft">
+              <?php if( !empty($logo_tag) ): ?>
               <div class="logo">
-                <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.png"></a>
+               <a href="<?php echo esc_url(home_url('/')); ?>">
+                  <?php echo $logo_tag; ?>
+                 </a>
               </div>
+              <?php endif; ?>
             </div>
             <div class="hdr-rgt">
               <div class="hamburger-cntlr">
@@ -173,9 +192,13 @@
         <div class="col-md-12">
           <div class="xs-menu-cntlr">
             <div class="xs-menu-hdr">
+              <?php if( !empty($logo_tag) ): ?>
               <div class="logo">
-                <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.png"></a>
+               <a href="<?php echo esc_url(home_url('/')); ?>">
+                  <?php echo $logo_tag; ?>
+                 </a>
               </div>
+              <?php endif; ?>
               <div class="hamburger-cntlr">
                 <div class="hamburger-icon">
                   <span></span>
@@ -187,78 +210,68 @@
             <div class="xs-mbl-menu clearfix">
               <div class="xs-menu-col">
                 <nav class="main-nav">
-                  <ul class="clearfix reset-list">
-                    <li class="current-menu-item"><a href="#">About Post at Oakgate</a></li>
-                    <li class="menu-item-has-children">
-                      <a href="#">The Facilities</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Watagans</a></li>
-                        <li><a href="#">awaba</a></li>
-                        <li><a href="#">heaton</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="#">Luxury Packages</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Watagans</a></li>
-                        <li><a href="#">awaba</a></li>
-                        <li><a href="#">heaton</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Make a Booking</a></li>
-                    <li><a href="#">Journal</a></li>
-                    <li><a href="#">Contact</a></li>
-                  </ul>
+                  <?php 
+                    $mmenuOptions = array( 
+                        'theme_location' => 'cbv_main_menu1', 
+                        'menu_class' => 'clearfix reset-list',
+                        'container' => '',
+                        'container_class' => ''
+                      );
+                    wp_nav_menu( $mmenuOptions ); 
+                  ?>
                 </nav>
               </div>
               <div class="xs-menu-col">
                 <nav class="main-nav">
-                  <ul class="clearfix reset-list">
-                    <li class="menu-item-has-children">
-                      <a href="#">The Cabins</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Watagans</a></li>
-                        <li><a href="#">awaba</a></li>
-                        <li><a href="#">heaton</a></li>
-                      </ul>
-                    </li>
-                  </ul>
+                  <?php 
+                    $mmenuOptions = array( 
+                        'theme_location' => 'cbv_main_menu2', 
+                        'menu_class' => 'clearfix reset-list',
+                        'container' => '',
+                        'container_class' => ''
+                      );
+                    wp_nav_menu( $mmenuOptions ); 
+                  ?>
                 </nav>
               </div>
               <div class="hdr-details-cntlr show-sm">
                 <div class="hdr-details ">
+                  <?php if( !empty($email) ): ?>
                   <div class="hdr-mail">
-                    <a href="mailto:hello@postatoakgate.com.au">
+                    <a href="mailto:<?php echo $email; ?>">
                       <i><svg class="mail-icon" width="19" height="15" viewBox="0 0 19 15" fill="#fff">
                         <use xlink:href="#mail-icon"></use></svg>
                       </i>
                     </a>
                   </div>
+                  <?php 
+                  endif;
+                  if( !empty($telephone) ): 
+                  ?>
                   <div class="hdr-tel">
-                    <a href="tel:(02)49939876">
-                      <span>(02) 4993 9876</span>
+                    <a href="tel:<?php echo phone_preg($telephone); ?>">
+                       <?php printf('<span>%s</span>', $telephone); ?>
                       <i><svg class="phone-icon" width="16.186" height="16.186" viewBox="0 0 16.186 16.186" fill="#fff">
                         <use xlink:href="#phone-icon"></use></svg>
                       </i>
                     </a>
                   </div>
+                  <?php endif; ?>
                 </div>
               </div>
+              <?php if( $sinfo ): ?>
               <div class="xs-hdr-socials">
                 <div class="hdr-socials">
                   <ul class="reset-list">
-                    <li>
-                      <a target="_blank" href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li>
-                      <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li>
-                      <a target="_blank" href="#"><i class="fab fa-youtube"></i></a>
-                    </li>
+                  <?php 
+                    if( !empty($sinfo['instagram_url']) ) printf('<li><a target="_blank" href="%s"><i class="fab fa-instagram"></i></a></li>', $sinfo['instagram_url']); 
+                    if( !empty($sinfo['facebook_url']) ) printf('<li><a target="_blank" href="%s"><i class="fab fa-facebook-f"></i></a></li>', $sinfo['facebook_url']); 
+                    if( !empty($sinfo['youtube_url']) ) printf('<li><a target="_blank" href="%s"><i class="fab fa-youtube"></i></a></li>', $sinfo['youtube_url']); 
+                  ?>
                   </ul>
                 </div>
               </div>
+              <?php endif; ?>
             </div>
             <div class="hdr-twiter-feed-gallery">
               <img src="<?php echo THEME_URI; ?>/assets/images/hdr-twiter-feed-galery.jpg" alt="">

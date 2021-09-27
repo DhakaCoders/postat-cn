@@ -35,10 +35,12 @@ if( !function_exists('cbv_theme_setup') ){
         ) );
 
         register_nav_menus( array(
-            'cbv_main_menu' => __( 'Main Menu', 'postat' ),
-            'cbv_mobile_main_menu' => __( 'Mobile Menu', 'postat' ),
+            'cbv_main_menu1' => __( 'Main Menu 1', 'postat' ),
+            'cbv_main_menu2' => __( 'Main Menu 2', 'postat' ),
             'cbv_footer_menu1' => __( 'Footer Menu 1', 'postat' ),
             'cbv_footer_menu2' => __( 'Footer Menu 2', 'postat' ),
+            'cbv_footer_menu3' => __( 'Footer Menu 3', 'postat' ),
+            'cbv_booking_menu' => __( 'Booking Menu', 'postat' ),
             'cbv_copyright_menu' => __( 'Copyright', 'postat' ),
         ) );
 
@@ -71,6 +73,7 @@ Includes->>
 include_once(THEME_DIR .'/inc/widgets-area.php');
 include_once(THEME_DIR .'/inc/breadcrumbs.php');
 include_once(THEME_DIR .'/inc/cbv-functions.php');
+include_once(THEME_DIR .'/inc/acf-menu-chooser/acf-menu-chooser.php');
 /**
 ACF Option pages->>
 */
