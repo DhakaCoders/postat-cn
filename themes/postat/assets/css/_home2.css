@@ -423,9 +423,6 @@
 	.hunter-sec {
 	    height: 700px;
 	}
-	.waking-up-des blockquote p {
-	    font-size: 24px;
-	}
 	.follow-img {
 	    margin-bottom: 60px;
 	}
@@ -493,9 +490,6 @@
 	.waking-up-des {
 	    margin-top: 70px;
 	}
-	.waking-up-des blockquote p {
-	    font-size: 22px;
-	}
 	.follow-sec {
 	    padding: 70px 0 80px;
 	}
@@ -548,14 +542,25 @@
 	    padding: 60px 0 70px;
 	}
 	.hunter-sec {
-	    height: 600px;
+	    height: 700px;
 	}
 	.lftdes-rgtimg-img {
 	    height: 300px;
+	}
+	.cabin-sec {
+	    min-height: 700px;
 	}
 }
 @media(max-width: 479px){
 	.cabin-sec-inr {
 	    padding-top: 50px;
+	}
+	.waking-up-des blockquote p {
+	    font-size: 24px;
+	}
+}
+@media(max-width: 359px){
+	.lftdes-rgtimg-des .fl-transparent-btn{
+		min-width: 100%;
 	}
 }
