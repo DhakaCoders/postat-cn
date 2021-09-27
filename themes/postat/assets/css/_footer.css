@@ -66,6 +66,9 @@
 	color: #48484A;
 	font-weight: 700;
 }
+.ftr-col-01 .fl-h6.ftr-col-title a:hover{
+	color: #010203;
+}
 .ftr-col a{
 	display: inline-block;
 	font-size: 16px;
@@ -176,7 +179,7 @@
 	font-weight: 300;
 }
 .ftr-btm-menu ul li a:hover{
-	color: #48484A;
+	color: #808368;
 }
 .ftr-developed-by{
 	margin-left: auto;
@@ -258,6 +261,7 @@
 	}
 	.ftr-icon{
 		margin-top: 0;
+		text-align: left;
 	}
 	.fl-h6.ftr-col-title{
 		margin-bottom: 30px;
@@ -274,6 +278,7 @@
 		max-width: 100%;
 		margin-bottom: 30px;
 		text-align: center;
+		padding-right: 0;
 	}
 	.ftr-topbar{
 		margin-bottom: 45px;
@@ -320,7 +325,16 @@
 		width: 100%;
 		margin-bottom: 20px;
 	}
+	.ftr-icon{
+		margin-top: 20px;
+		text-align: center;
+	}
+	.ftr-icon a{
+		max-width: 200px;
+	}
 }
 @media(max-width: 575px){
-	
+	.ftr-icon a{
+		max-width: 180px;
+	}
 }

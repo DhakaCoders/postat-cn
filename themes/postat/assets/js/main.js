@@ -207,19 +207,25 @@ if( $('.hamburger-cntlr').length ){
     $('body').toggleClass('allWork');
   });
 }
-if( $('li.menu-item-has-children a').length ){
-  $('li.menu-item-has-children a').click(function(e){
-   event.preventDefault();
-   $(this).next().slideToggle(300);
+if( $('.xs-mbl-menu li.menu-item-has-children > a').length ){
+  $('.xs-mbl-menu li.menu-item-has-children > a').click(function(e){
+   e.preventDefault();
    $(this).parent().toggleClass('this-sub-menu-active');
+   $(this).parents().siblings().find('li.this-sub-menu-active').removeClass('this-sub-menu-active');
+   $(this).parents('li.menu-item-has-children').siblings().removeClass('this-sub-menu-active');
+   $(this).next().slideToggle(300);
+   $(this).parents().siblings().find('ul.sub-menu').slideUp(300);
  });
 }
+
+
 
 if (windowWidth > 767) {
   if( $('.page-bnr-cntlr').length ){
     var windowHeight = $(window).height();
-    if (windowHeight > 660) {
-      $('.page-bnr-cntlr').css('height', windowHeight);
+    var windowHeightM = windowHeight - 100;
+    if (windowHeight > 550) {
+      $('.page-bnr-cntlr').css('height', windowHeightM);
     }
   }
 }

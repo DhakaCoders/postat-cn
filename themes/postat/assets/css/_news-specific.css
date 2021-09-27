@@ -86,6 +86,7 @@
 	display: inline-block;
 	vertical-align: baseline;
 	color: #A7A7A7;
+	font-weight: 400;
 	position: relative;
 }
 .pt-news-specific-article ul li a.pt-article-prev{
@@ -100,6 +101,7 @@
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 	color: #A7A7A7;
+	margin-top: 1px;
 }
 .pt-news-specific-article ul li a.pt-article-nxt{
 	padding-right: 18px;
@@ -113,6 +115,7 @@
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 	color: #A7A7A7;
+	margin-top: 1px;
 }
 .pt-news-specific-article ul li a:hover{
 	opacity: 0.7;
@@ -127,6 +130,10 @@
 }
 .news-specific-ctlr .lftdes-rgtimg-rgt{
 	width: 50%;
+}
+
+.news-specific-ctlr .lftdes-rgtimg-title{
+	text-transform: capitalize;
 }
 
 

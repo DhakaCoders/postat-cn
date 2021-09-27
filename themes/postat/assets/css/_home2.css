@@ -219,6 +219,13 @@
 	letter-spacing: 1px;
 }
 
+.cabin-landing-ctlr .pt-intro-text-sec{
+	padding-bottom: 0;
+}
+.facilites-landing-ctlr .pt-intro-text-sec{
+	padding-bottom: 20px;
+}
+
 
 /*responsive*/
 
@@ -536,6 +543,11 @@
 	.blockquote-sec {
 	    padding-bottom: 40px;
 	}
+	.hunter-des{
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
 }
 @media(max-width: 575px){
 	.lftdes-rgtimg-sec {
@@ -563,6 +575,9 @@
 	    min-height: 700px;
 	}
 	.pt-text-slider-title{
+		font-size: 24px!important;
+	}
+	.blockquote-title{
 		font-size: 24px!important;
 	}
 }
