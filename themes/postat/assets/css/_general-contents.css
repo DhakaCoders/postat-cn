@@ -512,6 +512,10 @@ Gallery design
 	.pt-grds-black-bg {
 	    padding-top: 100px;
 	}
+	.pt-accordion-title:after{
+		height: 9px;
+    	width: 14px;
+	}
 }
 @media(max-width: 1399px){
 	.pt-prev {
