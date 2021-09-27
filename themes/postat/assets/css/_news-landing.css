@@ -86,6 +86,7 @@
 .modal-dialog {
     max-width: 800px;
     width: 100%;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 20px;
@@ -249,6 +250,19 @@ button.close i {
 	    padding-left: 30px;
     	padding-right: 30px;
 	}
+	.modal-btn{
+		right: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.modal-btn a{
+		min-width: 0;
+		max-width: 190px;
+		font-size: 13px;
+		height: 40px;
+		padding: 0;
+		margin: 0 auto;
+	}
 
 }
 @media (max-width: 639px){
@@ -283,6 +297,9 @@ button.close i {
     	padding-left: 25px;
     	padding-right: 25px;
 	}
+	.modal-btn{
+		bottom: 23px;
+	}
 }
 @media (max-width: 479px){
 	.modal-body button.close i svg.mail-icon {
@@ -293,19 +310,7 @@ button.close i {
     	padding-left: 20px;
     	padding-right: 20px;
 	}
-	.modal-btn{
-		bottom: 23px;
-		right: 0;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-	.modal-btn a{
-		min-width: 0;
-		max-width: 190px;
-		font-size: 13px;
-		height: 40px;
-		padding: 0;
-	}
+	
 }
 @media (max-width: 359px){
 	.modal-btn a{
