@@ -516,6 +516,13 @@ Gallery design
 		height: 9px;
     	width: 14px;
 	}
+	.pt-text-slider-inr{
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	.ptTeamSlider .fl-transparent-btn{
+		min-width: 180px;
+	}
 }
 @media(max-width: 1399px){
 	.pt-prev {
