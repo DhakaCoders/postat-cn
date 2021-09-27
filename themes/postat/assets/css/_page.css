@@ -4,17 +4,20 @@
 	padding: 0 20px!important;
 }
 .slick-slider .slick-dots li{
-	width: 16px!important;
-	height: 16px!important;
+	width: 12px!important;
+	height: 12px!important;
 	position: static;
-	background: #E1E1E1!important;
+	background: #707070!important;
 	border-radius: 100% 100%!important;
 	margin: 0 8px;
 	padding: 0!important;
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
 }
 .slick-slider .slick-dots li.slick-active,
 .slick-slider .slick-dots li:hover{
-	background: #F3BA4B!important;
+	background: #fff!important;
 }
 .slick-slider .slick-dots li:before,
 .slick-slider .slick-dots li button:before{
@@ -22,8 +25,8 @@
 }
 .slick-slider .slick-dots li button{
 	padding: 0;
-	width: 16px;
-	height: 16px;
+	width: 12px;
+	height: 12px;
 }
 
 .slick-dots li:only-child{ 
@@ -82,6 +85,9 @@
 .pt-columns-2 .pt-grid-item{
 	width: 50%;
 }
+.pt-columns-2.lftimg-rgtdes .pt-grid-item:first-of-type{
+	order: 2;
+}
 .pt-columns-3 .pt-grid-item{
 	width: 33.33%;
 }
@@ -99,6 +105,13 @@
 }
 .pt-columns-2R .pt-grid-item:first-of-type{
 	width: 70%;
+}
+.pt-columns-2R.lftimg-rgtdes .pt-grid-item{
+	width: 70%;
+}
+.pt-columns-2R.lftimg-rgtdes .pt-grid-item:first-of-type{
+	order: 2;
+	width: 30%;
 }
 .pt-grids-sec-entry-hdr{
 	padding-bottom: 1px;
@@ -260,8 +273,29 @@ ol li::before {
 }
 
 
-
-
+/*page slider*/
+.pg-bnr-slide-item-cntlr{
+	display: none;
+}
+.pg-bnr-slide-item-cntlr:first-of-type{
+	display: block;
+}
+.pageBnrSlider.slick-initialized .pg-bnr-slide-item-cntlr{
+	display: block;
+}
+.pg-bnr-slide-item{
+	position: relative;
+}
+.pageBnrSlider.slick-dotted.slick-slider{
+	margin-bottom: 0;
+}
+.pageBnrSlider.slick-slider ul.slick-dots{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 51px;
+	z-index: 5;
+}
 
 /*responsive*/
 
@@ -291,6 +325,12 @@ ol li::before {
 	.pt-columns-2R .pt-grid-item {
 	    width: 35%;
 	}
+	.pt-columns-2R.lftimg-rgtdes .pt-grid-item{
+		width: 65%;
+	}
+	.pt-columns-2R.lftimg-rgtdes .pt-grid-item:first-of-type{
+		width: 35%;
+	}
 	.pt-columns-2L .pt-grid-item:first-of-type {
 	    width: 35%;
 	}
@@ -302,6 +342,12 @@ ol li::before {
 		font-size: 15px;
 	}
 	
+
+	.page-bnr-cntlr{
+		height: 700px;
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
 }
 @media(max-width: 1199px){
 	.pt-fullwidth-txt-module {
@@ -309,21 +355,48 @@ ol li::before {
 	    padding-bottom: 55px;
 	}
 	.pt-grids-sec-cntlr {
-	    padding-top: 60px;
-	    padding-bottom: 60px;
+	    padding-top: 40px;
+	    padding-bottom: 40px;
+	}
+	.page-bnr-cntlr{
+		height: 600px;
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	.pt-columns-2L .pt-grid-item {
+	    width: 60%;
+	}
+	.pt-columns-2L .pt-grid-item:first-of-type {
+	    width: 40%;
+	}
+	.pt-columns-2R .pt-grid-item:first-of-type {
+	    width: 60%;
+	}
+	.pt-columns-2R .pt-grid-item {
+	    width: 40%;
+	}
+	.pt-columns-2R.lftimg-rgtdes .pt-grid-item{
+		width: 60%;
+	}
+	.pt-columns-2R.lftimg-rgtdes .pt-grid-item:first-of-type{
+		width: 40%;
 	}
 }
 @media(max-width: 991px){
-	.pt-fullwidth-txt-module {
-	    padding-top: 45px;
-	    padding-bottom: 45px;
-	}
 	.pt-fullwidth-txt-module h2 {
 	    margin-bottom: 20px!important;
 	}
-	.pt-grids-sec-cntlr {
-	    padding-top: 50px;
-	    padding-bottom: 50px;
+	.default-page-con ol li, ol li{
+		padding: 2px 0 10px 30px;
+	}
+	.default-page-con ul li, ul li {
+	    padding: 2px 0 10px 30px;
+	}
+	.pt-columns-4 .pt-grid-item {
+	    width: 50%;
+	}
+	.pt-columns-3 .pt-grid-item {
+	    width: 50%;
 	}
 }
 @media(max-width: 767px){
@@ -340,7 +413,8 @@ ol li::before {
 	}
 	.pt-grid-item {
 	    padding: 0 0;
-	    margin-bottom: 20px;
+	    margin-bottom: 0;
+	    padding-bottom: 30px;
 	}
 	.pt-columns-3 .pt-grid-item,
 	.pt-columns-2L .pt-grid-item:first-of-type,
@@ -350,11 +424,25 @@ ol li::before {
 	.pt-columns-4 .pt-grid-item {
 	    width: 100%;
 	}
+	.pt-columns-2R.lftimg-rgtdes .pt-grid-item{
+		width: 100%;
+	}
+	.pt-columns-2R.lftimg-rgtdes .pt-grid-item:first-of-type{
+		width: 100%;
+	}
 	.default-page-con ol li, ol li{
 		padding: 2px 0 10px 30px;
 	}
 	.default-page-con ul li, ul li{
 		padding: 2px 0 10px 30px;
+	}
+	.page-bnr-cntlr{
+		height: 500px;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	.pageBnrSlider.slick-slider ul.slick-dots{
+		bottom: 30px;
 	}
 }
 @media(max-width: 575px){
@@ -366,5 +454,11 @@ ol li::before {
 	}
 	.default-page-con ul li::before, ul li::before{
 		margin-top: 2px;
+	}
+}
+
+@media(max-width: 359px){
+	.fl-transparent-btn{
+		min-width: 180px;
 	}
 }

@@ -48,6 +48,13 @@
 	background: #f2f2f2;
 	border-color: #f2f2f2;
 }
+.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input:focus{
+	border-color: #A7A7A7;
+    background-color: #D3E3CE;
+}
+.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input.flatpickr-input.active:focus{
+	border-color: transparent;
+}
 .make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field i{
 	position: absolute;
 	left: 27px;
@@ -76,8 +83,12 @@
 	border: 1px solid #48484A!important;
 	font-weight: 500!important;
 }
+.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button:hover{
+	color: #fff!important;
+	background: #48484A!important;
+}
 .make-bking-nav{
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 .make-bking-nav ul{
 	display: flex;
@@ -89,6 +100,7 @@
 .make-bking-nav ul li{
 	padding: 0 18px;
 	font-size: 14px;
+	margin-bottom: 10px;
 }
 .make-bking-nav ul li a{
 	display: inline-block;
@@ -97,6 +109,9 @@
 	font-style: italic;
 	color: #A7A7A7;
 }
+.make-bking-nav ul li a:hover{
+	color: #48484A;
+}
 .make-bking-mail{
 	text-align: center;
 }
@@ -104,13 +119,70 @@
 	display: inline-block;
 	position: relative;
 	padding-left: 31px;
+	font-size: 14px;
+	font-weight: 300;
 }
 .make-bking-mail a i{
 	position: absolute;
 	left: 0;
+	margin-top: -1px;
 	top: 50%;
 	transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
+	transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+.make-bking-mail a:hover i svg{
+	fill: #48484A;
+}
+
+
+/*responsive*/
+@media(max-width: 1699px){
+	.make-bking-cntlr{
+		padding: 50px;
+	}
+	.make-bking-contact{
+		margin-bottom: 60px;
+	}
+	.make-a-booking-sec{
+		padding: 170px 0;
+	}
+}
+@media(max-width: 992px){
+	.make-bking-cntlr{
+		padding: 50px 30px;
+	}
+	.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container{
+		margin: 0 -7px;
+	}
+	.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field{
+		padding: 0 7px;
+	}
+	.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field{
+		margin-bottom: 30px;
+	}
+	.make-bking-contact{
+		margin-bottom: 55px;
+	}
+	.make-a-booking-sec{
+		padding: 110px 0;
+	}
+}
+@media(max-width: 767px){
+	.make-bking-cntlr{
+		padding: 50px 20px;
+	}
+	.make-bking-contact .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field{
+		margin-bottom: 20px;
+	}
+	.make-bking-contact{
+		margin-bottom: 40px;
+	}
+	.make-a-booking-sec{
+		padding: 80px 0;
+	}
 }

@@ -154,6 +154,9 @@
 	-ms-transform: scale(1.0);
 	transform: scale(1.0);
 }
+.pt-team-grd-item-img img{
+	width: 100%;
+}
 .pt-team-grd-item-des{
 	text-align: center;
 	padding-top: 20px;
@@ -255,6 +258,21 @@
 
 .pt-grds-black-bg{
 	background: #010203;
+	padding-top: 150px;
+}
+
+.pt-grds-black-bg .pt-grid-item h1,
+.pt-grds-black-bg .pt-grid-item h2,
+.pt-grds-black-bg .pt-grid-item h3,
+.pt-grds-black-bg .pt-grid-item h4,
+.pt-grds-black-bg .pt-grid-item h5,
+.pt-grds-black-bg .pt-grid-item h6{
+	color: #fff;
+	margin-bottom: 30px;
+	padding-top: 30px;
+}
+.pt-grds-black-bg .pt-grid-item p{
+	color: #A7A7A7;
 }
 
 
@@ -473,17 +491,34 @@ Gallery design
 	.pt-nxt{
 		right: -75px!important;
 	}
-}
-@media(max-width: 1399px){
-	.btn-ctlr ul{
-		display: block;
-		margin-left: 0;
-		margin-right: 0;
+	.btn-ctlr ul {
+	    margin-left: -6px;
+	    margin-right: -6px;
 	}
 	.btn-ctlr ul li {
-	    padding-left: 0;
-	    padding-right: 0;
-	    padding-bottom: 20px;
+	    padding-left: 6px;
+	    padding-right: 6px;
+	}
+	.btn-ctlr .fl-transparent-btn{
+		min-width: 190px;
+	}
+	.btn-ctlr .fl-gray-btn{
+		min-width: 190px;
+	}
+	.cabin-landing-ctlr .lftdes-rgtimg-sec,
+	.facilites-landing-ctlr .lftdes-rgtimg-sec {
+	    padding: 70px 0 100px;
+	}
+	.pt-grds-black-bg {
+	    padding-top: 100px;
+	}
+}
+@media(max-width: 1399px){
+	.pt-prev {
+	    left: -60px!important;
+	}
+	.pt-nxt {
+	    right: -60px!important;
 	}
 }
 @media(max-width: 1199px){
@@ -501,16 +536,16 @@ Gallery design
 		padding-right: 50px;
 	}
 	.pt-prev {
-	    left: 0px!important;
+	    left: -20px!important;
 	}
 	.pt-nxt {
-	    right: 0px!important;
+	    right: -20px!important;
 	}
 	.pt-fea-sec {
-	    padding: 160px 0 120px;
+	    padding: 120px 0 100px;
 	}
 	.pt-fea-sec-inr {
-	    padding-bottom: 90px;
+	    padding-bottom: 70px;
 	}
 	.pt-fea-slider-grds {
 	    margin-left: -20px;
@@ -528,7 +563,20 @@ Gallery design
 	    padding-bottom: 180px;
 	}
 	.pt-gallery-sec-inr {
-	    padding-top: 140px;
+	    padding-top: 120px;
+	}
+	.btn-ctlr ul{
+		display: block;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.btn-ctlr ul li {
+	    padding-left: 0;
+	    padding-right: 0;
+	    padding-bottom: 15px;
+	}
+	.pt-grds-black-bg {
+	    padding-top: 80px;
 	}
 }
 @media(max-width: 991px){
@@ -572,6 +620,13 @@ Gallery design
 	.pt-gallery-sec-inr {
 	    padding-top: 100px;
 	}
+	.pt-text-slider-inr {
+	    padding-left: 50px;
+	    padding-right: 50px;
+	}
+	.pt-grds-black-bg {
+	    padding-top: 70px;
+	}
 }
 @media(max-width: 767px){
 	.pt-text-slider-ctlr {
@@ -601,7 +656,58 @@ Gallery design
 	.gallery-columns-4 .gallery-item {
 	    width: 50%;
 	}
+	.pt-text-slider-inr{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.pt-grid-item-img{
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+	
+	.btn-ctlr ul {
+	    display: flex;
+	    margin-left: -7px;
+	    margin-right: -7px;
+	}
+	.btn-ctlr ul li{
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+	.pt-text-slider .pt-prev {
+	    left: -20px!important;
+	    margin-top: 18px;
+	}
+	.pt-text-slider .pt-nxt {
+	    right: -20px!important;
+	    margin-top: 18px;
+	}
+	.pt-grds-black-bg .pt-grid-item h1,
+	.pt-grds-black-bg .pt-grid-item h2,
+	.pt-grds-black-bg .pt-grid-item h3,
+	.pt-grds-black-bg .pt-grid-item h4,
+	.pt-grds-black-bg .pt-grid-item h5,
+	.pt-grds-black-bg .pt-grid-item h6{
+		margin-bottom: 20px;
+		padding-top: 0;
+	}
 
+}
+@media(max-width: 639px){
+	.pt-team-grds {
+	    margin-left: 0;
+	    margin-right: 0;
+	}
+	.pt-team-grd-item-ctlr{
+		padding-left: 0;
+	    padding-right: 0;
+	}
+	.pt-team-grd-item{
+		max-width: 375px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 @media(max-width: 575px){
 	.pt-team-sec {
@@ -624,6 +730,31 @@ Gallery design
 	}
 	.pt-gallery-sec-inr {
 	    padding-top: 50px;
+	}
+	.pt-team-grd-item-des strong{
+		margin-bottom: 15px;
+	}
+	
+}
+
+@media(max-width: 479px){
+	.btn-ctlr ul {
+	    display: block;
+	    margin-left: 0;
+	    margin-right: 0;
+	}
+	.btn-ctlr ul li{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.btn-ctlr .fl-transparent-btn {
+	    min-width: 100%;
+	}
+	.btn-ctlr .fl-gray-btn {
+	    min-width: 100%;
+	}
+	.pt-grd-item-img-columns2 {
+	    height: 350px;
 	}
 }
 

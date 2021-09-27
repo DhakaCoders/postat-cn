@@ -216,10 +216,10 @@ if( $('li.menu-item-has-children a').length ){
 }
 
 if (windowWidth > 767) {
-  if( $('.hm-bnr-cntlr').length ){
+  if( $('.page-bnr-cntlr').length ){
     var windowHeight = $(window).height();
     if (windowHeight > 660) {
-      $('.hm-bnr-cntlr').css('height', windowHeight);
+      $('.page-bnr-cntlr').css('height', windowHeight);
     }
   }
 }
@@ -236,6 +236,18 @@ if($('.end-flatpickr').length ){
   }); 
 }
 
+
+if( $('.pageBnrSlider').length ){
+    $('.pageBnrSlider').slick({
+      dots: true,
+      infinite: false,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    });
+}
 /*start of Shariful*/
 
 var containerWidth = $('.container').width();
@@ -244,6 +256,7 @@ var containerLftOffset = (containerOffset / 2);
 $('.follow-img-ctlr').css('margin-left', containerLftOffset);
 
 $(window).resize(function(){
+  var windowWidth_1920 = $('.page-body-cntlr').width();
   var containerWidth = $('.container').width();
   var containerOffset = (windowWidth_1920 - containerWidth);
   var containerLftOffset = (containerOffset / 2);
