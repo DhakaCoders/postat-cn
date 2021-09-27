@@ -207,13 +207,18 @@ if( $('.hamburger-cntlr').length ){
     $('body').toggleClass('allWork');
   });
 }
-if( $('li.menu-item-has-children a').length ){
-  $('li.menu-item-has-children a').click(function(e){
+if( $('.xs-menu-col li.menu-item-has-children a').length ){
+  $('.xs-menu-col li.menu-item-has-children a').click(function(e){
    event.preventDefault();
-   $(this).next().slideToggle(300);
+   $('.xs-menu-col ul li').removeClass('this-sub-menu-active');
    $(this).parent().toggleClass('this-sub-menu-active');
+   /*$(this).parents().siblings().find('li.this-sub-menu-active').removeClass('this-sub-menu-active');*/
+   $(this).next().slideToggle(300);
+   $(this).parents().siblings().find('ul.sub-menu').slideUp(300);
  });
 }
+
+
 
 if (windowWidth > 767) {
   if( $('.page-bnr-cntlr').length ){

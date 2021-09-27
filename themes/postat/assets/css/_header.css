@@ -44,6 +44,14 @@
 .home .hdr-mail{
 	display: block;
 }
+.home .hdr-tel a:hover{
+	color: #fff;
+	opacity: 0.8;
+}
+.home .hdr-tel a:hover i svg{
+	fill: #fff;
+	opacity: 0.8;
+}
 .home .hdr-tel a i svg{
 	fill: #fff;
 }
@@ -52,6 +60,14 @@
 }
 .hdr-mail a{
 	display: inline-block;
+}
+.home .hdr-mail a:hover i svg{
+	fill: #fff;
+	opacity: 0.8;
+}
+.home .hdr-mail a:hover{
+	color: #fff;
+	opacity: 0.8;
 }
 .hdr-tel a:hover,
 .hdr-mail a:hover{
@@ -369,6 +385,13 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 @media(max-width: 1699px){
 	.logo a{
 		max-width: 320px;
+	}
+	.home .hdr-topbar{
+		padding-top: 55px;
+		padding-bottom: 30px;
+	}
+	.home .hdr-lft{
+		margin-top: -63px;
 	}
 	.xs-menu-cntlr{
 		padding: 85px 0 70px;
