@@ -368,7 +368,7 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 /*responsive*/
 @media(max-width: 1699px){
 	.logo a{
-		max-width: 350px;
+		max-width: 320px;
 	}
 	.xs-menu-cntlr{
 		padding: 85px 0 70px;
@@ -402,6 +402,12 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
 	}
 	.xs-mbl-menu{
 		margin-bottom: 140px;
+	}
+	.hdr-topbar{
+		padding: 20px 0 10px;
+	}
+	.header{
+		padding-bottom: 20px;
 	}
 }
 @media(max-width: 1199px){
