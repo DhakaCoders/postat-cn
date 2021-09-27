@@ -265,6 +265,10 @@
 .pt-grds-black-bg .pt-grid-item h6{
 	color: #fff;
 	margin-bottom: 30px;
+	padding-top: 30px;
+}
+.pt-grds-black-bg .pt-grid-item p{
+	color: #A7A7A7;
 }
 
 
