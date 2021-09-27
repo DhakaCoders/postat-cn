@@ -631,6 +631,12 @@ Gallery design
 	.pt-grds-black-bg {
 	    padding-top: 70px;
 	}
+	.pt-text-slider .pt-nxt{
+		margin-top: 25px;
+	}
+	.pt-text-slider .pt-prev{
+		margin-top: 25px;
+	}
 }
 @media(max-width: 767px){
 	.pt-text-slider-ctlr {
@@ -694,6 +700,17 @@ Gallery design
 	.pt-grds-black-bg .pt-grid-item h6{
 		margin-bottom: 20px;
 		padding-top: 0;
+	}
+	.pt-fea-slider-grds {
+	    margin-left: 0;
+	    margin-right: 0;
+	    display: block;
+	}
+	.pt-fea-slider-grd-item{
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+		text-align: center;
 	}
 
 }
