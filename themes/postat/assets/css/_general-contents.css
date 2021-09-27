@@ -685,6 +685,7 @@ Gallery design
 	.pt-grds-black-bg .pt-grid-item h5,
 	.pt-grds-black-bg .pt-grid-item h6{
 		margin-bottom: 20px;
+		padding-top: 20px;
 	}
 
 }
