@@ -207,9 +207,9 @@ if( $('.hamburger-cntlr').length ){
     $('body').toggleClass('allWork');
   });
 }
-if( $('.xs-menu-col li.menu-item-has-children a').length ){
-  $('.xs-menu-col li.menu-item-has-children a').click(function(e){
-   event.preventDefault();
+if( $('.xs-menu-col li.menu-item-has-children > a').length ){
+  $('.xs-menu-col li.menu-item-has-children > a').click(function(e){
+   e.preventDefault();
    $('.xs-menu-col ul li').removeClass('this-sub-menu-active');
    $(this).parent().toggleClass('this-sub-menu-active');
    /*$(this).parents().siblings().find('li.this-sub-menu-active').removeClass('this-sub-menu-active');*/
