@@ -218,8 +218,9 @@ if( $('li.menu-item-has-children a').length ){
 if (windowWidth > 767) {
   if( $('.page-bnr-cntlr').length ){
     var windowHeight = $(window).height();
-    if (windowHeight > 660) {
-      $('.page-bnr-cntlr').css('height', windowHeight);
+    var windowHeightM = windowHeight - 100;
+    if (windowHeight > 550) {
+      $('.page-bnr-cntlr').css('height', windowHeightM);
     }
   }
 }
