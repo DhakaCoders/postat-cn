@@ -562,6 +562,9 @@
 	.cabin-sec {
 	    min-height: 700px;
 	}
+	.pt-text-slider-title{
+		font-size: 24px!important;
+	}
 }
 @media(max-width: 479px){
 	.cabin-sec-inr {
