@@ -256,6 +256,7 @@ var containerLftOffset = (containerOffset / 2);
 $('.follow-img-ctlr').css('margin-left', containerLftOffset);
 
 $(window).resize(function(){
+  var windowWidth_1920 = $('.page-body-cntlr').width();
   var containerWidth = $('.container').width();
   var containerOffset = (windowWidth_1920 - containerWidth);
   var containerLftOffset = (containerOffset / 2);

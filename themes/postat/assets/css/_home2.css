@@ -327,9 +327,6 @@
 }
 
 @media(max-width: 1199px){
-	.lftdes-rgtimg-img {
-	    height: 470px;
-	}
 	.lftdes-rgtimg-lft {
 	    padding-right: 0;
 	}
@@ -534,13 +531,13 @@
 	.lftimg-rgtdes .lftdes-rgtimg-rgt {
 	    padding-right: 0;
 	}
+	.lftdes-rgtimg-rgt {
+	    padding-right: 0;
+	}
 }
 @media(max-width: 575px){
 	.lftdes-rgtimg-sec {
 	    padding: 60px 0 80px;
-	}
-	.cabin-sec {
-	    min-height: 550px;
 	}
 	.cabin-sec-inr {
 	    padding-top: 80px;
