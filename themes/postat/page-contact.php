@@ -2,6 +2,10 @@
 /*Template Name: Contact*/
 get_header();
 $thisID = get_the_ID();
+$telephone = get_field('telephone', 'options');
+$address = get_field('address', 'options');
+$gurl = get_field('gurl', 'options');
+$gmaplink = !empty($gurl)?$gurl: 'javascript:void()';
 $mapcode = get_field('gmap_code', $thisID);
 $imgID = get_post_thumbnail_id($thisID);
 $banner = !empty($imgID)? cbv_get_image_src($imgID): banner_placeholder();
@@ -41,12 +45,19 @@ $banner = !empty($imgID)? cbv_get_image_src($imgID): banner_placeholder();
                       <?php if( !empty($intro['description']) ) echo wpautop( $intro['description'] ); ?>
                     </div>
                     <div class="contact-form-dtails">
-                      <div class="cnt-addres">
+                      <!-- <div class="cnt-addres">
                         <a href="#"><span>379 Hunter Valley Road</span><span>Oakgate Farm NSW 2998</span></a>
                       </div>
+   
                       <div class="cnt-tel">
                         <a href="tel:(02)49939876">(02) 4993 9876</a>
-                      </div>
+                      </div> -->
+                      <?php 
+                        if( !empty($address) ) printf('<div class="cnt-addres"><a href="%s" target="_blank">%s</a></div>', $gmaplink, $address); 
+                        if( !empty($telephone) ) printf('<div class="cnt-tel"><a href="tel:%s">%s</a></div>', phone_preg($telephone), $telephone); 
+                      ?>
+
+
                     </div>
                   </div>
                 </div>
