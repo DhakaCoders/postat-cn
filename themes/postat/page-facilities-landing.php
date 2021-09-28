@@ -21,100 +21,106 @@ $thisID = get_the_ID();
   </section>
 
   <!-- <div class="gap-50"></div> -->
-
+  
   <div class="facilites-landing-ctlr">
+    <?php 
+    $intro = get_field('introsec', $thisID);
+      if($intro):
+    ?>
     <section class="pt-intro-text-sec">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="pt-intro-text-module">
-              <p>
-                Our luxurious amenities, in harmony with sustainable living, offer the ideal setting for you to disconnect and recharge. Set away from the hustle of city life, our enviable location is only eighty minutes from Sydney.  From spellbinding vistas all to yourself, to our thoughtful and welcoming spaces, POST at Oakgate provides an opportunity to slow down and reconnect.
-              </p>
+              <?php if( !empty($intro['description']) ) echo wpautop( $intro['description'] ); ?>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <?php endif; ?>
 
 
+
+    <?php 
+    $blocksec = get_field('blocksec', $thisID);
+      if($blocksec):
+    ?>
     <section class="lftdes-rgtimg-sec">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="lftdes-rgtimg-sec-inr">
               <div class="lftdes-rgtimg-grds">
-                <div class="lftdes-rgtimg-grd-item">
-                  <div class="lftdes-rgtimg-ctlr lftimg-rgtdes">
-                    <div class="lftdes-rgtimg-lft">
-                      <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-05.jpg)">
-                        <img src="<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-05.jpg">
-                      </div>
-                    </div>
-                    <div class="lftdes-rgtimg-rgt">
-                      <div class="lftdes-rgtimg-des pt-link-hover">
-                        <h2 class="lftdes-rgtimg-title fl-h2">Waterhole</h2>
-                        <h3 class="lftdes-rgtimg-subtitle fl-h6">Lorem ipsum</h3>
-                        <p>The Waterhole is the estate’s communal guest facility, and is a prime example of our awe-inspiring architectural masterpieces. </p>
-                        <a href="#">Learn more</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="lftdes-rgtimg-grd-item">
+                <?php 
+                  $i = 1;
+                  foreach( $blocksec as $block ): 
+                    if($i%2 == 0)  {  
+                     $lftimg = '';  
+                    }else{  
+                     $lftimg = 'lftimg-rgtdes'; 
+                    }
+                ?>
+                <div class="lftdes-rgtimg-grd-item <?php echo $lftimg; ?>">
                   <div class="lftdes-rgtimg-ctlr">
                     <div class="lftdes-rgtimg-lft">
-                      <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-06.jpg)">
-                        <img src="<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-06.jpg">
+                      <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php if( !empty($block['image']) ) echo cbv_get_image_src($block['image']); ?>)">
+                        <?php if( !empty($block['image']) ) echo cbv_get_image_tag($block['image']); ?>
                       </div>
                     </div>
                     <div class="lftdes-rgtimg-rgt">
                       <div class="lftdes-rgtimg-des pt-link-hover">
-                        <h2 class="lftdes-rgtimg-title fl-h2">Golf course</h2>
-                        <h3 class="lftdes-rgtimg-subtitle fl-h6">Lorem ipsum</h3>
-                        <p>Ut egestas eros orci, in elementum urna consequat a. Aliquam at rutrum lorem, vel tempus ligula. In dictum lectus at mi ornare, nec tincidunt ligula fermentum. Vestibulum facilisis turpis aliquet ligula egestas faucibus. Etiam congue odio et tincidunt semper. </p>
-                        <a href="#">Learn more</a>
+                        <?php 
+                        if( !empty($block['title']) ) printf( '<h2 class="lftdes-rgtimg-title fl-h2">%s</h2>', $block['title'] );
+                        if( !empty($block['subtitle']) ) printf( '<h3 class="lftdes-rgtimg-subtitle fl-h6">%s</h3>', $block['subtitle'] );
+                        if( !empty($block['description']) ) echo wpautop( $block['description'] ); 
+                        ?>
+
+                        <?php  
+                          $link = $block['link'];
+                          if( $link ): 
+                        ?>
+                        <a href="<?php echo esc_url( $link ); ?>">Learn more</a>
+                        <?php endif;?>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="lftdes-rgtimg-grd-item">
-                  <div class="lftdes-rgtimg-ctlr lftimg-rgtdes">
-                    <div class="lftdes-rgtimg-lft">
-                      <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-07.jpg)">
-                        <img src="<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-07.jpg">
-                      </div>
-                    </div>
-                    <div class="lftdes-rgtimg-rgt">
-                      <div class="lftdes-rgtimg-des pt-link-hover">
-                        <h2 class="lftdes-rgtimg-title fl-h2">Other amenties</h2>
-                        <h3 class="lftdes-rgtimg-subtitle fl-h6">Lorem ipsum</h3>
-                        <p>There are a range of other activities and facilities, all located onsite for the convenience of our guests and visitors.  </p>
-                        <a href="#">Learn more</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <?php  $i++; endforeach;?>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <?php endif; ?>
 
-    <section class="luxury-sec inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/luxury-bg.jpg)">
+    <?php
+    $showhide_luxuary_block = get_field('showhide_luxuary_block', $thisID );
+    if($showhide_luxuary_block): 
+    $pacage_sec = get_field('luxury_pacage_sec', $thisID );
+    if($pacage_sec):
+    ?>
+    <section class="luxury-sec inline-bg" style="background:url(<?php if( !empty($pacage_sec['image']) ) echo cbv_get_image_src($pacage_sec['image']); ?>)">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="luxury-sec-inr">
               <div class="luxury-des">
-                <h2 class="luxury-des-title fl-h2"><a href="#">View our luxury packages…</a></h2>
+                <?php 
+                  $pacagelink = $pacage_sec['link'];
+                  if( is_array( $pacagelink ) &&  !empty( $pacagelink['url'] ) ){
+                      printf('<h2 class="luxury-des-title fl-h2"><a href="%s" target="%s">%s</a></h2>', $pacagelink['url'], $pacagelink['target'], $pacagelink['title']); 
+                  }
+                ?>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <?php endif; ?>
+    <?php endif; ?>
 
     <section class="follow-sec">
       <div class="container">
