@@ -98,8 +98,8 @@ $thisID = get_the_ID();
     <?php
     $showhide_luxuary_block = get_field('showhide_luxuary_block', $thisID );
     if($showhide_luxuary_block): 
-    $pacage_sec = get_field('luxury_pacage_sec', $thisID );
-    if($pacage_sec):
+      $pacage_sec = get_field('luxury_pacage_sec', $thisID );
+      if($pacage_sec):
     ?>
     <section class="luxury-sec inline-bg" style="background:url(<?php if( !empty($pacage_sec['image']) ) echo cbv_get_image_src($pacage_sec['image']); ?>)">
       <div class="container">
