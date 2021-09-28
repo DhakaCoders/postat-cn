@@ -3,15 +3,16 @@
 get_header();
 $thisID = get_the_ID();
 $menu = get_field('select_menu', $thisID);
+$bgimg = get_field('bgimg', $thisID);
 ?>
 <section class="make-a-booking-sec">
-  <div class="make-bking-bg inline-bg" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/make-bking-bg.jpg');"></div>
+  <div class="make-bking-bg inline-bg" style="background-image: url('<?php if( !empty($bgimg) ) echo cbv_get_image_src($bgimg); ?>');"></div>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="make-bking-cntlr">
           <div class="make-bking-desc">
-            <p>POST AT OAKGATE is an Adults only accommodation that provides luxurious facilities for those looking to experience a break that pampers and rejuvenates. Surrounded by magnificent rural Australia landscape and furnished with stylish and comfortable décor, our guests enjoy a sophisticated environment created specifically to help them unwind. Whether you visit us for a quick break or a significant celebration, we ensure a memorable stay. Two night minimum stay.</p>
+            <?php the_content(); ?>
           </div>
           <div class="make-bking-contact">
             <div class="contact-form-wrp">
@@ -67,14 +68,19 @@ $menu = get_field('select_menu', $thisID);
               <li><a href="#">Things To Do</a></li>                             
             </ul>
           </div>
+          <?php 
+            $email = get_field('emailaddres', 'options');
+            if( !empty($email) ):
+          ?>
           <div class="make-bking-mail">
-            <a href="#">
-              <span>hello@postatoakgate.com.au</span>
+            <a href="mailto:<?php echo $email; ?>">
+              <?php printf('<span>%s</span>', $email); ?>
               <i><svg class="mail-icon" width="19" height="15" viewBox="0 0 19 15" fill="#d4e3ce">
                 <use xlink:href="#mail-icon"></use></svg>
               </i>
             </a>
           </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>

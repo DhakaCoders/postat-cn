@@ -387,21 +387,33 @@ if($post_akg):
   </div>
 </section>
 
-
-<section class="hunter-sec inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/hunter-sec-bg.jpg)">
+<?php
+$showhide_exploring = get_field('showhide_exploring', HOMEID);
+if($showhide_exploring): 
+$exploring = get_field('exploring_sec', HOMEID);
+if($exploring):
+?>
+<section class="hunter-sec inline-bg" style="background:url(<?php if( !empty($exploring['image']) ) echo cbv_get_image_src($exploring['image']); ?>)">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="hunter-sec-inr">
           <div class="hunter-des">
-            <h2 class="hunterd-des-title fl-h2">Exploring the Hunter </h2>
-            <h3 class="hunter-des-subtitle fl-h6">Australia’s oldest wine region</h3>
-            <p>The Hunter Valley is located to the north of Sydney and is split into two parts. The Lower Hunter is home to the majority of the 150 wineries within the region. The Upper Hunter hosts other industries in addition to vineyards, and the area is well known for its cheeses, olive oil and olives. </p>
-            <a class="fl-white-btn" href="#">visit the hunter</a>
+            <?php 
+            if( !empty($exploring['title']) ) printf('<h2 class="hunterd-des-title fl-h2">%s</h2>', $exploring['title']);
+            if( !empty($exploring['subtitle']) ) printf('<h3 class="hunter-des-subtitle fl-h6">%s</h3>', $exploring['subtitle']);
+            if( !empty($exploring['description']) ) echo wpautop( $exploring['description'] ); 
+            $expllink = $exploring['link'];
+            if( is_array( $expllink ) &&  !empty( $expllink['url'] ) ){
+                printf('<a class="fl-white-btn" href="%s" target="%s">%s</a>', $expllink['url'], $expllink['target'], $expllink['title']); 
+            }
+            ?>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-  <?php get_footer(); ?>
+<?php endif; ?>
+<?php endif; ?>
+<?php get_footer(); ?>
