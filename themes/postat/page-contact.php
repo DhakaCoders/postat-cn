@@ -45,19 +45,10 @@ $banner = !empty($imgID)? cbv_get_image_src($imgID): banner_placeholder();
                       <?php if( !empty($intro['description']) ) echo wpautop( $intro['description'] ); ?>
                     </div>
                     <div class="contact-form-dtails">
-                      <!-- <div class="cnt-addres">
-                        <a href="#"><span>379 Hunter Valley Road</span><span>Oakgate Farm NSW 2998</span></a>
-                      </div>
-   
-                      <div class="cnt-tel">
-                        <a href="tel:(02)49939876">(02) 4993 9876</a>
-                      </div> -->
                       <?php 
                         if( !empty($address) ) printf('<div class="cnt-addres"><a href="%s" target="_blank">%s</a></div>', $gmaplink, $address); 
                         if( !empty($telephone) ) printf('<div class="cnt-tel"><a href="tel:%s">%s</a></div>', phone_preg($telephone), $telephone); 
                       ?>
-
-
                     </div>
                   </div>
                 </div>
