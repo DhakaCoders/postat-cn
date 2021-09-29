@@ -18,85 +18,10 @@ $banner = !empty($bannerID)? cbv_get_image_src($bannerID): banner_placeholder();
     </div>
   </div>
 </section>
-<?php $tags = get_the_tags($thisID); ?>
-<div class="news-specific-ctlr">
-<section class="pt-news-specific-tag-article-sec">
- <div class="container">
-   <div class="row">
-     <div class="col-md-12">
-       <div class="pt-news-specific-tag-article-sec-inr">
-         <div class="pt-news-specific-tag-date">
-           <?php if( !empty($tags) ): ?>
-           <div class="pt-news-specific-tag">
-            <?php foreach($tags as $tag) :  ?>
-             <strong><a href="<?php echo get_tag_link( $tag ); ?>">#<?php echo $tag->name; ?></a></strong>
-             <?php endforeach; ?>
-           </div>
-            <?php endif; ?>
-           <div class="pt-news-specific-date">
-             <span><?php echo get_the_date('F Y'); ?></span>
-           </div>
-         </div>
-         <div class="pt-news-specific-article">
-           <ul class="reset-list">
-             <?php if( get_previous_post_link( ) ){ ?>
-             <li>
-              <?php 
-                preg_match('/href=(["\'])([^\1]*)\1/i', get_previous_post_link( ), $prev);
-              ?>
-              <a class="pt-article-prev" href="<?php echo $prev[2]?>">Previous article</a>
-              </li>
-              <?php } ?>
-              <?php if( get_next_post_link( ) ){ ?>
-             <li>
-              <?php 
-                preg_match('/href=(["\'])([^\1]*)\1/i', get_next_post_link( ), $next);
-              ?>
-              <a class="pt-article-nxt" href="<?php echo $next[2]?>">Next article</a>
-             </li>
-             <?php } ?>
-           </ul>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
-</section> 
+<div class="gap-50"></div>
 <?php while ( have_rows('contents') ) : the_row();  ?>
 <?php 
-  if( get_row_layout() == 'introduction' ){ 
-  $fctitle = get_sub_field('fc_title');
-  $fc_text = get_sub_field('fc_text');
-  $fc_image = get_sub_field('image');
-  $introtitle = !empty($fctitle)?$fctitle:get_the_title($thisID);
-?>
-<section class="lftdes-rgtimg-sec">
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="lftdes-rgtimg-sec-inr">
-        <div class="lftdes-rgtimg-ctlr lftimg-rgtdes">
-          <div class="lftdes-rgtimg-lft">
-            <div class="lftdes-rgtimg-img-ctlr">
-              <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php if( !empty($fc_image) ) echo cbv_get_image_src($fc_image); ?>)">
-                <?php if( !empty($fc_image) ) echo cbv_get_image_tag($fc_image); ?>
-              </div>
-            </div>
-          </div>
-          <div class="lftdes-rgtimg-rgt">
-            <div class="lftdes-rgtimg-des">
-              <h2 class="lftdes-rgtimg-title fl-h2"><?php echo $introtitle; ?></h2>
-              <h3 class="lftdes-rgtimg-subtitle fl-h6"><?php echo get_the_date('d F Y'); ?></h3>
-              <?php if( !empty($fc_text) ) echo wpautop($fc_text); ?>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-<?php }elseif( get_row_layout() == 'full_width' ){ 
+  if( get_row_layout() == 'full_width' ){ 
   $fctitle = get_sub_field('fc_title');
   $heading_color = get_sub_field('heading_color');
   $fc_text = get_sub_field('fc_text');
@@ -494,14 +419,14 @@ $fc_title = get_sub_field('fc_title');
 $fc_text = get_sub_field('fc_text');
 $fc_image = get_sub_field('image');
 $image_position = get_sub_field('image_position');
-$class_position = $image_position == 'right'?' lftimg-rgtdes':'';
+$class_position = $image_position == 'right'?' pt-columns-2R lftimg-rgtdes':' pt-columns-2L';
 ?>
 <section class="pt-grids-sec-cntlr">
   <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="pt-grd-sec-inr">
-            <div class="pt-columns pt-columns-2R<?php echo $class_position; ?>">
+            <div class="pt-columns<?php echo $class_position; ?>">
               <div class="pt-grid-item">
                 <div class="pt-grid-item-inr">
                   <div class="pt-grid-item-img inline-bg" style="background:url(<?php echo !empty($fc_image)?cbv_get_image_src($fc_image):''; ?>);">
@@ -704,5 +629,4 @@ $lightbox = get_sub_field('display_lightbox');
 <div class="gap-<?php echo $fc_gap; ?>"></div>
 <?php } ?>
 <?php endwhile; ?>
-</div>
 <?php get_footer(); ?>

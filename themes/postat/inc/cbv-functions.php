@@ -212,13 +212,13 @@ function banner_placeholder($format = 'src'){
 
 }
 
-function fleet_placeholder($format = 'src'){
+function news_placeholder($format = 'src'){
   $placehoder = get_field('placeholder', 'options');
   if( !empty($placehoder) ){
       if( $format == 'src' ){
-        $placeholder = !empty($placehoder['fleet'])? cbv_get_image_src($placehoder['fleet']):'';
+        $placeholder = !empty($placehoder['news'])? cbv_get_image_src($placehoder['news']):'';
       }else{
-        $placeholder = !empty($placehoder['fleet'])? cbv_get_image_tag($placehoder['fleet']):'';
+        $placeholder = !empty($placehoder['news'])? cbv_get_image_tag($placehoder['news']):'';
       }
       return $placeholder;
   }

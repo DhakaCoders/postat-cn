@@ -119,52 +119,83 @@ if($cabin):
 </section>
 <?php endif; ?>
 <?php endif; ?>
+<?php
+$showhide_secabin = get_field('showhide_secabin', HOMEID);
+if($showhide_secabin): 
+$cabinobj = get_field('select_cabin', HOMEID);
+if( empty($cabinobj) ){
+    $cabinobj = get_posts( array(
+      'post_type' => 'cabin',
+      'posts_per_page'=> -1,
+      'orderby' => 'date',
+      'order'=> 'asc',
 
+    ) );  
+}
+if( $cabinobj ){
+?>
 <section class="lftdes-rgtimg-sec">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="lftdes-rgtimg-sec-inr">
           <div class="lftdes-rgtimg-grds">
+            <?php
+              $i = 1;
+              foreach( $cabinobj as $cabin ) {
+              global $post;
+              $imgID = get_post_thumbnail_id($cabin->ID);
+              $thumb = !empty($imgID)? cbv_get_image_src($imgID): news_placeholder();
+              $imgtag = !empty($imgID)? cbv_get_image_tag($imgID): news_placeholder('tag');
+              $ovview = get_field('overview', $cabin->ID);
+            ?>
             <div class="lftdes-rgtimg-grd-item">
-              <div class="lftdes-rgtimg-ctlr lftimg-rgtdes">
+              <div class="lftdes-rgtimg-ctlr<?php echo ($i%2 != 0)?' lftimg-rgtdes':''; ?>">
                 <div class="lftdes-rgtimg-lft">
                   <div class="lftdes-rgtimg-img-ctlr">
-                    <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-02.jpg)">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-02.jpg">
+                    <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php echo $thumb; ?>)">
+                    <?php echo $imgtag; ?>
                     </div>
                   </div>
                 </div>
                 <div class="lftdes-rgtimg-rgt">
                   <div class="lftdes-rgtimg-des pt-link-hover">
-                    <h2 class="lftdes-rgtimg-title fl-h2">Watagans</h2>
+                    <h2 class="lftdes-rgtimg-title fl-h2"><?php echo get_the_title($cabin->ID); ?></h2>
                     
                     <div class="fea-grd-ctlr">
-                      <div class="fea-item pt-user">
-                        <i>
-                          <svg class="fea-item-img-01-svg" width="34.393" height="43.773" viewBox="0 0 34.393 43.773" fill="#000000">
-                          <use xlink:href="#fea-item-img-01-svg"></use> </svg>
-                        </i>
-                        <span>2</span>
-                      </div>
-                      <div class="fea-item pt-bed">
-                        <i>
-                          <svg class="fea-item-img-02-svg" width="50.661" height="42" viewBox="0 0 50.661 42" fill="#000000">
-                          <use xlink:href="#fea-item-img-02-svg"></use> </svg>
-                        </i>
-                        <span>1</span>
-                      </div>
-                      <div class="fea-item pt-bath">
-                        <i>
-                          <svg class="fea-item-img-03-svg" width="42.47" height="42.3" viewBox="0 0 42.47 42.3" fill="#000000">
-                          <use xlink:href="#fea-item-img-03-svg"></use> </svg>
-                        </i>
-                        <span>1</span>
-                      </div>
+                    <?php if( !empty($ovview['person']) ): ?>
+                    <div class="fea-item pt-user">
+                      <i>
+                        <svg class="fea-item-img-01-svg" width="34.393" height="43.773" viewBox="0 0 34.393 43.773" fill="#000000">
+                        <use xlink:href="#fea-item-img-01-svg"></use> </svg>
+                      </i>
+                      <?php printf('<span>%s</span>', $ovview['person']); ?>
                     </div>
-                    <h3 class="lftdes-rgtimg-subtitle fl-h6">Secluded beauty</h3>
-                    <p>This secluded cabin is the ideal setting for a luxurious and romantic getaway. Watch the sunset beyond the stunning mountain range, as you breathe in the fresh mountain air and feel the embrace of your unspoiled surroundings.</p>
-                    <a href="#">Learn more</a>
+                    <?php endif; ?>
+                    <?php if( !empty($ovview['bed']) ): ?>
+                    <div class="fea-item pt-bed">
+                      <i>
+                        <svg class="fea-item-img-02-svg" width="50.661" height="42" viewBox="0 0 50.661 42" fill="#000000">
+                        <use xlink:href="#fea-item-img-02-svg"></use> </svg>
+                      </i>
+                      <?php printf('<span>%s</span>', $ovview['bed']); ?>
+                    </div>
+                    <?php endif; ?>
+                    <?php if( !empty($ovview['bathroom']) ): ?>
+                    <div class="fea-item pt-bath">
+                      <i>
+                        <svg class="fea-item-img-03-svg" width="42.47" height="42.3" viewBox="0 0 42.47 42.3" fill="#000000">
+                        <use xlink:href="#fea-item-img-03-svg"></use> </svg>
+                      </i>
+                      <?php printf('<span>%s</span>', $ovview['bathroom']); ?>
+                    </div>
+                    <?php endif; ?>
+                    </div>
+                    <?php 
+                      if( !empty($ovview['subtitle']) ) printf('<h3 class="lftdes-rgtimg-subtitle fl-h6">%s</h3>', $ovview['subtitle']);
+                      if( !empty($ovview['description']) ) echo wpautop($ovview['description']); 
+                    ?>
+                    <a href="<?php the_permalink($cabin->ID); ?>">Learn more</a>
                     <div class="lftdes-rgtimg-des-btn">
                       <a class="fl-transparent-btn" href="#">make a booking</a>
                     </div>
@@ -172,102 +203,15 @@ if($cabin):
                 </div>
               </div>
             </div>
-            <div class="lftdes-rgtimg-grd-item">
-              <div class="lftdes-rgtimg-ctlr">
-                <div class="lftdes-rgtimg-lft">
-                  <div class="lftdes-rgtimg-img-ctlr">
-                    <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-03.jpg)">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-03.jpg">
-                    </div>
-                  </div>
-                </div>
-                <div class="lftdes-rgtimg-rgt">
-                  <div class="lftdes-rgtimg-des pt-link-hover">
-                    <h2 class="lftdes-rgtimg-title fl-h2">Heaton</h2>
-                    <div class="fea-grd-ctlr">
-                      <div class="fea-item pt-user">
-                        <i>
-                          <svg class="fea-item-img-01-svg" width="34.393" height="43.773" viewBox="0 0 34.393 43.773" fill="#000000">
-                          <use xlink:href="#fea-item-img-01-svg"></use> </svg>
-                        </i>
-                        <span>2</span>
-                      </div>
-                      <div class="fea-item pt-bed">
-                        <i>
-                          <svg class="fea-item-img-02-svg" width="50.661" height="42" viewBox="0 0 50.661 42" fill="#000000">
-                          <use xlink:href="#fea-item-img-02-svg"></use> </svg>
-                        </i>
-                        <span>1</span>
-                      </div>
-                      <div class="fea-item pt-bath">
-                        <i>
-                          <svg class="fea-item-img-03-svg" width="42.47" height="42.3" viewBox="0 0 42.47 42.3" fill="#000000">
-                          <use xlink:href="#fea-item-img-03-svg"></use> </svg>
-                        </i>
-                        <span>1</span>
-                      </div>
-                    </div>
-                    <h3 class="lftdes-rgtimg-subtitle fl-h6">Picture perfect</h3>
-                    <p>The picturesque location of Heaton, positioned waterfront to the scenic dam, combined with the luxury accommodation therein, lays the foundation of a rejuvenating, relaxing getaway or a restful reprieve from an adventure and sightseeing getaway in the gorgeous Hunter Valley.</p>
-                    <a href="#">Learn more </a>
-                    <div class="lftdes-rgtimg-des-btn">
-                      <a class="fl-transparent-btn" href="#">make a booking</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="lftdes-rgtimg-grd-item">
-              <div class="lftdes-rgtimg-ctlr lftimg-rgtdes">
-                <div class="lftdes-rgtimg-lft">
-                  <div class="lftdes-rgtimg-img-ctlr">
-                    <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-02.jpg)">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-02.jpg">
-                    </div>
-                  </div>
-                </div>
-                <div class="lftdes-rgtimg-rgt">
-                  <div class="lftdes-rgtimg-des pt-link-hover">
-                    <h2 class="lftdes-rgtimg-title fl-h2">Awaba</h2>
-                    <div class="fea-grd-ctlr">
-                      <div class="fea-item pt-user">
-                        <i>
-                          <svg class="fea-item-img-01-svg" width="34.393" height="43.773" viewBox="0 0 34.393 43.773" fill="#000000">
-                          <use xlink:href="#fea-item-img-01-svg"></use> </svg>
-                        </i>
-                        <span>2</span>
-                      </div>
-                      <div class="fea-item pt-bed">
-                        <i>
-                          <svg class="fea-item-img-02-svg" width="50.661" height="42" viewBox="0 0 50.661 42" fill="#000000">
-                          <use xlink:href="#fea-item-img-02-svg"></use> </svg>
-                        </i>
-                        <span>1</span>
-                      </div>
-                      <div class="fea-item pt-bath">
-                        <i>
-                          <svg class="fea-item-img-03-svg" width="42.47" height="42.3" viewBox="0 0 42.47 42.3" fill="#000000">
-                          <use xlink:href="#fea-item-img-03-svg"></use> </svg>
-                        </i>
-                        <span>1</span>
-                      </div>
-                    </div>
-                    <h3 class="lftdes-rgtimg-subtitle fl-h6">Quiet elegance</h3>
-                    <p>Awaba is set amid lush paddocks and bordered by state forest, ensuring relaxation comes easily to those who stay, making this cabin the perfect choice for an unmatched rural getaway experience.</p>
-                    <a href="#">Learn more</a>
-                    <div class="lftdes-rgtimg-des-btn">
-                      <a class="fl-transparent-btn" href="#">make a booking</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <?php $i++; } ?>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+<?php } ?>
+<?php endif; ?>
 <?php
 $showhide_luxuary_block = get_field('showhide_luxuary_block', HOMEID);
 if($showhide_luxuary_block): 
@@ -299,19 +243,33 @@ $showhide_testimonial = get_field('showhide_testimonial', HOMEID);
 if($showhide_testimonial): 
 $testi = get_field('testimonial_sec', HOMEID);
 if($testi):
+$testiobj = $testi['select_testimonial'];
+if( empty($testiobj) ){
+    $testiobj = get_posts( array(
+      'post_type' => 'testimonials',
+      'posts_per_page'=> 1,
+      'orderby' => 'date',
+      'order'=> 'asc',
+
+    ) );  
+}
 ?>
 <section class="waking-up-sec inline-bg" style="background:url(<?php if( !empty($testi['image']) ) echo cbv_get_image_src($testi['image']); ?>)">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
+        <?php if($testiobj){ ?>
         <div class="waking-up-sec-inr">
+          <?php foreach( $testiobj as $testi ) : ?>
           <div class="waking-up-des">
             <blockquote>
-              <p>“Waking up to the expansive windows to the rolling hills and morning fog is beyond dreamy.”</p>
+              <p>“<?php echo $testi->post_content; ?>”</p>
               <strong>lauren hill, sydney</strong>
             </blockquote>
           </div>
+          <?php endforeach; ?>
         </div>
+        <?php } ?>
       </div>
     </div>
   </div>
