@@ -2,7 +2,6 @@
 /*Template Name: Make a Booking*/
 get_header();
 $thisID = get_the_ID();
-echo $menu = get_field('select_menu', $thisID);
 $bgimg = get_field('bgimg', $thisID);
 ?>
 <section class="make-a-booking-sec">
