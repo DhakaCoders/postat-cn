@@ -30,8 +30,8 @@ if($banners){
 <?php } ?>
 <?php 
 $thumbID = get_post_thumbnail_id(get_the_ID());
-$thumb = !empty($thumbID)? cbv_get_image_src($thumbID): news_placeholder();
-$thumbtag = !empty($thumbID)? cbv_get_image_tag($thumbID): news_placeholder('tag');
+$thumb = !empty($thumbID)? cbv_get_image_src($thumbID): cabin_placeholder();
+$thumbtag = !empty($thumbID)? cbv_get_image_tag($thumbID): cabin_placeholder('tag');
 $ovview = get_field('overview', get_the_ID());
 ?>
 <div class="cabin-facilities-specific-ctlr">

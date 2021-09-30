@@ -2,27 +2,55 @@
 /*Template Name: Luxury Packages*/
 get_header();
 $thisID = get_the_ID();
+$bannerID = get_field('banner', $thisID);
+$content = get_field('description', $thisID);
+$banner = !empty($bannerID)? cbv_get_image_src($bannerID): banner_placeholder();
 ?>
-
-
-<section class="pt-intro-text-sec">
+<section class="page-banner">
+  <div class="page-banner-bg-black"></div>
+  <div class="page-bnr-bg inline-bg" style="background-image: url('<?php echo $banner; ?>');"></div>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="pt-intro-text-module">
-          <p>
-            Our luxurious amenities, in harmony with sustainable living, offer the ideal setting for you to disconnect and recharge. Set away from the hustle of city life, our enviable location is only eighty minutes from Sydney.  From spellbinding vistas all to yourself, to our thoughtful and welcoming spaces, POST at Oakgate provides an opportunity to slow down and reconnect.
-          </p>
+        <div class="page-bnr-cntlr">
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
+<?php if( !empty($content) ): ?>
+<section class="pt-intro-text-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="pt-intro-text-module">
+          <?php echo wpautop($content); ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+<?php 
+$query = new WP_Query(array( 
+    'post_type'=> 'packages',
+    'post_status' => 'publish',
+    'posts_per_page' => -1,
+    'orderby' => 'date',
+    'order'=> 'DESC'
+  ) 
+);
+?>
 <section class="full-width-img-bleed-sec">
   <div class="full-width-img-bleed-sec-rows-cntlr">
+    <?php if($query->have_posts()):  ?>
     <ul class="reset-list clearfix">
+      <?php 
+        while($query->have_posts()): $query->the_post(); 
+        $thumbID = get_post_thumbnail_id(get_the_ID());
+        $thumb = !empty($thumbID)? cbv_get_image_src($thumbID): package_placeholder();
+        $thumbtag = !empty($thumbID)? cbv_get_image_tag($thumbID): package_placeholder('tag');
+      ?>
       <li>
         <div class="container">
           <div class="row">
@@ -30,15 +58,15 @@ $thisID = get_the_ID();
               <div class="full-width-img-des-cntlr">
                 <div class="full-width-img-des-lft mHc">
                   <div class="full-width-img-cntlr">
-                    <div class="inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/luxury-packages-1.jpg);"></div>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/luxury-packages-1.jpg" alt="">
+                    <div class="inline-bg" style="background-image: url(<?php echo $thumb; ?>);"></div>
+                    <?php echo $thumbtag; ?>
                   </div>
                 </div>
                 <div class="full-width-img-des-rgt mHc">
                   <div class="full-width-des-innr">
-                    <h2 class="full-width-des-title fl-h2">Package 1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum dui nec venenatis ullamcorper. Nunc et ex nibh. Suspendisse quis magna non erat porta rhoncus. Fusce lacinia eros velit, at luctus diam efficitur a. Donec porta vitae tortor eget feugiat. Donec id sagittis ligula, et elementum lectus. Nam ligula lorem, imperdiet ut quam elementum, sagittis vestibulum dui. Donec quis ligula sed enim malesuada ultrices ut pretium dui. Integer interdum varius lacinia. Quisque vulputate enim a sapien suscipit pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ut lectus semper, blandit eros sit amet, tempor nulla. Curabitur ac rutrum ligula. Phasellus porttitor elit non semper placerat.</p>
-                    <a class="fl-transparent-btn" href="#">learn more</a>
+                    <h2 class="full-width-des-title fl-h2"><?php the_title(); ?></h2>
+                    <?php the_excerpt(); ?>
+                    <a class="fl-transparent-btn" href="<?php the_permalink(); ?>">learn more</a>
                   </div>
                 </div>
               </div>
@@ -46,53 +74,14 @@ $thisID = get_the_ID();
           </div>
         </div>
       </li>
-      <li>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="full-width-img-des-cntlr">
-                <div class="full-width-img-des-lft mHc">
-                  <div class="full-width-img-cntlr">
-                    <div class="inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/luxury-packages-2.jpg);"></div>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/luxury-packages-2.jpg" alt="">
-                  </div>
-                </div>
-                <div class="full-width-img-des-rgt mHc">
-                  <div class="full-width-des-innr">
-                    <h2 class="full-width-des-title fl-h2">Package 1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum dui nec venenatis ullamcorper. Nunc et ex nibh. Suspendisse quis magna non erat porta rhoncus. Fusce lacinia eros velit, at luctus diam efficitur a. Donec porta vitae tortor eget feugiat. Donec id sagittis ligula, et elementum lectus. Nam ligula lorem, imperdiet ut quam elementum, sagittis vestibulum dui. Donec quis ligula sed enim malesuada ultrices ut pretium dui. Integer interdum varius lacinia. Quisque vulputate enim a sapien suscipit pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ut lectus semper, blandit eros sit amet, tempor nulla. Curabitur ac rutrum ligula. Phasellus porttitor elit non semper placerat.</p>
-                    <a class="fl-transparent-btn" href="#">learn more</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="full-width-img-des-cntlr">
-                <div class="full-width-img-des-lft mHc">
-                  <div class="full-width-img-cntlr">
-                    <div class="inline-bg" style="background-image: url(<?php echo THEME_URI; ?>/assets/images/luxury-packages-3.jpg);"></div>
-                    <img src="<?php echo THEME_URI; ?>/assets/images/luxury-packages-3.jpg" alt="">
-                  </div>
-                </div>
-                <div class="full-width-img-des-rgt mHc">
-                  <div class="full-width-des-innr">
-                    <h2 class="full-width-des-title fl-h2">Package 1</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed interdum dui nec venenatis ullamcorper. Nunc et ex nibh. Suspendisse quis magna non erat porta rhoncus. Fusce lacinia eros velit, at luctus diam efficitur a. Donec porta vitae tortor eget feugiat. Donec id sagittis ligula, et elementum lectus. Nam ligula lorem, imperdiet ut quam elementum, sagittis vestibulum dui. Donec quis ligula sed enim malesuada ultrices ut pretium dui. Integer interdum varius lacinia. Quisque vulputate enim a sapien suscipit pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras ut lectus semper, blandit eros sit amet, tempor nulla. Curabitur ac rutrum ligula. Phasellus porttitor elit non semper placerat.</p>
-                    <a class="fl-transparent-btn" href="#">learn more</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
+      <?php endwhile; ?>
     </ul>
+    <?php  
+      else:
+      echo '<div class="no-result">No Result.</div>';   
+      endif;  
+      wp_reset_postdata();
+    ?>
   </div>
 </section>
 

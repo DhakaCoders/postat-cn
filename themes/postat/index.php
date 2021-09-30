@@ -33,28 +33,4 @@ $page_title = !empty($customtitle)? $customtitle: get_the_title($thisID);
       </div>
     </div>
 </section>
-
-
-
-<div class="modal fade show" id="hdr-rgt-btm-add-card" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="padding-right:0;">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <i><svg class="mail-icon" width="66" height="64" viewBox="0 0 66 64" fill="#48484a">
-            <use xlink:href="#close-icon"></use></svg>
-          </i>
-        </button>
-        <div class="modal-con-cntlr"> 
-          <div class="modal-img">
-            <img src="<?php echo THEME_URI; ?>/assets/images/modal-bg.jpg" alt="">
-          </div>
-          <div class="modal-btn">
-            <a class="fl-transparent-btn" href="#">download plan</a>
-          </div>
-        </div>  
-      </div>
-    </div>
-  </div>
-</div>
 <?php get_footer(); ?>
