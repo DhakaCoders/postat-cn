@@ -1,336 +1,377 @@
   <?php get_header(); ?>
-  <section class="hm-banner">
-      <div class="hm-bnr-btm-btn-cntlr">
-        <div class="hm-bnr-btm-btn">
-          <a href="#">make a reservation</a>
-        </div>
-        <div class="hm-bnr-btm-btn hm-bnr-btm-btn-2">
-          <a href="#">check availability</a>
+  <?php  
+  $hbanner = get_field('banner', HOMEID);
+  if($hbanner):
+  $banner = !empty($hbanner['image'])? cbv_get_image_src( $hbanner['image'] ): '';
+
+  $hqoutlink = $hbanner['quote_link'];
+  $hbookinglink = $hbanner['booking_link'];
+  $hreslink = $hbanner['reservation_link'];
+  $havaillink = $hbanner['availability_link'];
+?>
+<section class="hm-banner">
+  <div class="hm-bnr-btm-btn-cntlr">
+    <?php 
+      if( is_array( $hreslink ) &&  !empty( $hreslink['url'] ) ){
+          printf('<div class="hm-bnr-btm-btn"><a href="%s" target="%s">%s</a></div>', $hreslink['url'], $hreslink['target'], $hreslink['title']); 
+      }
+      if( is_array( $havaillink ) &&  !empty( $havaillink['url'] ) ){
+          printf('<div class="hm-bnr-btm-btn hm-bnr-btm-btn-2"><a href="%s" target="%s">%s</a></div>', $havaillink['url'], $havaillink['target'], $havaillink['title']); 
+      }
+    ?>
+  </div>
+  <div class="hm-banner-bg-black"></div>
+  <div class="hm-bnr-bg inline-bg" style="background-image: url('<?php echo $banner; ?>');"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hm-bnr-cntlr">
+          <div class="hm-bnr-desc-cntlr">
+            <?php if( !empty($hbanner['quote_text']) ): ?>
+            <div class="hm-bnr-desc">
+              <p>“<?php printf('%s', $hbanner['quote_text']); ?>” 
+                <?php 
+                  if( is_array( $hqoutlink ) &&  !empty( $hqoutlink['url'] ) ){
+                      printf('<a href="%s" target="%s">%s</a>', $hqoutlink['url'], $hqoutlink['target'], $hqoutlink['title']); 
+                  }
+                ?>
+              </p>
+            </div>
+            <?php endif; ?>
+            <?php 
+              if( is_array( $hbookinglink ) &&  !empty( $hbookinglink['url'] ) ){
+                  printf('<div class="hm-bnr-btn"><a class="fl-transparent-btn" href="%s" target="%s">%s</a></div>', $hbookinglink['url'], $hbookinglink['target'], $hbookinglink['title']); 
+              }
+            ?>
+          </div>
         </div>
       </div>
-      <div class="hm-banner-bg-black"></div>
-      <div class="hm-bnr-bg inline-bg" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/hm-banner-bg.jpg');"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="hm-bnr-cntlr">
-              <div class="hm-bnr-desc-cntlr">
-                <div class="hm-bnr-desc">
-                  <p>“Sleek and seductive accommodation with unsurpassed views of our rural Australian landscape.” <a href="#">gourmet traveller</a></p>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+<?php
+$showhide = get_field('showhide', HOMEID);
+if($showhide): 
+$intro = get_field('introsec', HOMEID);
+if($intro):
+?>
+<section class="lftdes-rgtimg-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="lftdes-rgtimg-sec-inr">
+          <div class="lftdes-rgtimg-ctlr lftimg-rgtdes display-align">
+            <div class="lftdes-rgtimg-lft">
+              <div class="lftdes-rgtimg-img-ctlr">
+                <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php if( !empty($intro['image']) ) echo cbv_get_image_src($intro['image']); ?>)">
+                  <?php if( !empty($intro['image']) ) echo cbv_get_image_tag($intro['image']); ?>
                 </div>
-                <div class="hm-bnr-btn">
-                  <a class="fl-transparent-btn" href="#">make a booking</a>
-                </div>
+              </div>
+            </div>
+            <div class="lftdes-rgtimg-rgt">
+              <div class="lftdes-rgtimg-des">
+                <?php 
+                if( !empty($intro['title']) ) printf('<h2 class="lftdes-rgtimg-title fl-h2">%s</h2>', $intro['title']);
+                if( !empty($intro['subtitle']) ) printf('<h3 class="lftdes-rgtimg-subtitle fl-h6">%s</h3>', $intro['subtitle']);
+                if( !empty($intro['description']) ) echo wpautop( $intro['description'] ); 
+                $introlink = $intro['link'];
+                if( is_array( $introlink ) &&  !empty( $introlink['url'] ) ){
+                    printf('<a class="fl-transparent-btn" href="%s" target="%s">%s</a>', $introlink['url'], $introlink['target'], $introlink['title']); 
+                }
+                ?>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+<?php endif; ?>
+<?php
+$showhide_cabin = get_field('showhide_cabin', HOMEID);
+if($showhide_cabin): 
+$cabin = get_field('cabinsec', HOMEID);
+if($cabin):
+?>
+<section class="cabin-sec inline-bg" style="background:url(<?php if( !empty($cabin['image']) ) echo cbv_get_image_src($cabin['image']); ?>)">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="cabin-sec-inr">
+          <div class="cabin-des">
+            <?php 
+            if( !empty($cabin['title']) ) printf('<h2 class="cabin-des-title fl-h2">%s</h2>', $cabin['title']);
+            if( !empty($cabin['subtitle']) ) printf('<h3 class="cabin-des-subtitle fl-h6">%s</h3>', $cabin['subtitle']);
+            if( !empty($cabin['description']) ) echo wpautop( $cabin['description'] ); 
+            $cabinlink = $cabin['link'];
+            if( is_array( $cabinlink ) &&  !empty( $cabinlink['url'] ) ){
+                printf('<a class="fl-white-btn" href="%s" target="%s">%s</a>', $cabinlink['url'], $cabinlink['target'], $cabinlink['title']); 
+            }
+            ?>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+<?php endif; ?>
+<?php
+$showhide_secabin = get_field('showhide_secabin', HOMEID);
+if($showhide_secabin): 
+$cabinobj = get_field('select_cabin', HOMEID);
+if( empty($cabinobj) ){
+    $cabinobj = get_posts( array(
+      'post_type' => 'cabin',
+      'posts_per_page'=> -1,
+      'orderby' => 'date',
+      'order'=> 'asc',
 
-
-    <section class="lftdes-rgtimg-sec">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="lftdes-rgtimg-sec-inr">
-              <div class="lftdes-rgtimg-ctlr lftimg-rgtdes display-align">
+    ) );  
+}
+if( $cabinobj ){
+?>
+<section class="lftdes-rgtimg-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="lftdes-rgtimg-sec-inr">
+          <div class="lftdes-rgtimg-grds">
+            <?php
+              $i = 1;
+              foreach( $cabinobj as $cabin ) {
+              global $post;
+              $imgID = get_post_thumbnail_id($cabin->ID);
+              $thumb = !empty($imgID)? cbv_get_image_src($imgID): news_placeholder();
+              $imgtag = !empty($imgID)? cbv_get_image_tag($imgID): news_placeholder('tag');
+              $ovview = get_field('overview', $cabin->ID);
+            ?>
+            <div class="lftdes-rgtimg-grd-item">
+              <div class="lftdes-rgtimg-ctlr<?php echo ($i%2 != 0)?' lftimg-rgtdes':''; ?>">
                 <div class="lftdes-rgtimg-lft">
                   <div class="lftdes-rgtimg-img-ctlr">
-                    <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-01.jpg)">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-01.jpg">
+                    <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php echo $thumb; ?>)">
+                    <?php echo $imgtag; ?>
                     </div>
                   </div>
                 </div>
                 <div class="lftdes-rgtimg-rgt">
-                  <div class="lftdes-rgtimg-des">
-                    <h2 class="lftdes-rgtimg-title fl-h2">Welcome to Post at Oakgate</h2>
-                    <h3 class="lftdes-rgtimg-subtitle fl-h6">A seduction of the senses</h3>
-                    <p>Prepare to be surrounded by the natural, unspoiled beauty of our estate, where the environment, and its care, is of the utmost priority. Between the sophisticated architecture and luxury of our cabins, and the quiet and pristine natural landscape, your experience as our guest will be nothing short of spectacular.</p>
-                    <a class="fl-transparent-btn" href="#">make a booking</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="cabin-sec inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/cabin-bg.jpg)">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="cabin-sec-inr">
-              <div class="cabin-des">
-                <h2 class="cabin-des-title fl-h2">The Cabins</h2>
-                <h3 class="cabin-des-subtitle fl-h6">Be one with nature</h3>
-                <p>Book a stay in one of our luxury cabins, built on a marriage between architectural excellence and the highest eco-friendly standards. Our three identical cabins offer unique experiences by virtue of their differing locations on the property, each ensuring that your eco footprint treads lightly, while guaranteeing a peaceful and pleasurable escape into the surroundings. </p>
-                <a class="fl-white-btn" href="#">explore the cabins</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="lftdes-rgtimg-sec">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="lftdes-rgtimg-sec-inr">
-              <div class="lftdes-rgtimg-grds">
-                <div class="lftdes-rgtimg-grd-item">
-                  <div class="lftdes-rgtimg-ctlr lftimg-rgtdes">
-                    <div class="lftdes-rgtimg-lft">
-                      <div class="lftdes-rgtimg-img-ctlr">
-                        <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-02.jpg)">
-                          <img src="<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-02.jpg">
-                        </div>
-                      </div>
+                  <div class="lftdes-rgtimg-des pt-link-hover">
+                    <h2 class="lftdes-rgtimg-title fl-h2"><?php echo get_the_title($cabin->ID); ?></h2>
+                    
+                    <div class="fea-grd-ctlr">
+                    <?php if( !empty($ovview['person']) ): ?>
+                    <div class="fea-item pt-user">
+                      <i>
+                        <svg class="fea-item-img-01-svg" width="34.393" height="43.773" viewBox="0 0 34.393 43.773" fill="#000000">
+                        <use xlink:href="#fea-item-img-01-svg"></use> </svg>
+                      </i>
+                      <?php printf('<span>%s</span>', $ovview['person']); ?>
                     </div>
-                    <div class="lftdes-rgtimg-rgt">
-                      <div class="lftdes-rgtimg-des pt-link-hover">
-                        <h2 class="lftdes-rgtimg-title fl-h2">Watagans</h2>
-                        
-                        <div class="fea-grd-ctlr">
-                          <div class="fea-item pt-user">
-                            <i>
-                              <svg class="fea-item-img-01-svg" width="34.393" height="43.773" viewBox="0 0 34.393 43.773" fill="#000000">
-                              <use xlink:href="#fea-item-img-01-svg"></use> </svg>
-                            </i>
-                            <span>2</span>
-                          </div>
-                          <div class="fea-item pt-bed">
-                            <i>
-                              <svg class="fea-item-img-02-svg" width="50.661" height="42" viewBox="0 0 50.661 42" fill="#000000">
-                              <use xlink:href="#fea-item-img-02-svg"></use> </svg>
-                            </i>
-                            <span>1</span>
-                          </div>
-                          <div class="fea-item pt-bath">
-                            <i>
-                              <svg class="fea-item-img-03-svg" width="42.47" height="42.3" viewBox="0 0 42.47 42.3" fill="#000000">
-                              <use xlink:href="#fea-item-img-03-svg"></use> </svg>
-                            </i>
-                            <span>1</span>
-                          </div>
-                        </div>
-                        <h3 class="lftdes-rgtimg-subtitle fl-h6">Secluded beauty</h3>
-                        <p>This secluded cabin is the ideal setting for a luxurious and romantic getaway. Watch the sunset beyond the stunning mountain range, as you breathe in the fresh mountain air and feel the embrace of your unspoiled surroundings.</p>
-                        <a href="#">Learn more</a>
-                        <div class="lftdes-rgtimg-des-btn">
-                          <a class="fl-transparent-btn" href="#">make a booking</a>
-                        </div>
-                      </div>
+                    <?php endif; ?>
+                    <?php if( !empty($ovview['bed']) ): ?>
+                    <div class="fea-item pt-bed">
+                      <i>
+                        <svg class="fea-item-img-02-svg" width="50.661" height="42" viewBox="0 0 50.661 42" fill="#000000">
+                        <use xlink:href="#fea-item-img-02-svg"></use> </svg>
+                      </i>
+                      <?php printf('<span>%s</span>', $ovview['bed']); ?>
                     </div>
-                  </div>
-                </div>
-                <div class="lftdes-rgtimg-grd-item">
-                  <div class="lftdes-rgtimg-ctlr">
-                    <div class="lftdes-rgtimg-lft">
-                      <div class="lftdes-rgtimg-img-ctlr">
-                        <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-03.jpg)">
-                          <img src="<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-03.jpg">
-                        </div>
-                      </div>
+                    <?php endif; ?>
+                    <?php if( !empty($ovview['bathroom']) ): ?>
+                    <div class="fea-item pt-bath">
+                      <i>
+                        <svg class="fea-item-img-03-svg" width="42.47" height="42.3" viewBox="0 0 42.47 42.3" fill="#000000">
+                        <use xlink:href="#fea-item-img-03-svg"></use> </svg>
+                      </i>
+                      <?php printf('<span>%s</span>', $ovview['bathroom']); ?>
                     </div>
-                    <div class="lftdes-rgtimg-rgt">
-                      <div class="lftdes-rgtimg-des pt-link-hover">
-                        <h2 class="lftdes-rgtimg-title fl-h2">Heaton</h2>
-                        <div class="fea-grd-ctlr">
-                          <div class="fea-item pt-user">
-                            <i>
-                              <svg class="fea-item-img-01-svg" width="34.393" height="43.773" viewBox="0 0 34.393 43.773" fill="#000000">
-                              <use xlink:href="#fea-item-img-01-svg"></use> </svg>
-                            </i>
-                            <span>2</span>
-                          </div>
-                          <div class="fea-item pt-bed">
-                            <i>
-                              <svg class="fea-item-img-02-svg" width="50.661" height="42" viewBox="0 0 50.661 42" fill="#000000">
-                              <use xlink:href="#fea-item-img-02-svg"></use> </svg>
-                            </i>
-                            <span>1</span>
-                          </div>
-                          <div class="fea-item pt-bath">
-                            <i>
-                              <svg class="fea-item-img-03-svg" width="42.47" height="42.3" viewBox="0 0 42.47 42.3" fill="#000000">
-                              <use xlink:href="#fea-item-img-03-svg"></use> </svg>
-                            </i>
-                            <span>1</span>
-                          </div>
-                        </div>
-                        <h3 class="lftdes-rgtimg-subtitle fl-h6">Picture perfect</h3>
-                        <p>The picturesque location of Heaton, positioned waterfront to the scenic dam, combined with the luxury accommodation therein, lays the foundation of a rejuvenating, relaxing getaway or a restful reprieve from an adventure and sightseeing getaway in the gorgeous Hunter Valley.</p>
-                        <a href="#">Learn more </a>
-                        <div class="lftdes-rgtimg-des-btn">
-                          <a class="fl-transparent-btn" href="#">make a booking</a>
-                        </div>
-                      </div>
+                    <?php endif; ?>
                     </div>
-                  </div>
-                </div>
-                <div class="lftdes-rgtimg-grd-item">
-                  <div class="lftdes-rgtimg-ctlr lftimg-rgtdes">
-                    <div class="lftdes-rgtimg-lft">
-                      <div class="lftdes-rgtimg-img-ctlr">
-                        <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-02.jpg)">
-                          <img src="<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-02.jpg">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="lftdes-rgtimg-rgt">
-                      <div class="lftdes-rgtimg-des pt-link-hover">
-                        <h2 class="lftdes-rgtimg-title fl-h2">Awaba</h2>
-                        <div class="fea-grd-ctlr">
-                          <div class="fea-item pt-user">
-                            <i>
-                              <svg class="fea-item-img-01-svg" width="34.393" height="43.773" viewBox="0 0 34.393 43.773" fill="#000000">
-                              <use xlink:href="#fea-item-img-01-svg"></use> </svg>
-                            </i>
-                            <span>2</span>
-                          </div>
-                          <div class="fea-item pt-bed">
-                            <i>
-                              <svg class="fea-item-img-02-svg" width="50.661" height="42" viewBox="0 0 50.661 42" fill="#000000">
-                              <use xlink:href="#fea-item-img-02-svg"></use> </svg>
-                            </i>
-                            <span>1</span>
-                          </div>
-                          <div class="fea-item pt-bath">
-                            <i>
-                              <svg class="fea-item-img-03-svg" width="42.47" height="42.3" viewBox="0 0 42.47 42.3" fill="#000000">
-                              <use xlink:href="#fea-item-img-03-svg"></use> </svg>
-                            </i>
-                            <span>1</span>
-                          </div>
-                        </div>
-                        <h3 class="lftdes-rgtimg-subtitle fl-h6">Quiet elegance</h3>
-                        <p>Awaba is set amid lush paddocks and bordered by state forest, ensuring relaxation comes easily to those who stay, making this cabin the perfect choice for an unmatched rural getaway experience.</p>
-                        <a href="#">Learn more</a>
-                        <div class="lftdes-rgtimg-des-btn">
-                          <a class="fl-transparent-btn" href="#">make a booking</a>
-                        </div>
-                      </div>
+                    <?php 
+                      if( !empty($ovview['subtitle']) ) printf('<h3 class="lftdes-rgtimg-subtitle fl-h6">%s</h3>', $ovview['subtitle']);
+                      if( !empty($ovview['description']) ) echo wpautop($ovview['description']); 
+                    ?>
+                    <a href="<?php the_permalink($cabin->ID); ?>">Learn more</a>
+                    <div class="lftdes-rgtimg-des-btn">
+                      <a class="fl-transparent-btn" href="#">make a booking</a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <?php $i++; } ?>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="luxury-sec inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/luxury-bg.jpg)">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="luxury-sec-inr">
-              <div class="luxury-des">
-                <h2 class="luxury-des-title fl-h2"><a href="#">View our luxury packages…</a></h2>
-              </div>
-            </div>
+    </div>
+  </div>
+</section>
+<?php } ?>
+<?php endif; ?>
+<?php
+$showhide_luxuary_block = get_field('showhide_luxuary_block', HOMEID);
+if($showhide_luxuary_block): 
+$pacage_sec = get_field('luxury_pacage_sec', HOMEID);
+if($pacage_sec):
+?>
+<section class="luxury-sec inline-bg" style="background:url(<?php if( !empty($pacage_sec['image']) ) echo cbv_get_image_src($pacage_sec['image']); ?>)">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="luxury-sec-inr">
+          <div class="luxury-des">
+            <?php 
+              $pacagelink = $pacage_sec['link'];
+              if( is_array( $pacagelink ) &&  !empty( $pacagelink['url'] ) ){
+                  printf('<h2 class="luxury-des-title fl-h2"><a href="%s" target="%s">%s</a></h2>', $pacagelink['url'], $pacagelink['target'], $pacagelink['title']); 
+              }
+            ?>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+<?php endif; ?>
+<?php
+$showhide_testimonial = get_field('showhide_testimonial', HOMEID);
+if($showhide_testimonial): 
+$testi = get_field('testimonial_sec', HOMEID);
+if($testi):
+$testiobj = $testi['select_testimonial'];
+if( empty($testiobj) ){
+    $testiobj = get_posts( array(
+      'post_type' => 'testimonials',
+      'posts_per_page'=> 1,
+      'orderby' => 'date',
+      'order'=> 'asc',
 
-    <section class="waking-up-sec inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/waking-up-img.jpg)">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="waking-up-sec-inr">
-              <div class="waking-up-des">
-                <blockquote>
-                  <p>“Waking up to the expansive windows to the rolling hills and morning fog is beyond dreamy.”</p>
-                  <strong>lauren hill, sydney</strong>
-                </blockquote>
-              </div>
-            </div>
+    ) );  
+}
+?>
+<section class="waking-up-sec inline-bg" style="background:url(<?php if( !empty($testi['image']) ) echo cbv_get_image_src($testi['image']); ?>)">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <?php if($testiobj){ ?>
+        <div class="waking-up-sec-inr">
+          <?php foreach( $testiobj as $testi ) : ?>
+          <div class="waking-up-des">
+            <blockquote>
+              <p>“<?php echo $testi->post_content; ?>”</p>
+              <strong>lauren hill, sydney</strong>
+            </blockquote>
           </div>
+          <?php endforeach; ?>
         </div>
+        <?php } ?>
       </div>
-    </section>
-
-    <section class="lftdes-rgtimg-sec">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="lftdes-rgtimg-sec-inr">
-              <div class="lftdes-rgtimg-ctlr lftimg-rgtdes display-align">
-                <div class="lftdes-rgtimg-lft">
-                  <div class="lftdes-rgtimg-img-ctlr">
-                    <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-04.jpg)">
-                      <img src="<?php echo THEME_URI; ?>/assets/images/lftdes-rgtimg-img-04.jpg">
-                    </div>
-                  </div>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+<?php endif; ?>
+<?php
+$showhide_post_og = get_field('showhide_post_og', HOMEID);
+if($showhide_post_og): 
+$post_akg = get_field('post_akg', HOMEID);
+if($post_akg):
+?>
+<section class="lftdes-rgtimg-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="lftdes-rgtimg-sec-inr">
+          <div class="lftdes-rgtimg-ctlr lftimg-rgtdes display-align">
+            <div class="lftdes-rgtimg-lft">
+              <div class="lftdes-rgtimg-img-ctlr">
+                <div class="lftdes-rgtimg-img inline-bg" style="background:url(<?php if( !empty($post_akg['image']) ) echo cbv_get_image_src($post_akg['image']); ?>)">
+                  <?php if( !empty($post_akg['image']) ) echo cbv_get_image_tag($post_akg['image']); ?>
                 </div>
-                <div class="lftdes-rgtimg-rgt">
-                  <div class="lftdes-rgtimg-des">
-                    <h2 class="lftdes-rgtimg-title fl-h2">The Post at Oakgate difference</h2>
-                    <h3 class="lftdes-rgtimg-subtitle fl-h6">iMMERSE yourself in nature </h3>
-                    <p>Surrounded by the beauty of nature, with mountain ranges on the horizon and abundant wildlife calling the property home, our core value of being gentle with nature is evident in every aspect of our estate. We look forward to welcoming you, to indulge in the rejuvenating experience that Post at Oakgate has to offer.</p>
-                  </div>
-                </div>
+              </div>
+            </div>
+            <div class="lftdes-rgtimg-rgt">
+              <div class="lftdes-rgtimg-des">
+                <?php 
+                if( !empty($post_akg['title']) ) printf('<h2 class="lftdes-rgtimg-title fl-h2">%s</h2>', $post_akg['title']);
+                if( !empty($post_akg['subtitle']) ) printf('<h3 class="lftdes-rgtimg-subtitle fl-h6">%s</h3>', $post_akg['subtitle']);
+                if( !empty($post_akg['description']) ) echo wpautop( $post_akg['description'] ); 
+                ?>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+<?php endif; ?>
+<section class="follow-sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="follow-sec-inr">
+          <div class="follow-des">
+            <h2 class="follow-des-title fl-h2">Follow @postatoakgate</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="follow-img-ctlr">
+    <div class="follow-img">
+      <img src="<?php echo THEME_URI; ?>/assets/images/follow-des-img.png">
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="follow-btm-des">
+          <div class="follow-btm-des-hdr">
+            <h3 class="follow-btm-des-title fl-h6">Immerse yourself in the landscape, Tag us #postatoakgate #cabinporn #immersivelandscapes </h3>
+          </div>
+          <div class="follow-btm-des-btn">
+            <a class="fl-black-btn" href="#">follow @postatoakgate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="follow-sec">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="follow-sec-inr">
-              <div class="follow-des">
-                <h2 class="follow-des-title fl-h2">Follow @postatoakgate</h2>
-              </div>
-            </div>
+<?php
+$showhide_exploring = get_field('showhide_exploring', HOMEID);
+if($showhide_exploring): 
+$exploring = get_field('exploring_sec', HOMEID);
+if($exploring):
+?>
+<section class="hunter-sec inline-bg" style="background:url(<?php if( !empty($exploring['image']) ) echo cbv_get_image_src($exploring['image']); ?>)">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hunter-sec-inr">
+          <div class="hunter-des">
+            <?php 
+            if( !empty($exploring['title']) ) printf('<h2 class="hunterd-des-title fl-h2">%s</h2>', $exploring['title']);
+            if( !empty($exploring['subtitle']) ) printf('<h3 class="hunter-des-subtitle fl-h6">%s</h3>', $exploring['subtitle']);
+            if( !empty($exploring['description']) ) echo wpautop( $exploring['description'] ); 
+            $expllink = $exploring['link'];
+            if( is_array( $expllink ) &&  !empty( $expllink['url'] ) ){
+                printf('<a class="fl-white-btn" href="%s" target="%s">%s</a>', $expllink['url'], $expllink['target'], $expllink['title']); 
+            }
+            ?>
           </div>
         </div>
       </div>
-      <div class="follow-img-ctlr">
-        <div class="follow-img">
-          <img src="<?php echo THEME_URI; ?>/assets/images/follow-des-img.png">
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="follow-btm-des">
-              <div class="follow-btm-des-hdr">
-                <h3 class="follow-btm-des-title fl-h6">Immerse yourself in the landscape, Tag us #postatoakgate #cabinporn #immersivelandscapes </h3>
-              </div>
-              <div class="follow-btm-des-btn">
-                <a class="fl-black-btn" href="#">follow @postatoakgate</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="hunter-sec inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/hunter-sec-bg.jpg)">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="hunter-sec-inr">
-              <div class="hunter-des">
-                <h2 class="hunterd-des-title fl-h2">Exploring the Hunter </h2>
-                <h3 class="hunter-des-subtitle fl-h6">Australia’s oldest wine region</h3>
-                <p>The Hunter Valley is located to the north of Sydney and is split into two parts. The Lower Hunter is home to the majority of the 150 wineries within the region. The Upper Hunter hosts other industries in addition to vineyards, and the area is well known for its cheeses, olive oil and olives. </p>
-                <a class="fl-white-btn" href="#">visit the hunter</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  <?php get_footer(); ?>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+<?php endif; ?>
+<?php get_footer(); ?>

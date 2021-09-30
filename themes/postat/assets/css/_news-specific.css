@@ -135,8 +135,9 @@
 .news-specific-ctlr .lftdes-rgtimg-title{
 	text-transform: capitalize;
 }
-
-
+.gallery-icon.portrait {
+    position: relative;
+}
 @media(max-width: 1699px){
 	.pt-news-specific-tag-article-sec {
 	    padding-top: 120px;

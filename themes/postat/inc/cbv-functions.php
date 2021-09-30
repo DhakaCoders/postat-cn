@@ -197,13 +197,28 @@ function get_title_by_page_template( $pagetemplate ){
   return $post_title;
 }
 
-function fleet_placeholder($format = 'src'){
+
+function banner_placeholder($format = 'src'){
   $placehoder = get_field('placeholder', 'options');
   if( !empty($placehoder) ){
       if( $format == 'src' ){
-        $placeholder = !empty($placehoder['fleet'])? cbv_get_image_src($placehoder['fleet']):'';
+        $placeholder = !empty($placehoder['default_banner'])? cbv_get_image_src($placehoder['default_banner']):'';
       }else{
-        $placeholder = !empty($placehoder['fleet'])? cbv_get_image_tag($placehoder['fleet']):'';
+        $placeholder = !empty($placehoder['default_banner'])? cbv_get_image_tag($placehoder['default_banner']):'';
+      }
+      return $placeholder;
+  }
+  return '';
+
+}
+
+function news_placeholder($format = 'src'){
+  $placehoder = get_field('placeholder', 'options');
+  if( !empty($placehoder) ){
+      if( $format == 'src' ){
+        $placeholder = !empty($placehoder['news'])? cbv_get_image_src($placehoder['news']):'';
+      }else{
+        $placeholder = !empty($placehoder['news'])? cbv_get_image_tag($placehoder['news']):'';
       }
       return $placeholder;
   }
