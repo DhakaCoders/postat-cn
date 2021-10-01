@@ -207,7 +207,7 @@ if( $('.hamburger-cntlr').length ){
     $('body').toggleClass('allWork');
   });
 }
-if( $('.xs-mbl-menu li.menu-item-has-children > a').length ){
+/*if( $('.xs-mbl-menu li.menu-item-has-children > a').length ){
   $('.xs-mbl-menu li.menu-item-has-children > a').click(function(e){
    e.preventDefault();
    $(this).parent().toggleClass('this-sub-menu-active');
@@ -216,7 +216,7 @@ if( $('.xs-mbl-menu li.menu-item-has-children > a').length ){
    $(this).next().slideToggle(300);
    $(this).parents().siblings().find('ul.sub-menu').slideUp(300);
  });
-}
+}*/
 
 
 
@@ -334,7 +334,10 @@ if( $('.ptTeamSlider').length ){
 }
 
 
-
+$('body a.fl-gray-btn').on('click', function(e){
+  e.preventDefault();
+  $('#floor-plan-btm-add-card').modal('show');
+});
 
     new WOW().init();
 

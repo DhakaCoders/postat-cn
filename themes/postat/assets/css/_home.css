@@ -45,6 +45,10 @@
 .hm-bnr-desc > p a{
 	font-size: 18px;
 	text-transform:uppercase;
+	color: #48484a;
+}
+.hm-bnr-desc > p a:hover{
+	color: #808368;
 }
 .hm-bnr-btn .fl-transparent-btn{
 	font-weight: 500;

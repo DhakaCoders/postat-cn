@@ -19,6 +19,9 @@
     padding-top: 235px;
     padding-bottom: 50px;
 }
+.contact-form-info{
+    padding-right: 20px;
+}
 .contact-form-info-title {
     margin-bottom: 46px;
 }
@@ -471,6 +474,9 @@ textarea {
         width: 100%;
         margin: 0 auto;
         text-align: center;
+    }
+    .contact-form-info{
+        padding-right: 0;
     }
     .contact-form-dsc-wrp {
         padding: 0;

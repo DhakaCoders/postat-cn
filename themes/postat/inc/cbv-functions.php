@@ -197,13 +197,54 @@ function get_title_by_page_template( $pagetemplate ){
   return $post_title;
 }
 
-function fleet_placeholder($format = 'src'){
+
+function banner_placeholder($format = 'src'){
   $placehoder = get_field('placeholder', 'options');
   if( !empty($placehoder) ){
       if( $format == 'src' ){
-        $placeholder = !empty($placehoder['fleet'])? cbv_get_image_src($placehoder['fleet']):'';
+        $placeholder = !empty($placehoder['default_banner'])? cbv_get_image_src($placehoder['default_banner']):'';
       }else{
-        $placeholder = !empty($placehoder['fleet'])? cbv_get_image_tag($placehoder['fleet']):'';
+        $placeholder = !empty($placehoder['default_banner'])? cbv_get_image_tag($placehoder['default_banner']):'';
+      }
+      return $placeholder;
+  }
+  return '';
+
+}
+
+function news_placeholder($format = 'src'){
+  $placehoder = get_field('placeholder', 'options');
+  if( !empty($placehoder) ){
+      if( $format == 'src' ){
+        $placeholder = !empty($placehoder['news'])? cbv_get_image_src($placehoder['news']):'';
+      }else{
+        $placeholder = !empty($placehoder['news'])? cbv_get_image_tag($placehoder['news']):'';
+      }
+      return $placeholder;
+  }
+  return '';
+
+}
+function cabin_placeholder($format = 'src'){
+  $placehoder = get_field('placeholder', 'options');
+  if( !empty($placehoder) ){
+      if( $format == 'src' ){
+        $placeholder = !empty($placehoder['cabin'])? cbv_get_image_src($placehoder['cabin']):'';
+      }else{
+        $placeholder = !empty($placehoder['cabin'])? cbv_get_image_tag($placehoder['cabin']):'';
+      }
+      return $placeholder;
+  }
+  return '';
+
+}
+function package_placeholder($format = 'src'){
+  $placehoder = get_field('placeholder', 'options');
+  if( !empty($placehoder) ){
+      if( $format == 'src' ){
+        $placeholder = !empty($placehoder['luxury_package'])? cbv_get_image_src($placehoder['luxury_package']):'';
+      }else{
+        $placeholder = !empty($placehoder['luxury_package'])? cbv_get_image_tag($placehoder['luxury_package']):'';
       }
       return $placeholder;
   }
