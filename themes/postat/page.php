@@ -74,7 +74,7 @@ if( !empty($hd_color) ){
         <div class="col-md-12">
           <div class="pt-grd-sec-inr">
             <div class="pt-grids-sec-entry-hdr">
-              <?php if( !empty($fc_title) ) printf('<h2 class="fl-h2 pt-grids-sec-entry-hdr-title"%s>%s</h2>', $fc_title, $txt_color); ?>
+              <?php if( !empty($fc_title) ) printf('<h2 class="fl-h2 pt-grids-sec-entry-hdr-title"%s>%s</h2>', $txt_color, $fc_title); ?>
             </div>
             <div class="pt-columns pt-columns-2"<?php echo $txt_color; ?>>
               <?php if( !empty($string) ): ?>
@@ -299,8 +299,8 @@ if($packobj){
     <?php 
       foreach( $packobj as $package ) :
       $imgID = get_post_thumbnail_id($package->ID);
-      $imgtag = !empty($imgID)? cbv_get_image_tag($imgID): ''; 
-      $imgsrc = !empty($imgID)? cbv_get_image_src($imgID): ''; 
+      $imgtag = !empty($imgID)? cbv_get_image_tag($imgID): package_placeholder('tag'); 
+      $imgsrc = !empty($imgID)? cbv_get_image_src($imgID): package_placeholder(); 
     ?>
     <li>
       <div class="container">

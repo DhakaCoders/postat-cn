@@ -334,7 +334,10 @@ if( $('.ptTeamSlider').length ){
 }
 
 
-
+$('body a.fl-gray-btn').on('click', function(e){
+  e.preventDefault();
+  $('#floor-plan-btm-add-card').modal('show');
+});
 
     new WOW().init();
 

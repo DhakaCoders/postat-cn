@@ -2,7 +2,6 @@
 /*Template Name: Make a Booking*/
 get_header();
 $thisID = get_the_ID();
-$menu = get_field('select_menu', $thisID);
 $bgimg = get_field('bgimg', $thisID);
 ?>
 <section class="make-a-booking-sec">
@@ -18,55 +17,58 @@ $bgimg = get_field('bgimg', $thisID);
             <div class="contact-form-wrp">
               <div class="wpforms-container">
                 <div class="wpforms-form needs-validation novalidate">
-                  <div class="wpforms-field-container">
-                    <div class="wpforms-field wpforms-field-start-date">
-                      <i><svg class="date-icon" width="27" height="27" viewBox="0 0 27 27" fill="#48484a">
-                        <use xlink:href="#date-icon"></use></svg>
-                      </i>
-                      <label class="wpforms-field-label">arrival date</label>
-                      <input type="text" class="start-flatpickr" required="">
-                      <label id="wpforms-222-field_1-error" class="wpforms-error" for="wpforms-222-field_1">Check this field!</label>
-                    </div>
-                    <div class="wpforms-field wpforms-field-end-date">
-                      <i><svg class="date-icon" width="27" height="27" viewBox="0 0 27 27" fill="#48484a">
-                        <use xlink:href="#date-icon"></use></svg>
-                      </i>
-                      <label class="wpforms-field-label">departure date</label>
-                      <input type="text" class="end-flatpickr" required="">
-                      <label id="wpforms-222-field_1-error" class="wpforms-error" for="wpforms-222-field_1">Check this field!</label>
-                    </div>
+                  <form action="https://dovecote.checkfront.com/reserve/" method="get">
+                    <div class="wpforms-field-container">
+                      <div class="wpforms-field wpforms-field-start-date">
+                        <i><svg class="date-icon" width="27" height="27" viewBox="0 0 27 27" fill="#48484a">
+                          <use xlink:href="#date-icon"></use></svg>
+                        </i>
+                        <label class="wpforms-field-label">arrival date</label>
+                        <input type="text" class="start-flatpickr" name="start_date" required="">
+                        <label id="wpforms-222-field_1-error" class="wpforms-error" for="wpforms-222-field_1">Check this field!</label>
+                      </div>
+                      <div class="wpforms-field wpforms-field-end-date">
+                        <i><svg class="date-icon" width="27" height="27" viewBox="0 0 27 27" fill="#48484a">
+                          <use xlink:href="#date-icon"></use></svg>
+                        </i>
+                        <label class="wpforms-field-label">departure date</label>
+                        <input type="text" class="end-flatpickr" name="end_date" required="">
+                        <label id="wpforms-222-field_1-error" class="wpforms-error" for="wpforms-222-field_1">Check this field!</label>
+                      </div>
 
-                    <div class="wpforms-field wpforms-field-user">
-                      
-                      <i><svg class="user-icon" width="20.896" height="26.719" viewBox="0 0 20.896 26.719" fill="#48484a">
-                        <use xlink:href="#user-icon"></use></svg>
-                      </i>
-                      <label class="wpforms-field-label">number of guests</label>
-                      <input type="text" required="">
-                      <label id="wpforms-222-field_1-error" class="wpforms-error" for="wpforms-222-field_1">Check this field!</label>
-                    </div>
-                    <div class="wpforms-field wpforms-field-promo-code">
+                      <div class="wpforms-field wpforms-field-user">
+                        
+                        <i><svg class="user-icon" width="20.896" height="26.719" viewBox="0 0 20.896 26.719" fill="#48484a">
+                          <use xlink:href="#user-icon"></use></svg>
+                        </i>
+                        <label class="wpforms-field-label">number of guests</label>
+                        <input type="text" name="param[guests]" required="">
+                        <label id="wpforms-222-field_1-error" class="wpforms-error" for="wpforms-222-field_1">Check this field!</label>
+                      </div>
+                      <div class="wpforms-field wpforms-field-promo-code">
 
-                      <label class="wpforms-field-label">promo code</label>
-                      <input type="text" required="">
-                      <label id="wpforms-222-field_1-error" class="wpforms-error" for="wpforms-222-field_1">Check this field!</label>
+                        <label class="wpforms-field-label">promo code</label>
+                        <input type="text" name="discount_code" required="">
+                        <label id="wpforms-222-field_1-error" class="wpforms-error" for="wpforms-222-field_1">Check this field!</label>
+                      </div>
                     </div>
-                  </div>
-                  <div class="wpforms-submit-container">
-                    <button type="submit" name="submit" class="wpforms-submit">search availability</button>
-                  </div>
+                    <div class="wpforms-submit-container">
+                      <button type="submit" class="wpforms-submit">search availability</button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
           <div class="make-bking-nav">
-            <ul class="reset-list">
-              <li><a href="#">Terms & Conditions </a></li>
-              <li><a href="#">Cancellation Policy </a></li>
-              <li><a href="#">Travel Directions </a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Things To Do</a></li>                             
-            </ul>
+            <?php 
+              wp_nav_menu(array(
+              'theme_location' => 'cbv_booking_menu', 
+                'menu_class' => 'reset-list',
+                'container' => '',
+                'container_class' => ''
+              ));
+            ?>
           </div>
           <?php 
             $email = get_field('emailaddres', 'options');

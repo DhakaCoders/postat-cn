@@ -88,7 +88,7 @@ if( empty($cabinobj) ){
       'post_type' => 'cabin',
       'posts_per_page'=> -1,
       'orderby' => 'date',
-      'order'=> 'asc',
+      'order'=> 'DESC',
 
     ) );  
 }
@@ -105,8 +105,8 @@ if( $cabinobj ){
             foreach( $cabinobj as $cabin ) {
             global $post;
             $imgID = get_post_thumbnail_id($cabin->ID);
-            $thumb = !empty($imgID)? cbv_get_image_src($imgID): news_placeholder();
-            $imgtag = !empty($imgID)? cbv_get_image_tag($imgID): news_placeholder('tag');
+            $thumb = !empty($imgID)? cbv_get_image_src($imgID): cabin_placeholder();
+            $imgtag = !empty($imgID)? cbv_get_image_tag($imgID): cabin_placeholder('tag');
             $ovview = get_field('overview', $cabin->ID);
           ?>
             <div class="lftdes-rgtimg-grd-item">
@@ -162,7 +162,7 @@ if( $cabinobj ){
 	                            printf('<li><a class="fl-transparent-btn" href="%s" target="%s">%s</a></li>', $booklink['url'], $booklink['target'], $booklink['title']); 
 	                        }
 	                      ?>
-                        <li><a class="fl-gray-btn" href="#" data-target="#floor-plan-btm-add-card" data-toggle="modal">floor plan</a></li>
+                        <li><a class="fl-gray-btn" href="#">floor plan</a></li>
                       </ul>
                     </div>
                   </div>
@@ -236,28 +236,5 @@ if($pacage_sec):
     </div>
   </div>
 </section>
-</div>
-
-
-<div class="modal fade show" id="floor-plan-btm-add-card" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="padding-right:0;">
-<div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-body">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <i><svg class="mail-icon" width="66" height="64" viewBox="0 0 66 64" fill="#48484a">
-          <use xlink:href="#close-icon"></use></svg>
-        </i>
-      </button>
-      <div class="modal-con-cntlr"> 
-        <div class="modal-img">
-          <img src="<?php echo THEME_URI; ?>/assets/images/modal-bg.jpg" alt="">
-        </div>
-        <div class="modal-btn">
-          <a class="fl-transparent-btn" href="#">download plan</a>
-        </div>
-      </div>  
-    </div>
-  </div>
-</div>
 </div>
 <?php get_footer(); ?>

@@ -2,10 +2,11 @@
 /*
  * initial posts dispaly
  */
-function script_load_more($args = array()) {
-	$results = cbv_load_more_a($args);
+function tag_script_load_more($args = array()) {
+	$queried_object = get_queried_object();
+	$results = tag_cbv_load_more_a($args, $queried_object->slug);
   $output = '';
-	$output .='<div class="news-landing-grids-cntlr">';
+	$output .='<div class="news-landing-grids-cntlr" id="tag_slug" data-slug="'.$queried_object->slug.'">';
   $output .='<ul class="reset-list clearfix" id="ajax-content">';
 	$output .= $results['output'];
   $output .= '</ul>';
@@ -13,7 +14,7 @@ function script_load_more($args = array()) {
 	if( $results['btn'] ){
 	  $output .= '<div class="news-landing-grid-sec-btn">';
 	  $output .= '<div class="ajaxloading" id="ajxaloader1" style="display:none"><img src="'.get_template_directory_uri().'/assets/images/loading.gif" alt="loader"></div>';
-	  $output .= '<a class="fl-transparent-btn" href="#" id="loadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >load more</a>';
+	  $output .= '<a class="fl-transparent-btn" href="#" id="tag_loadMore"  data-page="1" data-url="'.admin_url("admin-ajax.php").'" >load more</a>';
 	  $output .= '</div>';
 	}
 return $output;
@@ -21,9 +22,9 @@ return $output;
 /*
  * create short code.
  */
-add_shortcode('ajax_posts', 'script_load_more');
+add_shortcode('ajax_tag_posts', 'tag_script_load_more');
 
-function cbv_load_more_a($args, $catslug = '') {
+function tag_cbv_load_more_a($args, $catslug = '') {
 	
 	//number of posts per page default
 	$num = 6;
@@ -32,7 +33,14 @@ function cbv_load_more_a($args, $catslug = '') {
 	    'post_type'=> 'post',
 	    'post_status' => 'publish',
 	    'posts_per_page' =>$num,
-	    'order'=> 'DESC'
+	    'order'=> 'DESC',
+	    'tax_query' => array(
+	    	array(
+					'taxonomy' => 'post_tag',
+	        'field'    => 'slug',
+	        'terms'    => $catslug    	
+	      )
+	    )
 	  ) 
 	);
 
@@ -85,7 +93,7 @@ function cbv_load_more_a($args, $catslug = '') {
 /*
  * load more script call back
  */
-function ajax_script_load_more($args, $catslug = '') {
+function tag_ajax_script_load_more($args, $catslug = '') {
 	//init ajax
 	$ajax = false;
 	//check ajax call or not
@@ -102,12 +110,22 @@ function ajax_script_load_more($args, $catslug = '') {
 	}else{
 		$paged = 1;
 	}
+	if( isset($_POST['slug']) ){
+		$catslug = $_POST['slug'];
+	}
 	$query = new WP_Query(array( 
 	    'post_type'=> 'post',
 	    'post_status' => 'publish',
 	    'posts_per_page' =>$num,
 	    'paged'=>$paged,
-	    'order'=> 'DESC'
+	    'order'=> 'DESC',
+	    'tax_query' => array(
+	    	array(
+					'taxonomy' => 'post_tag',
+	        'field'    => 'slug',
+	        'terms'    => $catslug    	
+	      )
+	    )
 	  ) 
 	);
   if($query->have_posts()): 
@@ -152,16 +170,5 @@ if($ajax) wp_die();
 /*
  * load more script ajax hooks
  */
-add_action('wp_ajax_nopriv_ajax_script_load_more', 'ajax_script_load_more');
-add_action('wp_ajax_ajax_script_load_more', 'ajax_script_load_more');
-/*
- * enqueue js script
- */
-add_action( 'wp_enqueue_scripts', 'ajax_enqueue_script' );
-/*
- * enqueue js script call back
- */
-function ajax_enqueue_script() {
-    wp_enqueue_script( 'script_ajax', get_theme_file_uri( 'assets/js/ajax-scripts.js' ), array( 'jquery' ), '1.0', true );
-}
-
+add_action('wp_ajax_nopriv_tag_ajax_script_load_more', 'tag_ajax_script_load_more');
+add_action('wp_ajax_tag_ajax_script_load_more', 'tag_ajax_script_load_more');

@@ -145,8 +145,8 @@ if( $cabinobj ){
               foreach( $cabinobj as $cabin ) {
               global $post;
               $imgID = get_post_thumbnail_id($cabin->ID);
-              $thumb = !empty($imgID)? cbv_get_image_src($imgID): news_placeholder();
-              $imgtag = !empty($imgID)? cbv_get_image_tag($imgID): news_placeholder('tag');
+              $thumb = !empty($imgID)? cbv_get_image_src($imgID): cabin_placeholder();
+              $imgtag = !empty($imgID)? cbv_get_image_tag($imgID): cabin_placeholder('tag');
               $ovview = get_field('overview', $cabin->ID);
             ?>
             <div class="lftdes-rgtimg-grd-item">
@@ -197,7 +197,12 @@ if( $cabinobj ){
                     ?>
                     <a href="<?php the_permalink($cabin->ID); ?>">Learn more</a>
                     <div class="lftdes-rgtimg-des-btn">
-                      <a class="fl-transparent-btn" href="#">make a booking</a>
+                      <?php 
+                        $booklink = $ovview['booking_link'];
+                        if( is_array( $booklink ) &&  !empty( $booklink['url'] ) ){
+                            printf('<a class="fl-transparent-btn" href="%s" target="%s">%s</a>', $booklink['url'], $booklink['target'], $booklink['title']); 
+                        }
+                      ?>
                     </div>
                   </div>
                 </div>
@@ -243,33 +248,21 @@ $showhide_testimonial = get_field('showhide_testimonial', HOMEID);
 if($showhide_testimonial): 
 $testi = get_field('testimonial_sec', HOMEID);
 if($testi):
-$testiobj = $testi['select_testimonial'];
-if( empty($testiobj) ){
-    $testiobj = get_posts( array(
-      'post_type' => 'testimonials',
-      'posts_per_page'=> 1,
-      'orderby' => 'date',
-      'order'=> 'asc',
-
-    ) );  
-}
 ?>
 <section class="waking-up-sec inline-bg" style="background:url(<?php if( !empty($testi['image']) ) echo cbv_get_image_src($testi['image']); ?>)">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <?php if($testiobj){ ?>
         <div class="waking-up-sec-inr">
-          <?php foreach( $testiobj as $testi ) : ?>
           <div class="waking-up-des">
             <blockquote>
-              <p>“<?php echo $testi->post_content; ?>”</p>
-              <strong>lauren hill, sydney</strong>
+              <?php if( !empty($testi['quote_text']) ): ?>
+              <p>“<?php echo $testi['quote_text']; ?>”</p>
+              <?php endif; ?>
+              <?php if( !empty($testi['name']) ) printf('<strong>%s</strong>', $testi['name']); ?>
             </blockquote>
           </div>
-          <?php endforeach; ?>
         </div>
-        <?php } ?>
       </div>
     </div>
   </div>

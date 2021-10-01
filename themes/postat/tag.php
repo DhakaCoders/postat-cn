@@ -28,7 +28,7 @@ $page_title = !empty($customtitle)? $customtitle: get_the_title($thisID);
           <div class="news-landing-sec-entry-hdr">
             <?php printf('<h1 class="news-landing-sec-title fl-h2">%s</h1>', $page_title); ?>
           </div>
-          <?php echo do_shortcode('[ajax_posts]'); ?>
+          <?php echo do_shortcode('[ajax_tag_posts]'); ?>
         </div>
       </div>
     </div>
