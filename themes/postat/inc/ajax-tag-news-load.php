@@ -27,7 +27,7 @@ add_shortcode('ajax_tag_posts', 'tag_script_load_more');
 function tag_cbv_load_more_a($args, $catslug = '') {
 	
 	//number of posts per page default
-	$num = 6;
+	$num = 1;
 	//page number
 	$query = new WP_Query(array( 
 	    'post_type'=> 'post',
@@ -103,7 +103,7 @@ function tag_ajax_script_load_more($args, $catslug = '') {
 	}
 	
 	//number of posts per page default
-	$num = 6;
+	$num = 1;
 	//page number
 	if( isset($_POST['page']) ){
 		$paged = $_POST['page'] + 1;
