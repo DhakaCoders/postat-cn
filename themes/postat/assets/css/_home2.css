@@ -511,11 +511,8 @@
 	.luxury-sec {
 	    min-height: 220px;
 	}
-	.waking-up-sec {
-	    height: 600px;
-	}
 	.waking-up-des {
-	    margin-top: 70px;
+	    margin-top: 50px;
 	}
 	.follow-sec {
 	    padding: 70px 0 80px;
@@ -570,9 +567,6 @@
 	.luxury-sec {
 	    min-height: 200px;
 	}
-	.waking-up-sec {
-	    height: 500px;
-	}
 	.follow-sec {
 	    padding: 60px 0 70px;
 	}
@@ -598,6 +592,9 @@
 	}
 	.waking-up-des blockquote p {
 	    font-size: 24px;
+	}
+	.waking-up-sec {
+	    height: 1100px;
 	}
 }
 @media(max-width: 359px){
